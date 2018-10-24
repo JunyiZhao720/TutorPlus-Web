@@ -1,11 +1,11 @@
 /* import font */
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
 
 /* general setting */
 body, html{
-    height: calc(100% -2em);
+    height: 94%;
     margin: 0;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Source Serif Pro', serif;
 }
 
 body{
@@ -18,13 +18,20 @@ body{
     /* make the background color not repeat */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* genral display settings */
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 2em;
 }
 
 aside{
+    background: #DCE1F6;
     color: #fff;
     display: grid;
-    /* grid-template-columns: auto 40px; */
     padding: 2em;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto;
+    padding: 0;
 }
 
 img{
@@ -41,10 +48,10 @@ figcaption{
 }
 
 nav{
-    background: #fff;
+    background: none;
 }
 
-.active{
+/* .active{
     position: absolute;
     display: block;
     background: #fff;
@@ -52,13 +59,16 @@ nav{
     left: 0;
     /* top: 0; */
     /* height: 100%; */
-}
+
 
 ul{
-    /* display: none; */
+    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-top: 5em;
+    position: relative !important;
+    background: none !important;
 }
 
 ul li a{
@@ -71,16 +81,47 @@ ul li a{
     color: #000;
 }
 
+ul li a:hover{
+    background-color: white;
+}
+
 main{
-    background: #fff;
-    padding: 1em 1.4em;
+    background-size: 70%;
+    background: white url('../images/main-component.png') no-repeat bottom right;
+    padding: 2em;
+}
+#avatar{
+    border-radius: 50%;
+    background: white;
+    width: 50px;
+    height: 50px;
+    margin: 2em auto 1em auto;
+}
+figcaption{
+    text-align: center;
+    color: #000;
 }
 
 h1{
     margin: 0;
+    font-size: 3em;
+    margin-top: 2em;
 }
 
 p{
-    font-size: 1.1em;
+    font-size: 1.5em;
     line-height: 1.5em;
+}
+
+.cta{
+    display: inline-block;
+    color: #fff;
+    background: #0E7FFF;
+    text-decoration: none;
+    padding: 0.8em 3em;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 2em 0;
 }
