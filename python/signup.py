@@ -43,8 +43,6 @@ def signup(user_email, user_pwd, user_first_name, user_last_name):
                 disabled=False)
             user_uid = user.uid.decode()
             
-            ## assign a cookie to browser here!!!!!
-            
             #put data to firestore
             user_data = {
                 u'first_name': user_first_name,
@@ -53,6 +51,10 @@ def signup(user_email, user_pwd, user_first_name, user_last_name):
             }
             db.collection(u'users').document(user_uid).set(user_data)
             #user is created
+            
+            ## assign a cookie to browser here!!!!!
+            ## redirect to the main page here!!!!!
     else:
         #email already used!!
+        #redirect to the signup page with a warning report
         pass
