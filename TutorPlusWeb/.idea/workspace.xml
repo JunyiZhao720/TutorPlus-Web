@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fd142c8-33d9-45d6-b6ad-5888d32492f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/models/FirebaseTrans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TutorPlusWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TutorPlusWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/orig-prefix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/orig-prefix.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-40.5.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-40.5.0.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/wheel-0.32.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wheel-0.32.2.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-2.7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-2.7.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip2.7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip2.7.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/wheel.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/wheel.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/default.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterDir="false" />
@@ -24,9 +12,7 @@
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/sql.log" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/sql.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/storage.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/databases/storage.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/sessions/062/149/127.0.0.1-56d7adbe-1e00-4774-b92a-e124314905d6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/sessions/0bf/0c1/127.0.0.1-219f32f5-25c6-4a38-9153-91cc1a0be54e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterDir="false" />
@@ -34,11 +20,9 @@
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/sql.log" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/sql.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/storage.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/welcome/databases/storage.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/sessions/010/183/127.0.0.1-3038783e-2e48-4d0b-b614-ef13f50c6108" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/httpserver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web2py/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/httpserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/parameters_8000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/welcome.w2p" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/welcome.w2p" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,36 +31,43 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TutorPlusWeb$TutorPlusWeb.coverage" NAME="TutorPlusWeb Coverage Results" MODIFIED="1540784825923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\zjylh\Desktop\TutorPlus-Web\TutorPlusWeb\web2py" />
+    <SUITE FILE_PATH="coverage/TutorPlusWeb$TutorPlusWeb.coverage" NAME="TutorPlusWeb Coverage Results" MODIFIED="1540798858571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\zjylh\Desktop\TutorPlus-Web\TutorPlusWeb\web2py" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-566668539">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="3" />
           <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="3" />
           <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="173" />
+          <entry key="html" value="27" />
+          <entry key="py" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="173" />
+          <entry key="HTML" value="27" />
+          <entry key="Python" value="214" />
         </counts>
       </usages-collector>
     </session>
@@ -85,19 +76,49 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="58" column="57" lean-forward="true" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/default.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <marker date="1540798068804" expanded="true" signature="430:469" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web2py/applications/welcome/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index1.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="133">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#296#341#0" expanded="true" />
               </folding>
@@ -108,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/models/FirebaseTrans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="95">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -133,6 +154,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -141,6 +169,9 @@
       <list>
         <option value="$PROJECT_DIR$/web2py/applications/TutorPlus/models/FirebaseTrans.py" />
         <option value="$PROJECT_DIR$/web2py/applications/TutorPlus/models/db.py" />
+        <option value="$PROJECT_DIR$/web2py/applications/welcome/views/default/login.html" />
+        <option value="$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/default.py" />
+        <option value="$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html" />
       </list>
     </option>
   </component>
@@ -151,7 +182,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="82" />
+    <option name="x" value="80" />
     <option name="y" value="130" />
     <option name="width" value="1750" />
     <option name="height" value="975" />
@@ -199,6 +230,21 @@
               <item name="TutorPlusWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="TutorPlusWeb" type="57c3d0a0:Web2PyBaseDirNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorPlusWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorPlusWeb" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorPlusWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorPlusWeb" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="welcome" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,7 +252,15 @@
               <item name="TutorPlusWeb" type="57c3d0a0:Web2PyBaseDirNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="welcome" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorPlusWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorPlusWeb" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="welcome" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,7 +269,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
@@ -235,6 +291,11 @@
         </option>
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zjylh\Desktop\TutorPlus-Web\TutorPlusWeb\web2py\applications\TutorPlus\views\default" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -287,14 +348,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2272118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23994638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30212766" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30212766" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -319,23 +379,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <marker date="1540798068804" expanded="true" signature="430:469" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/welcome/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/appadmin.py">
+    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/models/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="133">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#296#341#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/models/FirebaseTrans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="95">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -345,13 +415,27 @@
     <entry file="file://$PROJECT_DIR$/web2py/applications/welcome/models/db.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/models/db.py">
+    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/controllers/appadmin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#296#341#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="58" column="57" lean-forward="true" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/index1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/TutorPlus/views/default/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
