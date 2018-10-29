@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<type \'exceptions.RuntimeError\'> Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 455, in __init__\n    self._adapter = adapter(**kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\__init__.py", line 40, in __call__\n    obj = super(AdapterMeta, cls).__call__(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 369, in __init__\n    super(SQLAdapter, self).__init__(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 53, in __init__\n    self.reconnect()\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\connection.py", line 152, in reconnect\n    self.connection = self.connector()\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\sqlite.py", line 42, in connector\n    return self.driver.Connection(self.dbpath, **self.driver_args)\nOperationalError: unable to open database file\n'
+p3
+sS'layer'
+p4
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\welcome\\models\\db.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0000000004177630, file "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\welcome\\models\\db.py", line 7>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\welcome\\models\\db.py", line 36, in <module>\n    check_reserved=[\'all\'])\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 170, in __call__\n    obj = super(MetaDAL, cls).__call__(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 475, in __init__\n    "Failure to connect, tried %d times:\\n%s" % (attempts, tb)\nRuntimeError: Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 455, in __init__\n    self._adapter = adapter(**kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\__init__.py", line 40, in __call__\n    obj = super(AdapterMeta, cls).__call__(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 369, in __init__\n    super(SQLAdapter, self).__init__(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 53, in __init__\n    self.reconnect()\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\connection.py", line 152, in reconnect\n    self.connection = self.connector()\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\sqlite.py", line 42, in connector\n    return self.driver.Connection(self.dbpath, **self.driver_args)\nOperationalError: unable to open database file\n\n'
+p11
+s.
