@@ -9,7 +9,9 @@ def index():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
 def login():
-    print("you are in logging controller")
+    #form = FORM('Your account:', INPUT(_name='username'), INPUT(_name='pass'))
+    print (request.vars.password)
+    print (request.vars.username)
     return dict()
 # ---- API (example) -----
 @auth.requires_login()

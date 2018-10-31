@@ -9,7 +9,7 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-t-85 p-b-20">
-            <form action="{{=URL(r=request)}}" method="post" class="login100-form validate-form" id="user_pass">
+            <form action="{{=URL('default','login')}}" method="post" class="login100-form validate-form" id="user_pass">
 
                 <img src="{{=URL('static','images/Logo.png')}}" align="middle">
 
@@ -19,13 +19,14 @@
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                    <input class="input100" type="password" name="pass">
+                    <input class="input100" type="password" name="password">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">{{=T('Login')}}</button>
+                    <button type="submit" class="login100-form-btn">Login</button>
                 </div>
+
 
                 <ul class="login-more p-t-190">
                     <li class="m-b-8">
@@ -58,6 +59,7 @@
 <script type="text/javascript">
     var form_vars = jQuery('#user_pass').serialize();
     jQuery.post("{{'default','login'}}}", form_vars, function() {
+
     alert('POST was successful');
 });
 </script>
