@@ -1,0 +1,223 @@
+(dp1
+S'output'
+p2
+S'Unable to open included view file: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'{{extend \'layout.html\'}}\r\n{{block head}}\r\n{{end}}\r\n\r\n<head>\r\n\t<title>Tutor+</title>\r\n</head>\r\n\r\n\t<div class="limiter">\r\n\t\t<div class="container-login100">\r\n\t\t\t<div class="wrap-login100 p-t-85 p-b-20">\r\n\t\t\t\t<form action="{{=URL(r=request)}}" method="post" class="login100-form validate-form" >\r\n\r\n                    <img src="{{=URL(\'static\',\'images/Logo.png\')}}" align="middle">\r\n\r\n\t\t\t\t\t<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">\r\n\t\t\t\t\t\t<input class="input100" type="text" name="username">\r\n\t\t\t\t\t\t<span class="focus-input100" data-placeholder="Username"></span>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">\r\n\t\t\t\t\t\t<input class="input100" type="password" name="pass">\r\n\t\t\t\t\t\t<span class="focus-input100" data-placeholder="Password"></span>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<div class="container-login100-form-btn">\r\n\t\t\t\t\t\t<button class="login100-form-btn">{{=T(\'Login\')}}</button>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t<ul class="login-more p-t-190">\r\n\t\t\t\t\t\t<li class="m-b-8">\r\n\t\t\t\t\t\t\t<span class="txt1">\r\n\t\t\t\t\t\t\t\tForgot\r\n\t\t\t\t\t\t\t</span>\r\n\r\n\t\t\t\t\t\t\t<a href="#" class="txt2">\r\n\t\t\t\t\t\t\t\tUsername / Password?\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<span class="txt1">\r\n\t\t\t\t\t\t\t\tDon\xe2\x80\x99t have an account?\r\n\t\t\t\t\t\t\t</span>\r\n\r\n\t\t\t\t\t\t\t<a href="#" class="txt2">\r\n\t\t\t\t\t\t\t\tSign up\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</form>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\r\n\t<div id="dropDownSelect1"></div>\r\n\r\n\r\n</body>\r\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'message'
+p22
+S"''"
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'errno'
+p32
+S'2'
+sS'__format__'
+p33
+S'<built-in method __format__ of exceptions.IOError object>'
+p34
+sS'__class__'
+p35
+S"<type 'exceptions.IOError'>"
+p36
+sS'filename'
+p37
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p38
+sS'__doc__'
+p39
+S"'I/O operation failed.'"
+p40
+sS'__getitem__'
+p41
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p42
+sS'__setstate__'
+p43
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p44
+sS'__getattribute__'
+p45
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p46
+sS'args'
+p47
+S"(2, 'No such file or directory')"
+p48
+sS'__subclasshook__'
+p49
+S'<built-in method __subclasshook__ of type object>'
+p50
+sS'__unicode__'
+p51
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p52
+sS'strerror'
+p53
+S"'No such file or directory'"
+p54
+sS'__delattr__'
+p55
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p56
+sS'__repr__'
+p57
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p58
+sS'__hash__'
+p59
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p60
+ssS'evalue'
+p61
+S"[Errno 2] No such file or directory: 'C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\views\\\\layout.html'"
+p62
+sS'frames'
+p63
+(lp64
+(dp65
+S'file'
+p66
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\template.py'
+p67
+sS'dump'
+p68
+(dp69
+S'builtinopen'
+p70
+S'<built-in function open>'
+p71
+sS'fileobj'
+p72
+S'undefined'
+p73
+sS'filepath'
+p74
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p75
+ssS'lnum'
+p76
+I445
+sS'lines'
+p77
+(dp78
+I448
+S'        except IOError:'
+p79
+sI449
+S"            self._raise_error('Unable to open included view file: ' + filepath)"
+p80
+sI440
+S'        # Get the path of the file on the system.'
+p81
+sI441
+S'        filepath = self.path and os.path.join(self.path, filename) or filename'
+p82
+sI442
+S''
+sI443
+S'        # try to read the text.'
+p83
+sI444
+S'        try:'
+p84
+sI445
+S"            fileobj = open(filepath, 'rb')"
+p85
+sI446
+S'            text = fileobj.read()'
+p86
+sI447
+S'            fileobj.close()'
+p87
+ssS'call'
+p88
+S"(self=<gluon.template.TemplateParser object>, filename='layout.html')"
+p89
+sS'func'
+p90
+S'_get_file_text'
+p91
+sasS'pyver'
+p92
+S'Python 2.7.15: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv\\Scripts\\python.exe (prefix: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv)'
+p93
+sS'etype'
+p94
+S"<type 'exceptions.IOError'>"
+p95
+sS'date'
+p96
+S'Tue Oct 30 21:26:36 2018'
+p97
+sS'locals'
+p98
+(dp99
+S'self'
+p100
+S'<gluon.template.TemplateParser object>'
+p101
+sS'filepath'
+p102
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p103
+sS'context'
+p104
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p105
+sg37
+S"'layout.html'"
+p106
+sssS'traceback'
+p107
+S'Traceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\template.py", line 445, in _get_file_text\n    fileobj = open(filepath, \'rb\')\nIOError: [Errno 2] No such file or directory: \'C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\views\\\\layout.html\'\n'
+p108
+s.

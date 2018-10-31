@@ -19,6 +19,7 @@
 '(something like "it-it")': '(就酱 "it-it")',
 '(version %s)': '(version %s)',
 '?': '?',
+'@markmin\x01An error occured, please [[reload %s]] the page': 'An error occured, please [[reload %s]] the page',
 '@markmin\x01Searching: **%s** %%{file}': 'Searching: **%s** files',
 'A new version of web2py is available': '新版本web2py已经可用',
 'A new version of web2py is available: %s': '新版本web2py已经可用: %s',
