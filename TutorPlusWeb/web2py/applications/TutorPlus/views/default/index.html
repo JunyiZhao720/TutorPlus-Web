@@ -9,22 +9,22 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-t-85 p-b-20">
-            <form action="{{=URL('default','login')}}" method="post" class="login100-form validate-form" id="user_pass">
+            <form action="{{=URL('default','login')}}" method="post" class="login100-form validate-form" id="login_div">
 
                 <img src="{{=URL('static','images/Logo.png')}}" align="middle">
 
                 <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                    <input class="input100" type="text" name="username">
+                    <input class="input100" type="text" name="username" id="username_field">
                     <span class="focus-input100" data-placeholder="Username"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                    <input class="input100" type="password" name="password">
+                    <input class="input100" type="password" name="password" id="password_field">
                     <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button type="submit" class="login100-form-btn">Login</button>
+                    <button onclick="login()" type="submit" class="login100-form-btn">Login</button>
                 </div>
 
 
@@ -63,3 +63,21 @@
     alert('POST was successful');
 });
 </script>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
+    authDomain: "tutorplus-93a0f.firebaseapp.com",
+    databaseURL: "https://tutorplus-93a0f.firebaseio.com",
+    projectId: "tutorplus-93a0f",
+    storageBucket: "tutorplus-93a0f.appspot.com",
+    messagingSenderId: "690236283457"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="{{=URL('static','js/firebase_login.js')}}"></script>

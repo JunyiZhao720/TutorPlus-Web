@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/databases/sql.log" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/databases/sql.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/welcome/databases/sql.log" beforeDir="false" afterPath="$PROJECT_DIR$/applications/welcome/databases/sql.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
@@ -15,7 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1541034925278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1541302569625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="888496440">
@@ -23,28 +38,82 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="html" value="3" />
+          <entry key="js" value="2" />
+          <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="HTML" value="3" />
+          <entry key="JavaScript" value="2" />
+          <entry key="Python" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="128" />
+          <entry key="js" value="335" />
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="128" />
+          <entry key="JavaScript" value="335" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="90" column="75" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -58,6 +127,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js" />
       </list>
     </option>
   </component>
@@ -68,9 +140,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -102,7 +174,30 @@
               <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,28 +262,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30093834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +297,46 @@
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="90" column="75" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
         </state>
       </provider>
     </entry>
