@@ -1,11 +1,51 @@
 # -*- coding: utf-8 -*-
 
 # -------------------------------------------------------------------------
+# Initialize firebase data structure
+# -------------------------------------------------------------------------
+class FirebaseUser:
+
+    # self properties
+    def __init__(self):
+        self.id = None
+        self.name = None
+        self.gender = None
+        self.img = None
+        self.major = None
+        self.statement = None
+        self.university = None
+        self.tag = None
+
+# -------------------------------------------------------------------------
+# Initialize global variables
+# -------------------------------------------------------------------------
+
+from firebase_admin import auth
+
+user = FirebaseUser()
+auth = auth
+
+# -------------------------------------------------------------------------
+# Initialize Firebase credentials and default_app
+# -------------------------------------------------------------------------
+import os.path
+import firebase_admin
+from firebase_admin import credentials
+
+my_path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.join(my_path, "../private/tutorPlusKey.json")
+if not len(firebase_admin._apps):
+    cred = credentials.Certificate(path)
+    default_app = firebase_admin.initialize_app(cred)
+    print(default_app.name)
+    print("Default_app Initialized!")
+else:
+    print("Default_app already initialized")
+# -------------------------------------------------------------------------
 # AppConfig configuration made easy. Look inside private/appconfig.ini
 # Auth is for authenticaiton and access control
 # -------------------------------------------------------------------------
 from gluon.contrib.appconfig import AppConfig
-from gluon.tools import Auth
 
 # -------------------------------------------------------------------------
 # This scaffolding model makes your app work on Google App Engine too
@@ -54,7 +94,7 @@ else:
 # by default give a view/generic.extension to all actions from localhost
 # none otherwise. a pattern can be 'controller/function.extension'
 # -------------------------------------------------------------------------
-response.generic_patterns = [] 
+response.generic_patterns = []
 if request.is_local and not configuration.get('app.production'):
     response.generic_patterns.append('*')
 
@@ -86,30 +126,30 @@ response.form_label_separator = ''
 # -------------------------------------------------------------------------
 
 # host names must be a list of allowed host names (glob syntax allowed)
-auth = Auth(db, host_names=configuration.get('host.names'))
+# auth = Auth(db, host_names=configuration.get('host.names'))
 
 # -------------------------------------------------------------------------
 # create all tables needed by auth, maybe add a list of extra fields
 # -------------------------------------------------------------------------
-auth.settings.extra_fields['auth_user'] = []
-auth.define_tables(username=False, signature=False)
+# auth.settings.extra_fields['auth_user'] = []
+# auth.define_tables(username=False, signature=False)
 
 # -------------------------------------------------------------------------
 # configure email
 # -------------------------------------------------------------------------
-mail = auth.settings.mailer
-mail.settings.server = 'logging' if request.is_local else configuration.get('smtp.server')
-mail.settings.sender = configuration.get('smtp.sender')
-mail.settings.login = configuration.get('smtp.login')
-mail.settings.tls = configuration.get('smtp.tls') or False
-mail.settings.ssl = configuration.get('smtp.ssl') or False
+# mail = auth.settings.mailer
+# mail.settings.server = 'logging' if request.is_local else configuration.get('smtp.server')
+# mail.settings.sender = configuration.get('smtp.sender')
+# mail.settings.login = configuration.get('smtp.login')
+# mail.settings.tls = configuration.get('smtp.tls') or False
+# mail.settings.ssl = configuration.get('smtp.ssl') or False
 
 # -------------------------------------------------------------------------
 # configure auth policy
 # -------------------------------------------------------------------------
-auth.settings.registration_requires_verification = False
-auth.settings.registration_requires_approval = False
-auth.settings.reset_password_requires_verification = True
+# auth.settings.registration_requires_verification = False
+# auth.settings.registration_requires_approval = False
+# auth.settings.reset_password_requires_verification = True
 
 # -------------------------------------------------------------------------  
 # read more at http://dev.w3.org/html5/markup/meta.name.html               
@@ -130,6 +170,7 @@ response.google_analytics_id = configuration.get('google.analytics_id')
 # -------------------------------------------------------------------------
 if configuration.get('scheduler.enabled'):
     from gluon.scheduler import Scheduler
+
     scheduler = Scheduler(db, heartbeat=configuration.get('scheduler.heartbeat'))
 
 # -------------------------------------------------------------------------

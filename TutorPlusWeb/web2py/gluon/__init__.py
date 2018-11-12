@@ -44,7 +44,7 @@ if 0:
     from .globals import Request, Response, Session
     from .cache import Cache
     from .languages import translator
-    from .tools import Auth, Crud, Mail, Service, PluginManager
+    from .tools import Crud, Mail, Service, PluginManager
 
     # API objects
     request = Request()
@@ -56,7 +56,7 @@ if 0:
     # Objects commonly defined in application model files
     # (names are conventions only -- not part of API)
     db = DAL()
-    auth = Auth(db)
+    auth = auth
     crud = Crud(db)
     mail = Mail()
     service = Service()

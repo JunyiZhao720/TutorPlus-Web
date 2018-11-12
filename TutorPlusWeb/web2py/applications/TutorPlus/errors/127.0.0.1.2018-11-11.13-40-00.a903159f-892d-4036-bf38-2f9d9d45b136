@@ -1,0 +1,223 @@
+(dp1
+S'output'
+p2
+S'Unable to open included view file: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'{{extend \'layout.html\'}}\r\n{{"""\r\n\r\nYou should not modify this file. \r\nIt is used as default when a view is not provided for your controllers\r\n\r\n"""}}\r\n<h2>{{=\' \'.join(x.capitalize() for x in request.function.split(\'_\'))}}</h2>\r\n{{if len(response._vars)==1:}}\r\n{{=BEAUTIFY(response._vars[next(iter(response._vars))])}}\r\n{{elif len(response._vars)>1:}}\r\n{{=BEAUTIFY(response._vars)}}\r\n{{pass}}\r\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'message'
+p22
+S"''"
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'errno'
+p32
+S'2'
+sS'__format__'
+p33
+S'<built-in method __format__ of exceptions.IOError object>'
+p34
+sS'__class__'
+p35
+S"<type 'exceptions.IOError'>"
+p36
+sS'filename'
+p37
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p38
+sS'__doc__'
+p39
+S"'I/O operation failed.'"
+p40
+sS'__getitem__'
+p41
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p42
+sS'__setstate__'
+p43
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p44
+sS'__getattribute__'
+p45
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p46
+sS'args'
+p47
+S"(2, 'No such file or directory')"
+p48
+sS'__subclasshook__'
+p49
+S'<built-in method __subclasshook__ of type object>'
+p50
+sS'__unicode__'
+p51
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p52
+sS'strerror'
+p53
+S"'No such file or directory'"
+p54
+sS'__delattr__'
+p55
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p56
+sS'__repr__'
+p57
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p58
+sS'__hash__'
+p59
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p60
+ssS'evalue'
+p61
+S"[Errno 2] No such file or directory: 'C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\views\\\\layout.html'"
+p62
+sS'frames'
+p63
+(lp64
+(dp65
+S'file'
+p66
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\template.py'
+p67
+sS'dump'
+p68
+(dp69
+S'builtinopen'
+p70
+S'<built-in function open>'
+p71
+sS'fileobj'
+p72
+S'undefined'
+p73
+sS'filepath'
+p74
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p75
+ssS'lnum'
+p76
+I445
+sS'lines'
+p77
+(dp78
+I448
+S'        except IOError:'
+p79
+sI449
+S"            self._raise_error('Unable to open included view file: ' + filepath)"
+p80
+sI440
+S'        # Get the path of the file on the system.'
+p81
+sI441
+S'        filepath = self.path and os.path.join(self.path, filename) or filename'
+p82
+sI442
+S''
+sI443
+S'        # try to read the text.'
+p83
+sI444
+S'        try:'
+p84
+sI445
+S"            fileobj = open(filepath, 'rb')"
+p85
+sI446
+S'            text = fileobj.read()'
+p86
+sI447
+S'            fileobj.close()'
+p87
+ssS'call'
+p88
+S"(self=<gluon.template.TemplateParser object>, filename='layout.html')"
+p89
+sS'func'
+p90
+S'_get_file_text'
+p91
+sasS'pyver'
+p92
+S'Python 2.7.15: E:\\Anaconda\\python.exe (prefix: E:\\Anaconda)'
+p93
+sS'etype'
+p94
+S"<type 'exceptions.IOError'>"
+p95
+sS'date'
+p96
+S'Sun Nov 11 13:40:00 2018'
+p97
+sS'locals'
+p98
+(dp99
+S'self'
+p100
+S'<gluon.template.TemplateParser object>'
+p101
+sS'filepath'
+p102
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\layout.html'"
+p103
+sS'context'
+p104
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p105
+sg37
+S"'layout.html'"
+p106
+sssS'traceback'
+p107
+S'Traceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\template.py", line 445, in _get_file_text\n    fileobj = open(filepath, \'rb\')\nIOError: [Errno 2] No such file or directory: \'C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\views\\\\layout.html\'\n'
+p108
+s.
