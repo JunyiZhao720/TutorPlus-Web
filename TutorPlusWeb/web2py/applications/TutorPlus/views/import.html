@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V6</title>
+	<title>TutorPlus</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--========================================CSS==================================================-->
 <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{=URL('static','images/icons/favicon.ico')}}">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/bootstrap/css/bootstrap.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/iconic/css/material-design-iconic-font.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animate/animate.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/css-hamburgers/hamburgers.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animsition/css/animsition.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/daterangepicker/daterangepicker.css')}}">
-<!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{=URL('static','css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{=URL('static','css/main.css')}}">
 <!--===============================================================================================-->
+
+
+<!--========================================CSS-JS==================================================-->
+<!--===============================================================================================-->
+	<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
+    <script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
+    <script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
+    <script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+
+<!--==========================================JS=============================================-->
+<!--===============================================================================================-->
+    <script src="{{=URL('static','js/main.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--===============================================================================================-->
+
+<!--==========================================Other=============================================-->
+<!--===============================================================================================-->
+    {{include "web2py_ajax.html"}}
+<!--===============================================================================================-->
+
+
+<!--==========================================Firebase=============================================-->
+<!--===============================================================================================-->
+<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
+    authDomain: "tutorplus-93a0f.firebaseapp.com",
+    databaseURL: "https://tutorplus-93a0f.firebaseio.com",
+    projectId: "tutorplus-93a0f",
+    storageBucket: "tutorplus-93a0f.appspot.com",
+    messagingSenderId: "690236283457"
+  };
+  firebase.initializeApp(config);
+</script>
+<!--===============================================================================================-->
+
+
+<!--============================================Main==============================================-->
+<!--===============================================================================================-->
 </head>
 <body>
-
 <main>
   {{include}}
 </main>
-
-<!--===============================================================================================-->
-	<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
-    <script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
-<!--===============================================================================================-->
-    <script src="{{=URL('static','js/main.js')}}"></script>
-
 </body>
+
+<script>
+    jQuery('.social a').each(function(){var t=jQuery(this); t.attr('href',t.attr('href').replace('{url}',encodeURIComponent(window.location.href)));});
+</script>
 </html>
+<!--===============================================================================================-->

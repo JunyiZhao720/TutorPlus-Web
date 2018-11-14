@@ -5,3 +5,8 @@ def check_userId():
     user.id = decoded_token['uid']
     print("user id:" + user.id)
     return "ok"
+
+def user_not_login_redirect():
+    login_state = request.vars.state.lower().startswith('t')
+    if not login_state:
+        redirect(URL('default', 'login'))

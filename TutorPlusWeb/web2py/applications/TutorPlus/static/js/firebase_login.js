@@ -5,20 +5,33 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         console.log(idToken)
         // Send token to your backend via HTTPS
-        $.post(check_userId_url, {
-            userId: idToken
-        });
+        // $.post(check_userId_url, {
+        //     userId: idToken
+        // });
 
     }).catch(function(error) {
       // Handle error
         const errorMessage = error.message;
-        windows.alert("Error : " + errorMessage);
+        alert("Error : " + errorMessage);
     });
 
   } else{
       // not logging in
   }
 });
+
+// login check function
+function check_login(){
+    let user = firebase.auth().currentUser;
+    var login_state = false;
+
+    if (user) {
+      login_state = true;
+    }
+    $.post(index_url,{
+        state: login_state
+    });
+}
 
 // login function
 function login(){

@@ -1,3 +1,14 @@
+{{extend 'import.html'}}
+{{block head}}
+{{end}}
+<script src="{{=URL('static','js/firebase_login.js')}}"></script>
+<script type="text/javascript">
+    let check_login_url = "{{=URL('api', 'user_not_login_redirect')}}";
+    let index_url = "{{=URL('default', 'index')}}";
+    check_login()
+
+</script>
 <p>
     This is tutorplus default page
 </p>
+

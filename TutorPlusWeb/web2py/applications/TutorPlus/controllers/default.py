@@ -7,22 +7,22 @@
 # ---- example index page ----
 def index():
     # check if the request contains userId
-    if "userId" in request.vars:
-        # if contains put it into user.id
-        id_token = request.vars.userId
-        decoded_token = auth.verify_id_token(id_token)
-        user.id = decoded_token['uid']
-        redirect(URL('default', 'index'))
-    else:
-        # if not contains, then redirects to login page
-        redirect(URL('default', 'login'))
+    # if "userId" in request.vars:
+    #     # if contains put it into user.id
+    #     id_token = request.vars.userId
+    #     decoded_token = auth.verify_id_token(id_token)
+    #     user.id = decoded_token['uid']
+    #     redirect(URL('default', 'index'))
+    # else:
+    #     # if not contains, then redirects to login page
+    #     redirect(URL('default', 'login'))
+    if request.vars.state is not None:
+        login_state = request.vars.state.lower().startswith('t')
+        if not login_state:
+            redirect(URL('default', 'login'))
     return dict()
 
-
 def login():
-    # form = FORM('Your account:', INPUT(_name='username'), INPUT(_name='pass'))
-    print (request.vars.password)
-    print (request.vars.username)
     return dict()
 
 
