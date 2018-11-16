@@ -1,0 +1,29 @@
+.colorful {
+  color: $clrHilight;
+}
+
+div.main_content {
+  padding: 16px;
+
+  div.form_row {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  div.post_div {
+    margin: 4px;
+    border: 1px black solid;
+    background-color: $clrLight;
+    padding: 4px;
+    .post_title {
+      font-size: 120%;
+    }
+  }
+  i.changed {
+    color: $clrUnconfirmed;
+  }
+  span.likers_list {
+    color: $clrLikerList;
+  }
+
+}

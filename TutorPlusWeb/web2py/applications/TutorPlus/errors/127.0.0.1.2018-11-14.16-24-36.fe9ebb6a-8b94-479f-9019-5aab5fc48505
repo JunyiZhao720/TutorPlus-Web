@@ -1,0 +1,816 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> name 'name' is not defined"
+p3
+sS'layer'
+p4
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\default/index.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\r\\n<html lang="en">\\r\\n<head>\\r\\n\\t<title>TutorPlus</title>\\r\\n\\t<meta charset="UTF-8">\\r\\n\\t<meta name="viewport" content="width=device-width, initial-scale=1">\\r\\n\\r\\n<!--========================================CSS==================================================-->\\r\\n<!--===============================================================================================-->\\r\\n    <link rel="icon" type="image/png" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/icons/favicon.ico\'))\nresponse.write(\'">\\r\\n\\t<link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/bootstrap/css/bootstrap.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'fonts/font-awesome-4.7.0/css/font-awesome.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'fonts/iconic/css/material-design-iconic-font.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/animate/animate.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/css-hamburgers/hamburgers.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/animsition/css/animsition.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/select2/select2.min.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/daterangepicker/daterangepicker.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'css/util.css\'))\nresponse.write(\'">\\r\\n    <link rel="stylesheet" type="text/css" href="\', escape=False)\nresponse.write(URL(\'static\',\'css/main.css\'))\nresponse.write(\'">\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n\\r\\n<!--========================================CSS-JS==================================================-->\\r\\n<!--===============================================================================================-->\\r\\n\\t<script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/jquery/jquery-3.2.1.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/animsition/js/animsition.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/bootstrap/js/popper.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/bootstrap/js/bootstrap.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/select2/select2.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/daterangepicker/moment.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/daterangepicker/daterangepicker.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vendor/countdowntime/countdowntime.js\'))\nresponse.write(\'"></script>\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n<!--==========================================JS=============================================-->\\r\\n<!--===============================================================================================-->\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/main.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vue.js\'))\nresponse.write(\'"></script>\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n<!--==========================================Other=============================================-->\\r\\n<!--===============================================================================================-->\\r\\n    \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\r\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\r\\n    \', escape=False)\nresponse.write(ASSIGNJS(\nw2p_ajax_confirm_message = T(\'Are you sure you want to delete this object?\'),\nw2p_ajax_disable_with_message = T(\'Working...\'),\nw2p_ajax_date_format = T(\'%Y-%m-%d\'),\nw2p_ajax_datetime_format = T(\'%Y-%m-%d %H:%M:%S\'),\najax_error_500 = T.M(\'An error occured, please [[reload %s]] the page\') % URL(args=request.args, vars=request.get_vars)\n))\nresponse.write(\'\\r\\n    //--></script>\\r\\n\', escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/web2py.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\r\\n\', escape=False)\nresponse.write(\'\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n\\r\\n<!--==========================================Firebase=============================================-->\\r\\n<!--===============================================================================================-->\\r\\n<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>\\r\\n<script>\\r\\n  // Initialize Firebase\\r\\n  var config = {\\r\\n    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",\\r\\n    authDomain: "tutorplus-93a0f.firebaseapp.com",\\r\\n    databaseURL: "https://tutorplus-93a0f.firebaseio.com",\\r\\n    projectId: "tutorplus-93a0f",\\r\\n    storageBucket: "tutorplus-93a0f.appspot.com",\\r\\n    messagingSenderId: "690236283457"\\r\\n  };\\r\\n  firebase.initializeApp(config);\\r\\n</script>\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n\\r\\n<!--============================================Main==============================================-->\\r\\n<!--===============================================================================================-->\\r\\n</head>\\r\\n<body>\\r\\n<main>\\r\\n  \', escape=False)\nresponse.write(\'\\r\\n\', escape=False)\nresponse.write(\'\\r\\n\', escape=False)\nresponse.write(\'\\r\\n\\r\\n<head>\\r\\n\\t<title>Tutor+</title>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\', \'js/app.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'vue.js\'))\nresponse.write(\'"></script>\\r\\n</head>\\r\\n\\r\\n\\r\\n<div id="app">\\r\\n    <h1>\', escape=False)\nname\nresponse.write(\'</h1>\\r\\n</div>\\r\\n\\r\\n<div class="limiter">\\r\\n\\r\\n    <div class="container-login100">\\r\\n        <div class="wrap-login100 p-t-85 p-b-20">\\r\\n\\r\\n            <div class="login100-form validate-form" id="login_div">\\r\\n\\r\\n                <img src="\', escape=False)\nresponse.write(URL(\'static\',\'images/Logo.png\'))\nresponse.write(\'" align="middle">\\r\\n\\r\\n                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">\\r\\n                    <input class="input100" type="text" name="username" id="username_field">\\r\\n                    <span class="focus-input100" data-placeholder="Username"></span>\\r\\n                </div>\\r\\n\\r\\n                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">\\r\\n                    <input class="input100" type="password" name="password" id="password_field">\\r\\n                    <span class="focus-input100" data-placeholder="Password"></span>\\r\\n                </div>\\r\\n\\r\\n                <div class="container-login100-form-btn">\\r\\n                    <button onclick="login()" class="login100-form-btn">Login</button>\\r\\n                </div>\\r\\n\\r\\n\\r\\n                <ul class="login-more p-t-190">\\r\\n                    <li class="m-b-8">\\r\\n                        <span class="txt1">\\r\\n                            Forgot\\r\\n                        </span>\\r\\n\\r\\n                        <a href="#" class="txt2">\\r\\n                            Username / Password?\\r\\n                        </a>\\r\\n                    </li>\\r\\n\\r\\n                    <li>\\r\\n                        <span class="txt1">\\r\\n                            Don\\xe2\\x80\\x99t have an account?\\r\\n                        </span>\\r\\n\\r\\n                        <a href="#" class="txt2">\\r\\n                            Sign up\\r\\n                        </a>\\r\\n                    </li>\\r\\n                </ul>\\r\\n            </div>\\r\\n        </div>\\r\\n    </div>\\r\\n</div>\\r\\n\\r\\n<div id="dropDownSelect1"></div>\\r\\n\\r\\n\', escape=False)\nresponse.write(\'\\r\\n</main>\\r\\n</body>\\r\\n</html>\\r\\n<!--===============================================================================================-->\\r\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.NameError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.NameError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.NameError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S'"name \'name\' is not defined"'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.NameError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.NameError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.NameError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.NameError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.NameError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.NameError'>"
+p35
+sS'__doc__'
+p36
+S"'Name not found globally.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.NameError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.NameError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.NameError object>"
+p43
+sS'args'
+p44
+S'("name \'name\' is not defined",)'
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.NameError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.NameError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.NameError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.NameError object>"
+p55
+ssS'evalue'
+p56
+S"name 'name' is not defined"
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\xf6o\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>TutorPlus</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-a65404ee-8281-4aff-8994-7747a2b67474<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_hw31</td><td style="vertical-align:top;">:</td><td><div>2:7e728a33-93df-4b98-9f4e-df3f164e4da3<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_hw3review</td><td style="vertical-align:top;">:</td><td><div>1:7920adb5-9f1b-4837-9091-3daea9f61511<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_tutorplus</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-04619965-700f-445f-8962-e4b2c3edf352<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-f95c6db5-5b61-479f-b5ba-44e895ed2257<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>no-cache</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_hw31=&quot;2:7e728a33-93df-4b98-9f4e-df3f164e4da3&quot;; session_id_hw3review=&quot;1:7920adb5-9f1b-4837-9091-3daea9f61511&quot;; session_id_admin=127.0.0.1-a65404ee-8281-4aff-8994-7747a2b67474; session_id_tutorplus=127.0.0.1-04619965-700f-445f-8962-e4b2c3edf352; session_id_welcome=127.0.0.1-f95c6db5-5b61-479f-b5ba-44e895ed2257</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_PRAGMA</td><td style="vertical-align:top;">:</td><td><div>no-cache</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/site</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/TutorPlus/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>49560</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x408ac88: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;DESKTOP-C7GQ937&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>no-cache</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_hw31=&quot;2:7e728a33-93df-4b98-9f4e-df3f164e4da3&quot;; session_id_hw3review=&quot;1:7920adb5-9f1b-4837-9091-3daea9f61511&quot;; session_id_admin=127.0.0.1-a65404ee-8281-4aff-8994-7747a2b67474; session_id_tutorplus=127.0.0.1-04619965-700f-445f-8962-e4b2c3edf352; session_id_welcome=127.0.0.1-f95c6db5-5b61-479f-b5ba-44e895ed2257</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_pragma</td><td style="vertical-align:top;">:</td><td><div>no-cache</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/site</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::e884:20d3:a637:9e4f%20</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::4d4c:b6a:b6c2:d4a1%18</div></td></tr><tr><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td><div>169.233.168.71</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/TutorPlus/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>49560</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/TutorPlus/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x0000000002F8B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x00000000040203A8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x000000000AE23390&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x0000000002F8B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x00000000040203A8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x000000000AE23390&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\TutorPlus\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x408ac88: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;DESKTOP-C7GQ937&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::e884:20d3:a637:9e4f%20</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::4d4c:b6a:b6c2:d4a1%18</div></td></tr><tr><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td><div>169.233.168.71</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 11, 14, 16, 24, 36, 100000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/TutorPlus/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 11, 15, 0, 24, 36, 100000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x000000000AD36F28&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 000000000AD4B430, file ...ions\\TutorPlus\\views\\default/index.html", line 1>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 000000000AD4B430, file ...ions\\TutorPlus\\views\\default/index.html", line 1>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, ...}, layer=r\'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWe...y\\applications\\TutorPlus\\views\\default/index.html\', scode=\'response.write(\\\'<!DOCTYPE html>\\\\r\\\\n<html lang="e...==========================-->\\\\r\\\\n\\\', escape=False)\')'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\default\\index.html'
+p90
+sg66
+(dp91
+sg72
+I68
+sg73
+(dp92
+I64
+S"response.write(URL('static', 'js/app.js'))"
+p93
+sI65
+S'response.write(\'"></script>\\r\\n    <script src="\', escape=False)'
+p94
+sI66
+S"response.write(URL('static','vue.js'))"
+p95
+sI67
+S'response.write(\'"></script>\\r\\n</head>\\r\\n\\r\\n\\r\\n<div id="app">\\r\\n    <h1>\', escape=False)'
+p96
+sI68
+S'name'
+p97
+sI69
+S'response.write(\'</h1>\\r\\n</div>\\r\\n\\r\\n<div class="limiter">\\r\\n\\r\\n    <div class="container-login100">\\r\\n        <div class="wrap-login100 p-t-85 p-b-20">\\r\\n\\r\\n            <div class="login100-form validate-form" id="login_div">\\r\\n\\r\\n                <img src="\', escape=False)'
+p98
+sI70
+S"response.write(URL('static','images/Logo.png'))"
+p99
+sI71
+S'response.write(\'" align="middle">\\r\\n\\r\\n                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">\\r\\n                    <input class="input100" type="text" name="username" id="username_field">\\r\\n                    <span class="focus-input100" data-placeholder="Username"></span>\\r\\n                </div>\\r\\n\\r\\n                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">\\r\\n                    <input class="input100" type="password" name="password" id="password_field">\\r\\n                    <span class="focus-input100" data-placeholder="Password"></span>\\r\\n                </div>\\r\\n\\r\\n                <div class="container-login100-form-btn">\\r\\n                    <button onclick="login()" class="login100-form-btn">Login</button>\\r\\n                </div>\\r\\n\\r\\n\\r\\n                <ul class="login-more p-t-190">\\r\\n                    <li class="m-b-8">\\r\\n                        <span class="txt1">\\r\\n                            Forgot\\r\\n                        </span>\\r\\n\\r\\n                        <a href="#" class="txt2">\\r\\n                            Username / Password?\\r\\n                        </a>\\r\\n                    </li>\\r\\n\\r\\n                    <li>\\r\\n                        <span class="txt1">\\r\\n                            Don\\xe2\\x80\\x99t have an account?\\r\\n                        </span>\\r\\n\\r\\n                        <a href="#" class="txt2">\\r\\n                            Sign up\\r\\n                        </a>\\r\\n                    </li>\\r\\n                </ul>\\r\\n            </div>\\r\\n        </div>\\r\\n    </div>\\r\\n</div>\\r\\n\\r\\n<div id="dropDownSelect1"></div>\\r\\n\\r\\n\', escape=False)'
+p100
+sI72
+S"response.write('\\r\\n</main>\\r\\n</body>\\r\\n</html>\\r\\n<!--===============================================================================================-->\\r\\n', escape=False)"
+p101
+sI59
+S"response.write('\\r\\n', escape=False)"
+p102
+sI60
+S'response.write(\'\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n\\r\\n<!--==========================================Firebase=============================================-->\\r\\n<!--===============================================================================================-->\\r\\n<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>\\r\\n<script>\\r\\n  // Initialize Firebase\\r\\n  var config = {\\r\\n    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",\\r\\n    authDomain: "tutorplus-93a0f.firebaseapp.com",\\r\\n    databaseURL: "https://tutorplus-93a0f.firebaseio.com",\\r\\n    projectId: "tutorplus-93a0f",\\r\\n    storageBucket: "tutorplus-93a0f.appspot.com",\\r\\n    messagingSenderId: "690236283457"\\r\\n  };\\r\\n  firebase.initializeApp(config);\\r\\n</script>\\r\\n<!--===============================================================================================-->\\r\\n\\r\\n\\r\\n<!--============================================Main==============================================-->\\r\\n<!--===============================================================================================-->\\r\\n</head>\\r\\n<body>\\r\\n<main>\\r\\n  \', escape=False)'
+p103
+sI61
+S"response.write('\\r\\n', escape=False)"
+p104
+sI62
+S"response.write('\\r\\n', escape=False)"
+p105
+sI63
+S'response.write(\'\\r\\n\\r\\n<head>\\r\\n\\t<title>Tutor+</title>\\r\\n    <script src="\', escape=False)'
+p106
+ssg85
+S'()'
+p107
+sg87
+S'<module>'
+p108
+sasS'pyver'
+p109
+S'Python 2.7.15: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv\\Scripts\\python.exe (prefix: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv)'
+p110
+sS'session'
+p111
+g59
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp112
+sS'etype'
+p113
+S"<type 'exceptions.NameError'>"
+p114
+sS'date'
+p115
+S'Wed Nov 14 16:24:36 2018'
+p116
+sS'response'
+p117
+g59
+(S's\x05>\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x000000000AD36A78&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_tutorplus</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-73b173ca-e78b-4323-92d5-bdbf0886c5e4<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>/TutorPlus/static/js/jquery.js</div></td></tr><tr><td><div>/TutorPlus/static/css/calendar.css</div></td></tr><tr><td><div>/TutorPlus/static/js/calendar.js</div></td></tr><tr><td><div>/TutorPlus/static/js/web2py.js</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/TutorPlus/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/TutorPlus</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Controller</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/controllers/default.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>View</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/views/default/index.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DB Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Menu Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Stylesheet</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/TutorPlus/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/TutorPlus/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errors</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/TutorPlus</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>About</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/TutorPlus</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Download</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Support</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Quick Examples</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Videos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Free Applications</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Preface</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introduction</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Overview</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Core</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Views</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Forms and Validators</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Email and SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Access Control</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Services</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ajax Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Components and Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Deployment Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Other Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Buy web2py\'s book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Groups</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Live Chat</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/index/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_tutorplus</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\sessions\\127.0.0.1-73b173ca-e78b-4323-92d5-bdbf0886c5e4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>c0762cbf4baf7f9af97c051e7fcb8083</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-73b173ca-e78b-4323-92d5-bdbf0886c5e4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_tutorplus</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>TutorPlus</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">show_toolbar</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/index.html</div></td></tr></table></div>'
+tRp118
+sS'locals'
+p119
+(dp120
+S'PY2'
+p121
+S'True'
+p122
+sS'OBJECT'
+p123
+S"<class 'gluon.html.OBJECT'>"
+p124
+sS'SQLDB'
+p125
+S"<class 'pydal.base.DAL'>"
+p126
+sg111
+S'<Storage {}>'
+p127
+sS'LINK'
+p128
+S"<class 'gluon.html.LINK'>"
+p129
+sS'FirebaseUser'
+p130
+S'<class __restricted__.FirebaseUser>'
+p131
+sS'local_import'
+p132
+S'<function <lambda>>'
+p133
+sS'OPTGROUP'
+p134
+S"<class 'gluon.html.OPTGROUP'>"
+p135
+sS'__package__'
+p136
+S'None'
+p137
+sS'PRE'
+p138
+S"<class 'gluon.html.PRE'>"
+p139
+sS'IS_INT_IN_RANGE'
+p140
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p141
+sS'to_bytes'
+p142
+S'<function to_bytes>'
+p143
+sS'IS_LOWER'
+p144
+S"<class 'gluon.validators.IS_LOWER'>"
+p145
+sS'IS_STRONG'
+p146
+S"<class 'gluon.validators.IS_STRONG'>"
+p147
+sS'cache'
+p148
+S'<gluon.cache.Cache object>'
+p149
+sS'IS_IN_DB'
+p150
+S"<class 'gluon.validators.IS_IN_DB'>"
+p151
+sS'TAG'
+p152
+S'<gluon.html.__TAG__ object>'
+p153
+sS'SQLField'
+p154
+S"<class 'pydal.objects.Field'>"
+p155
+sS'BODY'
+p156
+S"<class 'gluon.html.BODY'>"
+p157
+sS'IS_DATE_IN_RANGE'
+p158
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p159
+sS'IFRAME'
+p160
+S"<class 'gluon.html.IFRAME'>"
+p161
+sS'URL'
+p162
+S'<function URL>'
+p163
+sS'__file__'
+p164
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWe...y\\applications\\TutorPlus\\views\\default/index.html'"
+p165
+sS'db'
+p166
+S'<DAL uri="sqlite://storage.sqlite">'
+p167
+sS'firebase_admin'
+p168
+S"<module 'firebase_admin' from 'C:\\Users\\zjylh\\De...v\\lib\\site-packages\\firebase_admin\\__init__.pyc'>"
+p169
+sS'auth'
+p170
+S"<module 'firebase_admin.auth' from 'C:\\Users\\zjy...\\venv\\lib\\site-packages\\firebase_admin\\auth.pyc'>"
+p171
+sS'P'
+S"<class 'gluon.html.P'>"
+p172
+sS'T'
+S'<gluon.languages.translator object>'
+p173
+sS'iteritems'
+p174
+S'<function <lambda>>'
+p175
+sS'credentials'
+p176
+S"<module 'firebase_admin.credentials' from 'C:\\Us...ib\\site-packages\\firebase_admin\\credentials.pyc'>"
+p177
+sS'XHTML'
+p178
+S"<class 'gluon.html.XHTML'>"
+p179
+sS'ON'
+p180
+g122
+sS'OL'
+p181
+S"<class 'gluon.html.OL'>"
+p182
+sS'TEXTAREA'
+p183
+S"<class 'gluon.html.TEXTAREA'>"
+p184
+sS'MENU'
+p185
+S"<class 'gluon.html.MENU'>"
+p186
+sS'IS_IMAGE'
+p187
+S"<class 'gluon.validators.IS_IMAGE'>"
+p188
+sS'path'
+p189
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWe...ons\\TutorPlus\\models\\../private/tutorPlusKey.json'"
+p190
+sS'EM'
+p191
+S"<class 'gluon.html.EM'>"
+p192
+sS'CODE'
+p193
+S"<class 'gluon.html.CODE'>"
+p194
+sS'HTTP'
+p195
+S"<class 'gluon.http.HTTP'>"
+p196
+sS'BR'
+p197
+S"<class 'gluon.html.BR'>"
+p198
+sS'HR'
+p199
+S"<class 'gluon.html.HR'>"
+p200
+sS'IS_DATETIME'
+p201
+S"<class 'gluon.validators.IS_DATETIME'>"
+p202
+sS'reduce'
+p203
+S'<built-in function reduce>'
+p204
+sS'STYLE'
+p205
+S"<class 'gluon.html.STYLE'>"
+p206
+sS'LABEL'
+p207
+S"<class 'gluon.html.LABEL'>"
+p208
+sS'CLEANUP'
+p209
+S"<class 'gluon.validators.CLEANUP'>"
+p210
+sS'SELECT'
+p211
+S"<class 'gluon.html.SELECT'>"
+p212
+sS'CENTER'
+p213
+S"<class 'gluon.html.CENTER'>"
+p214
+sS'__builtins__'
+p215
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p216
+sS'HTML'
+p217
+S"<class 'gluon.html.HTML'>"
+p218
+sS'SQLFORM'
+p219
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p220
+sS'LOAD'
+p221
+S'<function LOAD>'
+p222
+sS'redirect'
+p223
+S'<function redirect>'
+p224
+sS'FIELDSET'
+p225
+S"<class 'gluon.html.FIELDSET'>"
+p226
+sS'IS_EQUAL_TO'
+p227
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p228
+sS'embed64'
+p229
+S'<function embed64>'
+p230
+sS'IS_LIST_OF'
+p231
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p232
+sS'INPUT'
+p233
+S"<class 'gluon.html.INPUT'>"
+p234
+sS'EMBED'
+p235
+S"<class 'gluon.html.EMBED'>"
+p236
+sS'configuration'
+p237
+S"{'host': {'names': 'localhost:*, 127.0.0.1:*, *:...': 'sqlite://storage.sqlite', 'pool_size': '10'}}"
+p238
+sS'H2'
+p239
+S"<class 'gluon.html.H2'>"
+p240
+sS'H3'
+p241
+S"<class 'gluon.html.H3'>"
+p242
+sS'AppConfig'
+p243
+S'<function AppConfig>'
+p244
+sS'H1'
+p245
+S"<class 'gluon.html.H1'>"
+p246
+sS'H6'
+p247
+S"<class 'gluon.html.H6'>"
+p248
+sS'H4'
+p249
+S"<class 'gluon.html.H4'>"
+p250
+sS'H5'
+p251
+S"<class 'gluon.html.H5'>"
+p252
+sS'UL'
+p253
+S"<class 'gluon.html.UL'>"
+p254
+sS'IS_UPPER'
+p255
+S"<class 'gluon.validators.IS_UPPER'>"
+p256
+sS'xmlescape'
+p257
+S'<function xmlescape>'
+p258
+sS'IS_TIME'
+p259
+S"<class 'gluon.validators.IS_TIME'>"
+p260
+sS'os'
+p261
+S"<module 'os' from 'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv\\lib\\os.pyc'>"
+p262
+sS'OPTION'
+p263
+S"<class 'gluon.html.OPTION'>"
+p264
+sS'TITLE'
+p265
+S"<class 'gluon.html.TITLE'>"
+p266
+sS'CRYPT'
+p267
+S"<class 'gluon.validators.CRYPT'>"
+p268
+sS'IS_EMPTY_OR'
+p269
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p270
+sS'MARKMIN'
+p271
+S"<class 'gluon.html.MARKMIN'>"
+p272
+sS'__name__'
+p273
+S"'__restricted__'"
+p274
+sS'STRONG'
+p275
+S"<class 'gluon.html.STRONG'>"
+p276
+sS'COL'
+p277
+S"<class 'gluon.html.COL'>"
+p278
+sS'SCRIPT'
+p279
+S"<class 'gluon.html.SCRIPT'>"
+p280
+sS'TABLE'
+p281
+S"<class 'gluon.html.TABLE'>"
+p282
+sS'IS_IPV4'
+p283
+S"<class 'gluon.validators.IS_IPV4'>"
+p284
+sS'IS_LENGTH'
+p285
+S"<class 'gluon.validators.IS_LENGTH'>"
+p286
+sS'IS_IPV6'
+p287
+S"<class 'gluon.validators.IS_IPV6'>"
+p288
+sS'XML'
+p289
+S"<class 'gluon.html.XML'>"
+p290
+sS'B'
+S"<class 'gluon.html.B'>"
+p291
+sS'my_path'
+p292
+S"r'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\models'"
+p293
+sS'IMG'
+p294
+S"<class 'gluon.html.IMG'>"
+p295
+sS'SQLTABLE'
+p296
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p297
+sS'IS_MATCH'
+p298
+S"<class 'gluon.validators.IS_MATCH'>"
+p299
+sS'IS_ALPHANUMERIC'
+p300
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p301
+sS'_app'
+p302
+S"'TutorPlus'"
+p303
+sS'SPAN'
+p304
+S"<class 'gluon.html.SPAN'>"
+p305
+sS'IS_JSON'
+p306
+S"<class 'gluon.validators.IS_JSON'>"
+p307
+sS'IS_IPADDRESS'
+p308
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p309
+sS'IS_SLUG'
+p310
+S"<class 'gluon.validators.IS_SLUG'>"
+p311
+sS'BEAUTIFY'
+p312
+S"<class 'gluon.html.BEAUTIFY'>"
+p313
+sS'META'
+p314
+S"<class 'gluon.html.META'>"
+p315
+sS'BUTTON'
+p316
+S"<class 'gluon.html.BUTTON'>"
+p317
+sS'IS_DATE'
+p318
+S"<class 'gluon.validators.IS_DATE'>"
+p319
+sS'IS_EMAIL'
+p320
+S"<class 'gluon.validators.IS_EMAIL'>"
+p321
+sS'IS_NOT_EMPTY'
+p322
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p323
+sS'xrange'
+p324
+S"<type 'xrange'>"
+p325
+sS'TBODY'
+p326
+S"<class 'gluon.html.TBODY'>"
+p327
+sS'CAT'
+p328
+S"<class 'gluon.html.CAT'>"
+p329
+sS'Field'
+p330
+S"<class 'pydal.objects.Field'>"
+p331
+sS'IS_LIST_OF_EMAILS'
+p332
+S"<class 'gluon.validators.IS_LIST_OF_EMAILS'>"
+p333
+sg58
+S"<Storage {'function': 'index', 'cookies': <Simpl...False, 'is_https': False, 'client': '127.0.0.1'}>"
+p334
+sS'DIV'
+p335
+S"<class 'gluon.html.DIV'>"
+p336
+sS'LEGEND'
+p337
+S"<class 'gluon.html.LEGEND'>"
+p338
+sS'to_native'
+p339
+S'<function to_native>'
+p340
+sS'COLGROUP'
+p341
+S"<class 'gluon.html.COLGROUP'>"
+p342
+sS'DAL'
+p343
+S"<class 'pydal.base.DAL'>"
+p344
+sS'ASSIGNJS'
+p345
+S'<function ASSIGNJS>'
+p346
+sS'TR'
+p347
+S"<class 'gluon.html.TR'>"
+p348
+sS'LI'
+p349
+S"<class 'gluon.html.LI'>"
+p350
+sS'TH'
+p351
+S"<class 'gluon.html.TH'>"
+p352
+sS'TD'
+p353
+S"<class 'gluon.html.TD'>"
+p354
+sS'IS_URL'
+p355
+S"<class 'gluon.validators.IS_URL'>"
+p356
+sS'A'
+S"<class 'gluon.html.A'>"
+p357
+sS'HEAD'
+p358
+S"<class 'gluon.html.HEAD'>"
+p359
+sS'IS_DATETIME_IN_RANGE'
+p360
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p361
+sS'FORM'
+p362
+S"<class 'gluon.html.FORM'>"
+p363
+sS'I'
+S"<class 'gluon.html.I'>"
+p364
+sS'IS_NOT_IN_DB'
+p365
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p366
+sS'user'
+p367
+S'<__restricted__.FirebaseUser instance>'
+p368
+sg117
+S"<Storage {'body': <cStringIO.StringO object at 0...000000000AD3CDD8>, 'view': 'default/index.html'}>"
+p369
+sS'THEAD'
+p370
+S"<class 'gluon.html.THEAD'>"
+p371
+sS'ANY_OF'
+p372
+S"<class 'gluon.validators.ANY_OF'>"
+p373
+sS'IS_NULL_OR'
+p374
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p375
+sS'TFOOT'
+p376
+S"<class 'gluon.html.TFOOT'>"
+p377
+sS'IS_FLOAT_IN_RANGE'
+p378
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p379
+sS'IS_EXPR'
+p380
+S"<class 'gluon.validators.IS_EXPR'>"
+p381
+sS'IS_IN_SET'
+p382
+S"<class 'gluon.validators.IS_IN_SET'>"
+p383
+sS'IS_UPLOAD_FILENAME'
+p384
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p385
+sS'TT'
+p386
+S"<class 'gluon.html.TT'>"
+p387
+sS'IS_DECIMAL_IN_RANGE'
+p388
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p389
+sssS'traceback'
+p390
+S'Traceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\TutorPlus\\views\\default/index.html", line 68, in <module>\nNameError: name \'name\' is not defined\n'
+p391
+s.

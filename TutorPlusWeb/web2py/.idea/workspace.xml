@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/TutorPlusWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/TutorPlusWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/controllers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/controllers/default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/web2py.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/web2py.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/OldIndex.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/user.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/import.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/import.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/admin/sessions/163/1c0/127.0.0.1-a65404ee-8281-4aff-8994-7747a2b67474" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin/sessions/163/1c0/127.0.0.1-a65404ee-8281-4aff-8994-7747a2b67474" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,48 +23,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1542173741448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1542323327540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="888496440">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="4" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="6" />
-          <entry key="js" value="5" />
+          <entry key="html" value="8" />
+          <entry key="js" value="6" />
           <entry key="json" value="1" />
           <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
+          <entry key="HTML" value="8" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="5" />
+          <entry key="JavaScript" value="6" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="html" value="564" />
-          <entry key="js" value="697" />
+          <entry key="html" value="859" />
+          <entry key="js" value="740" />
           <entry key="py" value="1388" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="564" />
-          <entry key="JavaScript" value="697" />
+          <entry key="HTML" value="859" />
+          <entry key="JavaScript" value="740" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1388" />
         </counts>
@@ -73,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -82,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="58" />
+            <state relative-caret-position="1045">
+              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -97,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="266">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <marker date="1542176140940" expanded="true" signature="959:980" ph="..." />
               </folding>
@@ -109,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="228">
+              <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -121,7 +124,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="385">
               <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
@@ -146,12 +149,13 @@
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/FirebaseTrans.py" />
         <option value="$PROJECT_DIR$/gluon/__init__.py" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/views/import.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/controllers/default.py" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/app.js" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/views/import.html" />
       </list>
     </option>
   </component>
@@ -161,7 +165,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-645" />
     <option name="y" value="205" />
     <option name="width" value="1750" />
@@ -213,6 +217,14 @@
               <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,9 +243,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../UCSC-CS183/web2py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zjylh\Desktop\TutorPlus-Web\TutorPlusWeb\web2py\applications\TutorPlus\views\default" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,12 +303,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2660858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.269437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -345,9 +363,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/OldIndex.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/OldIndex.html" />
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -357,20 +373,6 @@
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -378,27 +380,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="266">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1542176140940" expanded="true" signature="959:980" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/firebase_login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="385">
           <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <marker date="1542176140940" expanded="true" signature="959:980" ph="..." />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,105 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script>
+    var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
+    var get_post_list_url = "{{=URL('api', 'get_post_list')}}";
+    // Like callbacks.
+    var set_like_url = "{{=URL('api', 'set_like', user_signature=True)}}";
+    var get_likers_url = "{{=URL('api', 'get_likers')}}"
+    // Stars.
+    var set_stars_url = "{{=URL('api', 'set_stars', user_signature=True)}}";
+
+    var set_thumb_url = "{{=URL('api', 'set_thumb', user_signature=True)}}";
+    var update_count_url = "{{=URL('api', 'update_count', user_signature=True)}}";
+
+    var is_logged_in = {{='false' if auth.user is None else 'true'}};
+</script>
+{{end}}
+
+<div class="main_content">
+
+    <div id="vue-div" class="display:none">
+      <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
+
+      <!-- First, let's add a form to insert blog posts. -->
+      <div id="add_post" v-if="show_form">
+        <div class="container form_row">
+          <div class="label quarter">
+            Title:
+          </div>
+          <div class="form threequarters">
+            <input v-model="form_title" placeholder="Enter the post title"/>
+          </div>
+        </div>
+        <div class="container form_row">
+          <div class="label quarter">
+            Content:
+          </div>
+          <div class="form threequarters">
+            <textarea v-model="form_content" placeholder="Enter the content of your post"></textarea>
+          </div>
+        </div>
+        <div class="container form_row"><div class="quarter"></div>
+          <div class="threequarters">
+            <div class="submit">
+              <button id="add-post" v-on:click="add_post(); toggle_form()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="form_button" v-if="!show_form === is_logged_in === true">
+        <div class="container form_row">
+          <div>
+            <div class="submit">
+              <button v-on:click="toggle_form">Add Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message in case there are no posts. -->
+      <div v-if="post_list.length === 0">There are no posts.</div>
+
+      <!-- We display the posts. -->
+      <div id="post_list">
+        <div class="post_div" v-for="post in post_list">
+          <div class="post_title">${post.post_title}</div>
+          <div class="post_content">${post.post_content}</div>
+          <div class="attributes">
+            
+            
+            <!-- Code for Thumbs. -->
+            <div id ="tb" class="thumbs">
+              <span id="thumb_count" class="thumb_count" v-if="is_logged_in">Thumbs Count: ${post.thumb_count}</span>
+              <span class="show_thumbs_up">
+                <span v-if="is_logged_in" class="toggle_thumb"
+                      v-on:mouseover="thumb_mouseover_u(post._idx)"
+                      v-on:mouseout="thumb_mouseout(post._idx)"
+                      v-on:click="thumb_click_u(post._idx)">
+                  <i v-if="post._tstatus === 'u'" class="fa fa-thumbs-up" v-bind:style="{color: post._color}"></i>
+                  <i v-else class="fa fa-thumbs-o-up" v-bind:style="{color: post._color}"></i>
+                </span>
+              </span>
+
+              <span class="show_thumbs_down">
+                <span v-if="is_logged_in" class="toggle_thumb"
+                      v-on:mouseover="thumb_mouseover_d(post._idx)" 
+                      v-on:mouseout="thumb_mouseout(post._idx)"
+                      v-on:click="thumb_click_d(post._idx)">
+                  <i v-if="post._tstatus === 'd'" class="fa fa-thumbs-down" v-bind:style="{color: post._color}"></i>
+                  <i v-else class="fa fa-thumbs-o-down" v-bind:style="{color: post._color}"></i>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
