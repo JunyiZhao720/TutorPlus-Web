@@ -28,7 +28,7 @@ aside{
     background: #DCE1F6;
     color: #fff;
     display: grid;
-    padding: 2em;
+    /*padding: 2em;*/
     grid-template-columns: auto;
     grid-template-rows: 20% auto;
     padding: 0;
@@ -86,16 +86,17 @@ ul li a:hover{
 }
 
 main{
-    background-size: 70%;
-    background: white url('../images/main-component.png') no-repeat bottom right;
+    background: white url("../images/tutorandstudentstudying.jpg") no-repeat;
+    background-size: cover;
     padding: 2em;
 }
+
 #avatar{
-    border-radius: 50%;
-    background: white;
-    width: 50px;
-    height: 50px;
-    margin: 2em auto 1em auto;
+	border-radius: 50%;
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	margin: 2em auto 1em auto;
 }
 figcaption{
     text-align: center;
@@ -116,7 +117,7 @@ p{
 .cta{
     display: inline-block;
     color: #fff;
-    background: #0E7FFF;
+    background: rgba(14,127,255,.35);
     text-decoration: none;
     padding: 0.8em 3em;
     font-size: 1.3em;
