@@ -119,13 +119,13 @@ textarea::-moz-placeholder { color: #adadad;}
 textarea:-ms-input-placeholder { color: #adadad;}
 
 /*---------------------------------------------*/
-button {
+button-transparent {
 	outline: none !important;
 	border: none;
 	background: transparent;
 }
 
-button:hover {
+button-transparent:hover {
 	cursor: pointer;
 }
 

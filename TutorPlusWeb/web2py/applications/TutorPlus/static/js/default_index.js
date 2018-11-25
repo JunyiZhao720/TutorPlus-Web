@@ -1,4 +1,9 @@
 // This is the js for the default/index.html view.
+    // register modal component
+    Vue.component('modal', {
+      template: '#modal-template'
+    });
+
 var app = function() {
 
     var self = {};
@@ -220,7 +225,9 @@ var app = function() {
             // login-part
             logged_in: true,
             login_idx: "LOGIN",
-
+            // message box
+            is_messagebox_show: true,
+            message:"",
             // main-part
             main_idx: "HOME",
             // form_title: "",
