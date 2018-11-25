@@ -86,8 +86,8 @@
                 </span>
 
                 <!---messageBox--->
-                <modal v-show="is_messagebox_show" @close="is_messagebox_show = false">
-                    <h3 slot="body">${ message }</h3>
+                <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
+                    <h3 slot="body">${ login_message }</h3>
                     <h3 slot="header">Login error</h3>
                 </modal>
             </div>

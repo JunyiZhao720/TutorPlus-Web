@@ -154,7 +154,8 @@ var app = function() {
     //     });
     // };
 
-
+    /*********************************************************************************************************/
+    /*Login functions*/
     self.is_logged_in_listener = function(){
         console.log("User listener is online!");
         firebase.auth().onAuthStateChanged(function(user) {
@@ -200,6 +201,8 @@ var app = function() {
             let errorCode = error.code;
             let errorMessage = error.message;
             console.log("Error : " + errorCode + "-" + errorMessage);
+            self.vue.message = errorCode + "-" + errorMessage;
+            self.vue.is_messagebox_show = true;
         });
     };
 
@@ -213,10 +216,16 @@ var app = function() {
             let errorCode = error.code;
             let errorMessage = error.message;
             console.log("Error : " + errorCode + "-" + errorMessage);
+            self.vue.message = errorCode + "-" + errorMessage;
+            self.vue.is_messagebox_show = true;
         });
     };
 
-    // Complete as needed.
+    /*********************************************************************************************************/
+    /*Signup functions*/
+
+
+
     self.vue = new Vue({
         el: "#vue-index",
         delimiters: ['${', '}'],
@@ -225,18 +234,21 @@ var app = function() {
             // login-part
             logged_in: true,
             login_idx: "LOGIN",
-            // message box
-            is_messagebox_show: true,
-            message:"",
+
+            // login-part message box
+            is_login_messagebox_show: false,
+            login_message:"",
+
             // main-part
             main_idx: "HOME",
+
             // form_title: "",
             // form_content: "",
             // post_list: [],
             // star_indices: [1, 2, 3, 4, 5],
-
         },
         methods: {
+            // login-part
             is_logged_in: self.is_logged_in,
             login: self.login,
             logout: self.logout
