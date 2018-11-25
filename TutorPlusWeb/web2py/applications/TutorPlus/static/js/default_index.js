@@ -219,10 +219,10 @@ var app = function() {
         data: {
             // login-part
             logged_in: true,
-            login_idx: "SIGNUP",
+            login_idx: "LOGIN",
 
             // main-part
-            main_idx: "INITIAL",
+            main_idx: "HOME",
             // form_title: "",
             // form_content: "",
             // post_list: [],

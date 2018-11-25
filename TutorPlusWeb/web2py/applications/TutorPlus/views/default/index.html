@@ -5,7 +5,8 @@
     <body>
         <div id="vue-index">
             <!----------------------------------- login part -------------------------------->
-            <div id="login_part" v-show="true">
+            <!--login_idx is used to control display: LOGIN, SIGNUP-->
+            <div id="login_part" v-show="!logged_in">
 
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
@@ -80,8 +81,6 @@
 
                                     </div>
 
-
-
                                 </div>
                             </div>
                         </div>
@@ -92,7 +91,7 @@
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="false">
+            <div id="main_part" v-show="logged_in">
                 <aside>
                     <figure>
                         <div id="avatar"></div>
@@ -100,18 +99,35 @@
                     </figure>
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Search</a></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">List</a></li>
+                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
+                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
+                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
+                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
                         </ul>
                     </nav>
                 </aside>
 
                 <main>
-                    <h1>Welcome to Tutor+</h1>
-                    <p>Tutor+ is a right place to find your ideal tutor!</p>
-                    <a href="#" class="cta">Do Search Now</a>
+                    <!---home--->
+                    <div v-show="main_idx === 'HOME'">
+                        <h1>Welcome to Tutor+</h1>
+                        <p>Tutor+ is a right place to find your ideal tutor!</p>
+                        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+                    </div>
+                    <!---search--->
+                    <div v-show="main_idx === 'SEARCH'">
+                        Search page
+                    </div>
+                    <!---profile--->
+                    <div v-show="main_idx === 'PROFILE'">
+                        Profile page
+                        <button v-on:click="logout()">logout</button>
+                    </div>
+                    <!---result--->
+                    <div v-show="main_idx === 'RESULT'">
+                        Result page
+                    </div>
+
                 </main>
             </div>
             <!------------------------------------------------------------------------------->
