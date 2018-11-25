@@ -1,6 +1,91 @@
 {{extend 'import.html'}}
 {{block head}}
 {{end}}
+<html>
+    <body>
+        <div id="vue-index">
+            <!----------------------------------- login part -------------------------------->
+            <div id="login_part" v-show="!logged_in">
+                <div class="limiter">
+                    <div class="container-login100">
+                        <div class="wrap-login100 p-t-85 p-b-20">
 
+                            <div class="login100-form validate-form" id="login_div">
+
+                                <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+                                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+                                    <input class="input100" type="text" name="username" id="username_field">
+                                    <span class="focus-input100" data-placeholder="Username"></span>
+                                </div>
+
+                                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                                    <input class="input100" type="password" name="password" id="password_field">
+                                    <span class="focus-input100" data-placeholder="Password"></span>
+                                </div>
+
+                                <div class="container-login100-form-btn">
+                                    <button v-on:click="login()" class="login100-form-btn">Login</button>
+                                </div>
+
+                                <ul class="login-more p-t-190">
+                                    <li class="m-b-8">
+                                        <span class="txt1">
+                                            Forgot
+                                        </span>
+
+                                        <a href="#" class="txt2">
+                                            Username / Password?
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <span class="txt1">
+                                            Don’t have an account?
+                                        </span>
+
+                                        <a href="#" class="txt2">
+                                            Sign up
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dropDownSelect1"></div>
+            </div>
+            <!------------------------------------------------------------------------------->
+
+
+            <!------------------------------------ main part -------------------------------->
+            <div id="main_part" v-show="logged_in">
+                <aside>
+                    <figure>
+                        <div id="avatar"></div>
+                        <figcaption>User Name</figcaption>
+                    </figure>
+                    <nav>
+                        <ul class="active">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Search</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">List</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <main>
+                    <h1>Welcome to Tutor+</h1>
+                    <p>Tutor+ is a right place to find your ideal tutor!</p>
+                    <a href="#" class="cta">Do Search Now</a>
+                </main>
+            </div>
+            <!------------------------------------------------------------------------------->
+
+        </div>
+    </body>
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+</html>
 
 
