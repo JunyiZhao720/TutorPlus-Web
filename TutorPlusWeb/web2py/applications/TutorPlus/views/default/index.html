@@ -5,61 +5,94 @@
     <body>
         <div id="vue-index">
             <!----------------------------------- login part -------------------------------->
-            <div id="login_part" v-show="logged_in">
-                <div class="limiter">
-                    <div class="container-login100">
-                        <div class="wrap-login100 p-t-85 p-b-20">
+            <div id="login_part" v-show="true">
 
-                            <div class="login100-form validate-form" id="login_div">
+                <!---login--->
+                <span v-show="login_idx === 'LOGIN'">
+                    <div class="limiter">
+                        <div class="container-login100">
+                            <div class="wrap-login100 p-t-85 p-b-20">
 
-                                <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+                                <div class="login100-form validate-form" id="login_div">
 
-                                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                    <input class="input100" type="text" name="username" id="username_field">
-                                    <span class="focus-input100" data-placeholder="Username"></span>
+                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+                                        <input class="input100" type="text" name="username" id="username_field">
+                                        <span class="focus-input100" data-placeholder="Username"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                                        <input class="input100" type="password" name="password" id="password_field">
+                                        <span class="focus-input100" data-placeholder="Password"></span>
+                                    </div>
+
+                                    <div class="container-login100-form-btn">
+                                        <button v-on:click="login()" class="login100-form-btn">Login</button>
+                                    </div>
+
+                                    <ul class="login-more p-t-190">
+                                        <li>
+                                            <span class="txt1">
+                                                Don’t have an account?
+                                            </span>
+
+                                            <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
+                                                Sign up
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-
-                                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                    <input class="input100" type="password" name="password" id="password_field">
-                                    <span class="focus-input100" data-placeholder="Password"></span>
-                                </div>
-
-                                <div class="container-login100-form-btn">
-                                    <button v-on:click="login()" class="login100-form-btn">Login</button>
-                                </div>
-
-                                <ul class="login-more p-t-190">
-                                    <li class="m-b-8">
-                                        <span class="txt1">
-                                            Forgot
-                                        </span>
-
-                                        <a href="#" class="txt2">
-                                            Username / Password?
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <span class="txt1">
-                                            Don’t have an account?
-                                        </span>
-
-                                        <a href="#" class="txt2">
-                                            Sign up
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="dropDownSelect1"></div>
+                </span>
+
+
+                <!---signup--->
+                <span v-show="login_idx === 'SIGNUP'">
+                    <div class="limiter">
+                        <div class="container-login100">
+                            <div class="wrap-login100 p-t-85 p-b-20">
+
+                                <div class="login100-form validate-form" id="login_div">
+
+                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+                                        <input class="input100" type="text" name="username-signup" id="username_signup_field">
+                                        <span class="focus-input100" data-placeholder="Username"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                                        <input class="input100" type="password" name="password-signup" id="password_signup_field">
+                                        <span class="focus-input100" data-placeholder="Password"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                                        <input class="input100" type="password" name="re-password" id="re-password_signup_field">
+                                        <span class="focus-input100" data-placeholder="Re-Password"></span>
+                                    </div>
+
+                                    <div class="container-login50-form-btn">
+                                        <button v-on:click="" class="login50-form-btn">Signup</button>
+                                        <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
             </div>
             <!------------------------------------------------------------------------------->
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="logged_in">
+            <div id="main_part" v-show="false">
                 <aside>
                     <figure>
                         <div id="avatar"></div>

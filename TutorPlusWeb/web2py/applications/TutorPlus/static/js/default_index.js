@@ -148,6 +148,8 @@ var app = function() {
     //         rating: star_idx
     //     });
     // };
+
+
     self.is_logged_in_listener = function(){
         console.log("User listener is online!");
         firebase.auth().onAuthStateChanged(function(user) {
@@ -215,7 +217,12 @@ var app = function() {
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
+            // login-part
             logged_in: true,
+            login_idx: "SIGNUP",
+
+            // main-part
+            main_idx: "INITIAL",
             // form_title: "",
             // form_content: "",
             // post_list: [],
@@ -238,6 +245,8 @@ var app = function() {
             // stars_out: self.stars_out,
             // stars_over: self.stars_over,
             // set_stars: self.set_stars
+        },
+        computed: {
         }
 
     });
