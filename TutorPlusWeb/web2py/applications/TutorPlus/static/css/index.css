@@ -86,8 +86,8 @@ nav ul li a:hover{
 }
 
 main{
-    background-size: 70%;
-    background: white url('../images/main-component.png') no-repeat bottom right;
+    background: white url('../images/main-component.jpg') no-repeat;
+    background-size: cover;
     padding: 2em;
 }
 #avatar{

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/admin/sessions/08e/1fa/127.0.0.1-e08a1ecf-fb43-46e8-ad99-7786d7ac1186" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin/sessions/08e/1fa/127.0.0.1-e08a1ecf-fb43-46e8-ad99-7786d7ac1186" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +46,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="487" />
+          <entry key="css" value="488" />
           <entry key="dummy" value="4" />
           <entry key="html" value="1588" />
           <entry key="js" value="1246" />
@@ -61,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="487" />
+          <entry key="CSS" value="488" />
           <entry key="HTML" value="1588" />
           <entry key="JavaScript" value="1246" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -93,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="219">
+              <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -451,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="219">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
         </state>
       </provider>
     </entry>
