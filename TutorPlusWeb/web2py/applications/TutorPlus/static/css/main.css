@@ -31,19 +31,19 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
+/** {*/
+	/*margin: 0px; */
+	/*padding: 0px; */
+	/*box-sizing: border-box;*/
+/*}*/
 
-body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
-}
+/*body, html {*/
+	/*height: 100%;*/
+	/*font-family: Poppins-Regular, sans-serif;*/
+/*}*/
 
 /*---------------------------------------------*/
-a {
+.login-more p-t-190 a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
@@ -55,19 +55,19 @@ a {
   -moz-transition: all 0.4s;
 }
 
-a:focus {
+.login-more p-t-190 a:focus {
 	outline: none !important;
 }
 
-a:hover {
+.login-more p-t-190 a:hover {
 	text-decoration: none;
   color: #333333;
 }
 
 /*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
+/*h1,h2,h3,h4,h5,h6 {*/
+	/*margin: 0px;*/
+/*}*/
 
 p {
 	font-family: Poppins-Regular;
@@ -77,7 +77,7 @@ p {
 	margin: 0px;
 }
 
-ul, li {
+.login-more p-t-190 ul, li {
 	margin: 0px;
 	list-style-type: none;
 }

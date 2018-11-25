@@ -62,18 +62,16 @@ nav{
     /* top: 0; */
     /* height: 100%; */
 
-
-ul{
+nav ul{
     display: block;
     list-style-type: none;
-    margin: 0;
     padding: 0;
     margin-top: 5em;
     position: relative !important;
     background: none !important;
 }
 
-ul li a{
+nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8em;
@@ -83,7 +81,7 @@ ul li a{
     color: #000;
 }
 
-ul li a:hover{
+nav ul li a:hover{
     background-color: white;
 }
 
