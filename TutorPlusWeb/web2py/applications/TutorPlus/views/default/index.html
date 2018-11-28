@@ -1,145 +1,256 @@
 {{extend 'import.html'}}
 {{block head}}
 {{end}}
+<!--
 <html>
-    <body>
-        <div id="vue-index">
-            <!----------------------------------- login part -------------------------------->
-            <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" v-show="!logged_in">
+    <body>-->
+<div id="vue-index">
+  <!----------------------------------- login part -------------------------------->
+  <!--login_idx is used to control display: LOGIN, SIGNUP-->
+  <div id="login_part" v-show="!logged_in">
 
-                <!---login--->
-                <span v-show="login_idx === 'LOGIN'">
-                    <div class="limiter">
-                        <div class="container-login100">
-                            <div class="wrap-login100 p-t-85 p-b-20">
+    <!---login--->
+    <span v-show="login_idx === 'LOGIN'">
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
 
-                                <div class="login100-form validate-form" id="login_div">
+            <div class="login100-form validate-form" id="login_div">
 
-                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+              <img src="{{=URL('static','images/Logo.png')}}" align="middle">
 
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username" id="username_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                <input class="input100" type="text" name="username" id="username_field">
+                <span class="focus-input100" data-placeholder="Email"></span>
+              </div>
 
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password" id="password_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="password" id="password_field">
+                <span class="focus-input100" data-placeholder="Password"></span>
+              </div>
 
-                                    <div class="container-login100-form-btn">
-                                        <button v-on:click="login()" class="login100-form-btn">Login</button>
-                                    </div>
+              <div class="container-login100-form-btn">
+                <button v-on:click="login()" class="login100-form-btn">Login</button>
+              </div>
 
-                                    <ul class="login-more p-t-190">
-                                        <li>
-                                            <span class="txt1">
-                                                Don’t have an account?
-                                            </span>
+              <ul class="login-more p-t-190">
+                <li>
+                  <span class="txt1">
+                    Don’t have an account?
+                  </span>
 
-                                            <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
-                                                Sign up
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </span>
-
-
-                <!---signup--->
-                <span v-show="login_idx === 'SIGNUP'">
-                    <div class="limiter">
-                        <div class="container-login100">
-                            <div class="wrap-login100 p-t-85 p-b-20">
-
-                                <div class="login100-form validate-form" id="login_div">
-
-                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
-
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username-signup" id="username_signup_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password-signup" id="password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="re-password" id="re-password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Re-Password"></span>
-                                    </div>
-
-                                    <div class="container-login50-form-btn">
-                                        <button v-on:click="" class="login50-form-btn">Signup</button>
-                                        <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </span>
-
-                <!---messageBox--->
-                <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
-                    <h3 slot="body">${ login_message }</h3>
-                    <h3 slot="header">Login error</h3>
-                </modal>
+                  <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
+                    Sign up
+                  </a>
+                </li>
+              </ul>
             </div>
-            <!------------------------------------------------------------------------------->
+          </div>
+        </div>
+      </div>
+    </span>
 
 
-            <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="logged_in">
-                <aside>
-                    <figure>
-                        <div id="avatar"></div>
-                        <figcaption>User Name</figcaption>
-                    </figure>
-                    <nav>
-                        <ul>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
-                        </ul>
-                    </nav>
-                </aside>
+    <!---signup--->
+    <span v-show="login_idx === 'SIGNUP'">
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
 
-                <main>
-                    <!---home--->
-                    <div v-show="main_idx === 'HOME'">
-                        <h1>Welcome to Tutor+</h1>
-                        <p>Tutor+ is a right place to find your ideal tutor!</p>
-                        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
-                    </div>
-                    <!---search--->
-                    <div v-show="main_idx === 'SEARCH'">
-                        Search page
-                    </div>
-                    <!---profile--->
-                    <div v-show="main_idx === 'PROFILE'">
-                        Profile page
-                        <button v-on:click="logout()">logout</button>
-                    </div>
-                    <!---result--->
-                    <div v-show="main_idx === 'RESULT'">
-                        Result page
-                    </div>
+            <div class="login100-form validate-form" id="login_div">
 
-                </main>
+              <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                <input class="input100" type="text" name="username-signup" id="username_signup_field">
+                <span class="focus-input100" data-placeholder="Email"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="password-signup" id="password_signup_field">
+                <span class="focus-input100" data-placeholder="Password"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="re-password" id="re-password_signup_field">
+                <span class="focus-input100" data-placeholder="Re-Password"></span>
+              </div>
+
+              <div class="container-login50-form-btn">
+                <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+              </div>
             </div>
-            <!------------------------------------------------------------------------------->
+          </div>
+        </div>
+      </div>
+    </span>
 
+    <!---messageBox--->
+    <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
+      <h3 slot="body">${ login_message }</h3>
+      <h3 slot="header">Login error</h3>
+    </modal>
+  </div>
+  <!------------------------------------------------------------------------------->
+
+
+  <!------------------------------------ main part -------------------------------->
+  <div id="main_part" v-show="logged_in">
+    <aside>
+      <figure>
+        <div id="avatar"></div>
+        <figcaption>User Name</figcaption>
+      </figure>
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <!---home--->
+      <div v-show="main_idx === 'HOME'">
+        <h1>Welcome to Tutor+</h1>
+        <p>Tutor+ is a right place to find your ideal tutor!</p>
+        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+      </div>
+      <!---search--->
+      <div v-show="main_idx === 'SEARCH'">
+        Search page
+        <button v-on:click="logout()">logout</button>
+      </div>
+      <!---profile--->
+      <div v-show="main_idx === 'PROFILE'">
+
+        <div class="wrapper wrapper--w680">
+          <div class="card card-1">
+            <div class="card-heading"></div>
+
+
+            <div class="card-body">
+
+                <div v-if="!become_a_TA" >
+                  <h2 class="title">Update your Profile</h2>
+
+                  <div>
+                  <v-flex xs12 sm6 md3>
+                    <v-text-field v-model="profile_name" label="Name"></v-text-field>
+                  </v-flex>
+                  </div>
+
+                  <div class="input-group" style="margin-top:30px">
+                    <v-select v-model="profile_university" :options="[ 'Boston College (BC)',
+                                        'University of California, Santa Cruz (UCSC)',
+                                        'University of California, San Francisco (UCSF)',
+                                        'University of California, Davis (UCD)',
+                                        'University of Illinois at Chicago (UIC)',
+                                        'University of British Columbia (UBC)'
+                                        ]"
+                      placeholder="University"></v-select>
+                  </div>
+
+                  <div>
+                  <v-flex xs12 sm6 md3>
+                    <v-text-field v-model="profile_major" label="Major"></v-text-field>
+                  </v-flex>
+                  </div>
+
+                  <div class="row row-space" style="margin-top:30px">
+                    <div class="col-2">
+                      <div class="input-group">
+                        <v-select v-model="profile_gender" :options="['Male','Female']" placeholder="Gender"></v-select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
+                  </div>
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=true">Become a TA!</button>
+                  </div>
+                  </v-layout>
+
+                </div>
+
+                <div v-if="become_a_TA">
+                  <h2 class="title">Update your Profile</h2>
+
+
+                  <ta-course-card
+                    v-for="TutorCard in tutor_card_list"
+                    v-bind:card="TutorCard"
+                  ></ta-course-card>
+                  <!--v-on:deleteThis="deleteTaCard($event)"-->
+
+
+                  <!--
+                  <div style="padding:10px; margin-bottom:30px; border-radius: 3px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
+                    <v-select v-model="TA_school" :options="['Boston College (BC)',
+                                    'University of California, Santa Cruz (UCSC)',
+                                    'University of California, San Francisco (UCSF)',
+                                    'University of California, Davis (UCD)',
+                                    'University of Illinois at Chicago (UIC)',
+                                    'University of British Columbia (UBC)'
+                                    ]"
+                      placeholder="School"></v-select>
+                    <v-layout row wrap>
+                      <v-flex xs12 sm6 md3 style="margin-right:15px">
+                        <v-text-field v-model="TA_course" label="Course"></v-text-field>
+                      </v-flex>
+                      <v-flex xs12 sm6 md3>
+                        <v-text-field v-model="TA_grade" label="Grade"></v-text-field>
+                      </v-flex>
+                      <i class="fa fa-minus-circle" style="font-size:30px; margin:auto; margin-right:10px"></i>
+                    </v-layout>
+                  </div>
+                  -->
+
+                  <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
+
+                  <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
+                  </div>
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=false">Back To You Personal Profile</button>
+                  </div>
+                  </v-layout>
+
+                </div>
+
+            </div>
+          </div>
         </div>
 
-    </body>
+
+
+
+      </div>
+
+
+      <!---result--->
+      <div v-show="main_idx === 'RESULT'">
+        Result page
+      </div>
+
+    </main>
+  </div>
+  <!------------------------------------------------------------------------------->
+
+</div>
+
+
+
+<!-- Main JS-->
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
-</html>
 
-
+<!--
+</body>
+</html>-->

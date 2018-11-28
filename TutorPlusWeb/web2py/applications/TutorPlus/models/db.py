@@ -19,7 +19,7 @@ class FirebaseUser:
 # -------------------------------------------------------------------------
 # Initialize global variables
 # -------------------------------------------------------------------------
-
+import firebase_admin
 from firebase_admin import auth
 
 user = FirebaseUser()
@@ -29,11 +29,13 @@ auth = auth
 # Initialize Firebase credentials and default_app
 # -------------------------------------------------------------------------
 import os.path
-import firebase_admin
-from firebase_admin import credentials
 
-my_path = os.path.abspath(os.path.dirname(__file__))
-path = os.path.join(my_path, "../private/tutorPlusKey.json")
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+#my_path = os.path.abspath(os.path.dirname(__file__))
+#path = os.path.join(my_path, "../private/tutorPlusKey.json")
+path = os.path.join(request.folder, 'private', 'tutorPlusKey.json')
 if not len(firebase_admin._apps):
     cred = credentials.Certificate(path)
     default_app = firebase_admin.initialize_app(cred)
@@ -151,8 +153,8 @@ response.form_label_separator = ''
 # auth.settings.registration_requires_approval = False
 # auth.settings.reset_password_requires_verification = True
 
-# -------------------------------------------------------------------------  
-# read more at http://dev.w3.org/html5/markup/meta.name.html               
+# -------------------------------------------------------------------------
+# read more at http://dev.w3.org/html5/markup/meta.name.html
 # -------------------------------------------------------------------------
 response.meta.author = configuration.get('app.author')
 response.meta.description = configuration.get('app.description')
@@ -161,7 +163,7 @@ response.meta.generator = configuration.get('app.generator')
 response.show_toolbar = configuration.get('app.toolbar')
 
 # -------------------------------------------------------------------------
-# your http://google.com/analytics id                                      
+# your http://google.com/analytics id
 # -------------------------------------------------------------------------
 response.google_analytics_id = configuration.get('google.analytics_id')
 
