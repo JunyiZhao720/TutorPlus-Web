@@ -5,6 +5,7 @@
 <html>
     <body>-->
 <div id="vue-index">
+  <v-app>
   <!----------------------------------- login part -------------------------------->
   <!--login_idx is used to control display: LOGIN, SIGNUP-->
   <div id="login_part" v-show="!logged_in">
@@ -100,7 +101,7 @@
     <aside>
       <figure>
         <div id="avatar"></div>
-        <figcaption>User Name</figcaption>
+        <figcaption>${profile_name}</figcaption>
       </figure>
       <nav>
         <ul>
@@ -118,123 +119,118 @@
         <h1>Welcome to Tutor+</h1>
         <p>Tutor+ is a right place to find your ideal tutor!</p>
         <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+        <button v-on:click="logout()">logout</button>
       </div>
       <!---search--->
       <div v-show="main_idx === 'SEARCH'">
         Search page
-        <button v-on:click="logout()">logout</button>
+
       </div>
       <!---profile--->
       <div v-show="main_idx === 'PROFILE'">
 
-        <!--<div class="wrapper wrapper--w680">-->
-          <div class="card card-1">
+        <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+
             <div class="card-heading"></div>
-
-
             <div class="card-body">
 
-                <div v-if="!become_a_TA" >
-                  <h2 class="title">Update your Profile</h2>
+              <div v-if="!become_a_TA">
+                <h2 class="title">Update your Profile</h2>
 
-                  <div>
-                  <v-flex xs12 sm6 md3>
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-text-field
+                      v-bind:value="profile_email"
+                      label="Email"
+                      disabled
+                    ></v-text-field>
+                  </v-flex>
+                </div>
+
+                <div>
+                  <v-flex xs12 sm6>
                     <v-text-field v-model="profile_name" label="Name"></v-text-field>
                   </v-flex>
-                  </div>
+                </div>
 
-                  <div class="input-group" style="margin-top:30px">
-                    <v-select v-model="profile_university" :options="[ 'Boston College (BC)',
-                                      'University of California, Berkeley (UCB)',
-                                      'University of California, San Diego (UCSD)',
-                                      'University of California, Los Angeles (UCLA)',
-                                      'University of California, Santa Barbara (UCSB)',
-                                      'University of California, San Francisco (UCSF)',
-                                      'University of California, Irvine (UCI)',
-                                      'University of California, Riverside (UCR)',
-                                      'University of California, Santa Cruz (UCSC)',
-                                      'University of California, Merced (UCM)',
-                                      'University of California, Davis (UCD)',
-                                      'University of Illinois at Chicago (UIC)',
-                                      'University of British Columbia (UBC)'
-                                        ]"
-                      placeholder="University"></v-select>
-                  </div>
+                <div>
+                  <v-autocomplete v-model="profile_university" :items="school_list" :label="`University`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </div>
 
-                  <div>
-                  <v-flex xs12 sm6 md3>
-                    <v-text-field v-model="profile_major" label="Major"></v-text-field>
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-autocomplete v-model="profile_major" :items="profile_major_list" :label="`Major`" clearable>
+                      <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                      </v-slide-x-reverse-transition>
+                    </v-autocomplete>
+                    <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
                   </v-flex>
-                  </div>
+                </div>
 
-                  <div class="row row-space" style="margin-top:30px">
-                    <div class="col-2">
-                      <div class="input-group">
-                        <v-select v-model="profile_gender" :options="['male','female']" placeholder="Gender"></v-select>
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                  <v-flex xs12 sm6 md3>
+                  <v-autocomplete v-model="profile_gender" :items="['Male','Female']" :label="`Gender`">
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                  </v-flex>
+                </div>
 
-                  <v-layout row wrap>
+                <v-textarea
+                  v-model="profile_personal_statement"
+                  color="teal"
+                  placeholder="Talk about yourself..."
+                  style="margin-top:45px; margin-bottom:25px"
+                >
+                  <div slot="label">
+                    Personal Statment <small></small>
+                  </div>
+                </v-textarea>
+
+
+                <v-layout row wrap>
                   <div class="p-t-20" style="margin-right:15px">
                     <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
                   </div>
                   <div class="p-t-20">
-                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=true">Become a TA!</button>
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=true">Become a Tutor!</button>
                   </div>
-                  </v-layout>
+                </v-layout>
 
-                </div>
+              </div>
 
-                <div v-if="become_a_TA">
-                  <h2 class="title">Update your Profile</h2>
-
-
-                  <ta-course-card
-                    v-for="TutorCard in tutor_card_list"
-                    v-bind:card="TutorCard"
-                  ></ta-course-card>
-                  <!--v-on:deleteThis="deleteTaCard($event)"-->
+              <div v-if="become_a_TA">
+                <h2 class="title">Update your Profile</h2>
 
 
-                  <!--
-                  <div style="padding:10px; margin-bottom:30px; border-radius: 3px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
-                    <v-select v-model="TA_school" :options="['Boston College (BC)',
-                                    'University of California, Santa Cruz (UCSC)',
-                                    'University of California, San Francisco (UCSF)',
-                                    'University of California, Davis (UCD)',
-                                    'University of Illinois at Chicago (UIC)',
-                                    'University of British Columbia (UBC)'
-                                    ]"
-                      placeholder="School"></v-select>
-                    <v-layout row wrap>
-                      <v-flex xs12 sm6 md3 style="margin-right:15px">
-                        <v-text-field v-model="TA_course" label="Course"></v-text-field>
-                      </v-flex>
-                      <v-flex xs12 sm6 md3>
-                        <v-text-field v-model="TA_grade" label="Grade"></v-text-field>
-                      </v-flex>
-                      <i class="fa fa-minus-circle" style="font-size:30px; margin:auto; margin-right:10px"></i>
-                    </v-layout>
-                  </div>
-                  -->
+                <ta-course-card
+                  v-for="TutorCard in tutor_card_list"
+                  v-bind:card="TutorCard"
+                  v-bind:school_list="school_list"
+                  v-bind:school_data="school_data">
+                </ta-course-card>
 
-                  <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
+                <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
 
-                  <v-layout row wrap>
+                <v-layout row wrap>
                   <div class="p-t-20" style="margin-right:15px">
                     <button class="btn btn--radius btn--green" v-on:click="updateTutorProfile()">Update</button>
                   </div>
                   <div class="p-t-20">
                     <button class="btn btn--radius btn--green" v-on:click="become_a_TA=false">Back To You Personal Profile</button>
                   </div>
-                  </v-layout>
+                </v-layout>
 
-                </div>
+              </div>
 
             </div>
-          </div>
-        <!--</div>-->
+
+        </div>
+        </div>
 
 
 
@@ -250,7 +246,7 @@
     </main>
   </div>
   <!------------------------------------------------------------------------------->
-
+</v-app>
 </div>
 
 

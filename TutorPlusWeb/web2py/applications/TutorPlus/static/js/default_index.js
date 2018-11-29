@@ -4,26 +4,16 @@ Vue.component('modal', {
   template: '#modal-template'
 });
 
-Vue.component('v-select', VueSelect.VueSelect);
+//Vue.component('v-select', VueSelect.VueSelect);
 
 
 var Template_TA_Course_Card = `
 <div v-if="card.is_active" style="padding:10px; margin-bottom:30px; border-radius: 3px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
-  <v-select v-model="card.data.school" :options="['Boston College (BC)',
-                    'University of California, Berkeley (UCB)',
-                    'University of California, San Diego (UCSD)',
-                    'University of California, Los Angeles (UCLA)',
-                    'University of California, Santa Barbara (UCSB)',
-                    'University of California, San Francisco (UCSF)',
-                    'University of California, Irvine (UCI)',
-                    'University of California, Riverside (UCR)',
-                    'University of California, Santa Cruz (UCSC)',
-                    'University of California, Merced (UCM)',
-                    'University of California, Davis (UCD)',
-                    'University of Illinois at Chicago (UIC)',
-                    'University of British Columbia (UBC)'
-                  ]"
-    placeholder="School"></v-select>
+<v-autocomplete v-model="card.data.school" :items="school_list" :label="'University'" clearable>
+  <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+  </v-slide-x-reverse-transition>
+</v-autocomplete>
+
   <v-layout row wrap>
     <v-flex xs12 sm6 md3 style="margin-right:15px">
       <v-text-field v-model="card.data.course" label="Course"></v-text-field>
@@ -38,7 +28,9 @@ var Template_TA_Course_Card = `
 
 Vue.component('ta-course-card', {
   props: [
-    'card'
+    'card',
+    'school_list',
+    'school_data'
   ],
   data: function() {
     return {
@@ -125,7 +117,10 @@ var app = function() {
               if (user_profile.major) {
                 self.vue.profile_major = user_profile.major;
               }
-
+              if(user_profile.ps) {
+                self.vue.profile_personal_statement = user_profile.ps;
+              }
+              self.vue.profile_email = user.email;
               db.collection("users").doc(user_uid).collection("courses").get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                   // doc.data() is never undefined for query doc snapshots
@@ -152,7 +147,8 @@ var app = function() {
                 gender: '',
                 major: '',
                 name: '',
-                university: ''
+                university: '',
+                ps: ''
               });
             }
           });
@@ -244,7 +240,8 @@ var app = function() {
           gender: '',
           major: '',
           name: '',
-          university: ''
+          university: '',
+          ps: ''
         });
         user.sendEmailVerification().then(function() {
           // Email sent.
@@ -275,7 +272,8 @@ var app = function() {
         gender: self.vue.profile_gender.toLowerCase(),
         major: self.vue.profile_major,
         name: self.vue.profile_name,
-        university: /\(([^)]+)\)/.exec(self.vue.profile_university)[1].toLowerCase()
+        university: /\(([^)]+)\)/.exec(self.vue.profile_university)[1].toLowerCase(),
+        ps: self.vue.profile_personal_statement
       })
       .then(function() {
         console.log("Document successfully written!");
@@ -362,11 +360,14 @@ var app = function() {
       main_idx: "HOME",
 
       // self profile
+      profile_email: '',
       profile_name: '',
       profile_university: '',
       profile_gender: '',
       profile_major: '',
+      profile_personal_statement: '',
       become_a_TA: false,
+      profile_major_list: [],
 
       tutor_card_list: [],
 
@@ -384,7 +385,24 @@ var app = function() {
         ucd: 'University of California, Davis (UCD)',
         uic: 'University of Illinois at Chicago (UIC)',
         ubc: 'University of British Columbia (UBC)'
-      }
+      },
+
+      school_list: ['Boston College (BC)',
+        'University of California, Berkeley (UCB)',
+        'University of California, San Diego (UCSD)',
+        'University of California, Los Angeles (UCLA)',
+        'University of California, Santa Barbara (UCSB)',
+        'University of California, San Francisco (UCSF)',
+        'University of California, Irvine (UCI)',
+        'University of California, Riverside (UCR)',
+        'University of California, Santa Cruz (UCSC)',
+        'University of California, Merced (UCM)',
+        'University of California, Davis (UCD)',
+        'University of Illinois at Chicago (UIC)',
+        'University of British Columbia (UBC)'
+      ],
+
+      school_data: {}
       //signup part
       // form_title: "",
       // form_content: "",
@@ -428,7 +446,24 @@ var app = function() {
       // stars_over: self.stars_over,
       // set_stars: self.set_stars
     },
-    computed: {},
+    watch: {
+      profile_university: function(newSchool, oldSchool) {
+        var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
+        if (!(schoolAbbr in this.school_data)) {
+          var db = firebase.firestore();
+          var schoolRef = db.collection("schools").doc(schoolAbbr);
+          var that = this;
+          schoolRef.get().then(function(doc){
+            if(doc.exists) {
+              that.school_data[schoolAbbr] = doc.data();
+              that.profile_major_list = that.school_data[schoolAbbr].major_list;
+            }
+          });
+        } else {
+          this.profile_major_list = this.school_data[schoolAbbr].major_list;
+        }
+      }
+    },
 
   });
 
