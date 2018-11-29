@@ -127,7 +127,7 @@
       <!---profile--->
       <div v-show="main_idx === 'PROFILE'">
 
-        <div class="wrapper wrapper--w680">
+        <!--<div class="wrapper wrapper--w680">-->
           <div class="card card-1">
             <div class="card-heading"></div>
 
@@ -145,11 +145,18 @@
 
                   <div class="input-group" style="margin-top:30px">
                     <v-select v-model="profile_university" :options="[ 'Boston College (BC)',
-                                        'University of California, Santa Cruz (UCSC)',
-                                        'University of California, San Francisco (UCSF)',
-                                        'University of California, Davis (UCD)',
-                                        'University of Illinois at Chicago (UIC)',
-                                        'University of British Columbia (UBC)'
+                                      'University of California, Berkeley (UCB)',
+                                      'University of California, San Diego (UCSD)',
+                                      'University of California, Los Angeles (UCLA)',
+                                      'University of California, Santa Barbara (UCSB)',
+                                      'University of California, San Francisco (UCSF)',
+                                      'University of California, Irvine (UCI)',
+                                      'University of California, Riverside (UCR)',
+                                      'University of California, Santa Cruz (UCSC)',
+                                      'University of California, Merced (UCM)',
+                                      'University of California, Davis (UCD)',
+                                      'University of Illinois at Chicago (UIC)',
+                                      'University of British Columbia (UBC)'
                                         ]"
                       placeholder="University"></v-select>
                   </div>
@@ -163,7 +170,7 @@
                   <div class="row row-space" style="margin-top:30px">
                     <div class="col-2">
                       <div class="input-group">
-                        <v-select v-model="profile_gender" :options="['Male','Female']" placeholder="Gender"></v-select>
+                        <v-select v-model="profile_gender" :options="['male','female']" placeholder="Gender"></v-select>
                       </div>
                     </div>
                   </div>
@@ -216,7 +223,7 @@
 
                   <v-layout row wrap>
                   <div class="p-t-20" style="margin-right:15px">
-                    <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
+                    <button class="btn btn--radius btn--green" v-on:click="updateTutorProfile()">Update</button>
                   </div>
                   <div class="p-t-20">
                     <button class="btn btn--radius btn--green" v-on:click="become_a_TA=false">Back To You Personal Profile</button>
@@ -227,7 +234,7 @@
 
             </div>
           </div>
-        </div>
+        <!--</div>-->
 
 
 

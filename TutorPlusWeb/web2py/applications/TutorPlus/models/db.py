@@ -43,6 +43,7 @@ if not len(firebase_admin._apps):
     print("Default_app Initialized!")
 else:
     print("Default_app already initialized")
+
 # -------------------------------------------------------------------------
 # AppConfig configuration made easy. Look inside private/appconfig.ini
 # Auth is for authenticaiton and access control
