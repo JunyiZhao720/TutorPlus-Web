@@ -13,17 +13,9 @@ class FirebaseUser:
         self.img = None
         self.major = None
         self.statement = None
-        self.university = None
+        self.school = None
         self.tag = None
 
-# -------------------------------------------------------------------------
-# Initialize global variables
-# -------------------------------------------------------------------------
-
-from firebase_admin import auth
-
-user = FirebaseUser()
-auth = auth
 
 # -------------------------------------------------------------------------
 # Initialize Firebase credentials and default_app
@@ -41,6 +33,26 @@ if not len(firebase_admin._apps):
     print("Default_app Initialized!")
 else:
     print("Default_app already initialized")
+
+# -------------------------------------------------------------------------
+# Initialize global variables
+# -------------------------------------------------------------------------
+
+from firebase_admin import auth, firestore
+
+user = FirebaseUser()
+auth = auth
+db = firestore.client()
+
+a = ["47M3QdWhfkMbrSDvuTglpwz30Gn1", "8TyZ3sGCYYPA2p11wIGUPnxPW5A3", "Ipus0TpfCzXVABANUoE32Qb3V7A2"]
+for s in a:
+    doc_ref = db.collection('users').document(s)
+    try:
+        doc = doc_ref.get()
+        print(u'Document data: {}'.format(doc.to_dict()))
+    except:
+        print(u'No such document!')
+print("Hello world")
 # -------------------------------------------------------------------------
 # AppConfig configuration made easy. Look inside private/appconfig.ini
 # Auth is for authenticaiton and access control
