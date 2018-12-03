@@ -4,23 +4,32 @@
 # Constants
 # -------------------------------------------------------------------------
 
-USER_COLLECTION = "users"
-SCHOOL_COLLECTION = "schools"
-COURSE_COLLECTION = "courses"
-STUDENT_COLLECTION = "students"
-TUTOR_COLLECTION = "tutors"
-UNREAD_COLLECTION = "unread"
-CHAT_COLLECTION = "chats"
-CHANNEL_COLLECTION = "channel"
+USER_COLLECTION = u"users"
+SCHOOL_COLLECTION = u"schools"
+COURSE_COLLECTION = u"courses"
+STUDENT_COLLECTION = u"students"
+TUTOR_COLLECTION = u"tutors"
+UNREAD_COLLECTION = u"unread"
+CHAT_COLLECTION = u"chats"
+CHANNEL_COLLECTION = u"channel"
 
-IMAGE_FOLDER = "images/"
-IMAGE_EXTENSION = ".png"
+IMAGE_FOLDER = u"images/"
+IMAGE_EXTENSION = u".png"
 
-NAME_FIELD = "name"
-COURSE_FIELD = "courses"
-UNIVERSITY_FIELD = "university"
-TAG_FIELD = "tag"
-COUNT_FIELD = "count"
+ID_FIELD = u"id"
+GENDER_FIELD = u"gender"
+IMAGE_URL_FIELD = u"imageURL"
+MAJOR_FIELD = u"major"
+PS_FIELD = u"ps"
+SCHEDULE_FIELD = u"schedule"
+NAME_FIELD = u"name"
+COURSE_FIELD = u"courses"
+UNIVERSITY_FIELD = u"university"
+TAG_FIELD = u"tag"
+COUNT_FIELD = u"count"
+
+USER_PROFILE_FIELDS = (ID_FIELD, COUNT_FIELD, GENDER_FIELD, IMAGE_URL_FIELD, MAJOR_FIELD, NAME_FIELD, PS_FIELD,
+                       SCHEDULE_FIELD, TAG_FIELD, UNIVERSITY_FIELD)
 
 
 # -------------------------------------------------------------------------

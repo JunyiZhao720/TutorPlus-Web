@@ -50,16 +50,41 @@ def __downloadDoc(collections, uid):
 
 
 def __updateDoc(collections, uid, dic):
-    return 0
+    if __checkStrList(collections) and isinstance(uid, str) and isinstance(dic, dict):
+        try:
+            doc_ref = __parseCollection(collections).document(uid)
+            doc_ref.update(dic)
+            debug("__updateDoc", uid + ": {}".format(dic))
+
+        except Exception, e:
+            raise ValueError(bracket(__updateDoc) + str(e))
+
+    else:
+        raise ValueError(bracket(__updateDoc) + 'collections or uid or dic type not correct')
+
+
+def __createDoc(collections, uid, dic):
+    if __checkStrList(collections) and isinstance(uid, str) and isinstance(dic, dict):
+        try:
+            doc_ref = __parseCollection(collections).document(uid)
+            doc_ref.set(dic)
+            debug("__createDoc", uid + ": {}".format(dic))
+
+        except Exception, e:
+            raise ValueError(bracket(__createDoc) + str(e))
+
+    else:
+        raise ValueError(bracket(__createDoc) + 'collections or uid or dic type not correct')
 
 
 # -------------------------------------------------------------------------
 # Profile
 # -------------------------------------------------------------------------
+from gluon.contrib import simplejson
 
 
 def get_profile():
-    uid = request.vars.uid
+    uid = request.vars.id
     if uid is None:
         debug("get_profile", "Empty uid")
         return "Empty uid"
@@ -69,5 +94,61 @@ def get_profile():
         profile = __downloadDoc(collections, uid)
         return response.json(dict(profile=profile))
     except ValueError, e:
-        debug(get_profile, str(e))
+        debug("get_profile", str(e))
         return uid + ": Document doesn't exist"
+
+
+def update_profile():
+    data = request.vars.data
+    if data is None:
+        debug("create_profile", "Empty data")
+        return "Empty data"
+    data = simplejson.loads(data)
+    uid = data["id"]
+    if uid is None:
+        debug("create_profile", "Empty id")
+        return "Empty id"
+    uid = str(uid)
+    # test code
+    # data = dict()
+    # data["count2"] = 0
+    # end test code
+    for field_name in data:
+        if field_name not in USER_PROFILE_FIELDS:
+            debug("update_profile", uid + ": " + field_name + " is not a user field")
+            return uid + ": " + field_name + " is not a user field"
+    collections = [USER_COLLECTION]
+    try:
+        __updateDoc(collections, uid, data)
+        return uid + ': Updating successfully'
+    except ValueError, e:
+        debug(update_profile, str(e))
+        return uid + ': Updating info encounters an error'
+
+
+def create_profile():
+    data = request.vars.data
+    if data is None:
+        debug("create_profile", "Empty data")
+        return "Empty data"
+    data = simplejson.loads(data)
+    uid = data["id"]
+    if uid is None:
+        debug("create_profile", "Empty id")
+        return "Empty id"
+    uid = str(uid)
+    # test code
+    # data = dict()
+    # data["count2"] = 0
+    # end test code
+    for field_name in data:
+        if field_name not in USER_PROFILE_FIELDS:
+            debug("create_profile", uid + ": <" + field_name + "> is not a user field")
+            return uid + ": " + field_name + " is not a user field"
+    collections = [USER_COLLECTION]
+    try:
+        __createDoc(collections, uid, data)
+        return uid + ': Creating a profile succeeds'
+    except ValueError, e:
+        debug("create_profile", str(e))
+    return uid + ': Creating info encounters an error'

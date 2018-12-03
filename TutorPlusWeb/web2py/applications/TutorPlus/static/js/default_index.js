@@ -74,18 +74,36 @@ var app = function() {
 
   /*********************************************************************************************************/
   /*Profile functions*/
-   self.get_profile = function(uid) {
-        $.getJSON(get_profile_url,{uid: uid}, function(data) {
+   self.get_profile = function(id) {
+        $.getJSON(get_profile_url,{id: id}, function(data) {
                 console.log("I got my list");
                 console.log(data);
             }
         );
-        $.getJSON(get_likers_url, {post_id: p.id}, function (data) {
-                p._likers = data.likers
-                p._likers_known = true;
-            })
-        console.log("I fired the get");
     };
+   self.create_profile = function(id) {
+       var post_data = {
+           "id":id,
+           "name": "test",
+           "tag": [1,2,3]
+       };
+      post_data = JSON.stringify(post_data);
+      $.post(create_profile_url, {
+         data: post_data
+       },console.log("create_profile() gets called")); // Nothing to do upon completion.
+   };
+   self.update_profile = function(id) {
+     var post_data = {
+           "id":id,
+           "name": "test22",
+           "tag": [3]
+       };
+        post_data = JSON.stringify(post_data);
+        $.post(update_profile_url,{
+         data: post_data
+       },console.log("create_profile() gets called")); // Nothing to do upon completion.
+    };
+
 
   /*********************************************************************************************************/
   /*Login functions*/
@@ -480,10 +498,12 @@ var app = function() {
 
   });
 
+  //self.create_profile("1112");
   // If we are logged in, shows the form to add posts.
   //self.is_logged_in();
   self.is_logged_in_listener();
-  self.get_profile("gb6r7KS0F9YKaJupmTXhdM4pu9b2");
+  //self.get_profile("1112");
+  self.update_profile("1112");
   // Gets the posts.
   // self.get_posts();
 
