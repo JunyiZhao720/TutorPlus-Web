@@ -1,40 +1,49 @@
 # -*- coding: utf-8 -*-
 
 # -------------------------------------------------------------------------
-# Initialize firebase data structure
+# Constants
 # -------------------------------------------------------------------------
-class FirebaseUser:
 
-    # self properties
-    def __init__(self):
-        self.id = None
-        self.name = None
-        self.gender = None
-        self.img = None
-        self.major = None
-        self.statement = None
-        self.university = None
-        self.tag = None
+USER_COLLECTION = "users"
+SCHOOL_COLLECTION = "schools"
+COURSE_COLLECTION = "courses"
+STUDENT_COLLECTION = "students"
+TUTOR_COLLECTION = "tutors"
+UNREAD_COLLECTION = "unread"
+CHAT_COLLECTION = "chats"
+CHANNEL_COLLECTION = "channel"
+
+IMAGE_FOLDER = "images/"
+IMAGE_EXTENSION = ".png"
+
+NAME_FIELD = "name"
+COURSE_FIELD = "courses"
+UNIVERSITY_FIELD = "university"
+TAG_FIELD = "tag"
+COUNT_FIELD = "count"
+
 
 # -------------------------------------------------------------------------
-# Initialize global variables
+# Helper Functions
 # -------------------------------------------------------------------------
-import firebase_admin
-from firebase_admin import auth
 
-user = FirebaseUser()
-auth = auth
+def debug(funcName, content):
+    print(bracket(funcName) + content)
+
+
+def bracket(funcName):
+    return str(funcName) + "():"
+
 
 # -------------------------------------------------------------------------
 # Initialize Firebase credentials and default_app
 # -------------------------------------------------------------------------
 import os.path
+import firebase_admin
+from firebase_admin import credentials, auth, firestore
 
-from firebase_admin import credentials
-from firebase_admin import firestore
-
-#my_path = os.path.abspath(os.path.dirname(__file__))
-#path = os.path.join(my_path, "../private/tutorPlusKey.json")
+# my_path = os.path.abspath(os.path.dirname(__file__))
+# path = os.path.join(my_path, "../private/tutorPlusKey.json")
 path = os.path.join(request.folder, 'private', 'tutorPlusKey.json')
 if not len(firebase_admin._apps):
     cred = credentials.Certificate(path)
@@ -43,6 +52,12 @@ if not len(firebase_admin._apps):
     print("Default_app Initialized!")
 else:
     print("Default_app already initialized")
+
+# -------------------------------------------------------------------------
+# Initialize global variables
+# -------------------------------------------------------------------------
+db_fire = firestore.client()
+auth = auth
 
 # -------------------------------------------------------------------------
 # AppConfig configuration made easy. Look inside private/appconfig.ini

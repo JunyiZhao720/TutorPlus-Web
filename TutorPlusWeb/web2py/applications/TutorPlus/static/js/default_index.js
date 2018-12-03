@@ -72,7 +72,20 @@ var app = function() {
     });
   };
 
-
+  /*********************************************************************************************************/
+  /*Profile functions*/
+   self.get_profile = function(uid) {
+        $.getJSON(get_profile_url,{uid: uid}, function(data) {
+                console.log("I got my list");
+                console.log(data);
+            }
+        );
+        $.getJSON(get_likers_url, {post_id: p.id}, function (data) {
+                p._likers = data.likers
+                p._likers_known = true;
+            })
+        console.log("I fired the get");
+    };
 
   /*********************************************************************************************************/
   /*Login functions*/
@@ -470,7 +483,7 @@ var app = function() {
   // If we are logged in, shows the form to add posts.
   //self.is_logged_in();
   self.is_logged_in_listener();
-
+  self.get_profile("gb6r7KS0F9YKaJupmTXhdM4pu9b2");
   // Gets the posts.
   // self.get_posts();
 
