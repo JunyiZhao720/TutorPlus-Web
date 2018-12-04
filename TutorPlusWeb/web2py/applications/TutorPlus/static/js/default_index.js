@@ -127,11 +127,11 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  //id:"3g6q663SXcazHSVuw7MFV4h9saX2"
+                  id:"ucsc"
                 }
             };
             let post_packet = JSON.stringify(packet);
-            $.getJSON(get_profile_url, {
+            $.getJSON(get_school_list_url, {
                  packet: post_packet
             },function(data){
               console.log("I got my data");

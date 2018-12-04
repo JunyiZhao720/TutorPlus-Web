@@ -47,7 +47,7 @@ def __verify_idToken(id_token):
         return None
 
 
-def __parsePacket(packet, check_data = True):
+def __parsePacket(packet, check_data=True):
     if packet is None:
         debug("__parsePacket", "Packet is empty")
         return None
@@ -270,4 +270,28 @@ def download_course_list():
         return response.json(dict(course_list=course_list))
     except ValueError, e:
         debug("download_course_list", str(e))
+        raise HTTP(400, "Internal error")
+
+
+def download_major_list():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("download_major_list", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("download_major_list", "Empty id")
+        raise HTTP(400, "Empty id")
+    school = data[ID_FIELD]
+    school = str(school)
+    collections = [SCHOOL_COLLECTION]
+    try:
+        school_doc = __downloadDoc(collections, school)
+        if MAJOR_LIST_FIELD in school_doc:
+            return response.json(dict(major_list=school_doc[MAJOR_LIST_FIELD]))
+        else:
+            return response.json(dict(major_list=[]))
+    except ValueError, e:
+        debug("download_major_list", str(e))
         raise HTTP(400, "Internal error")

@@ -15,7 +15,7 @@ CHANNEL_COLLECTION = u"channel"
 
 IMAGE_FOLDER = u"images/"
 IMAGE_EXTENSION = u".png"
-
+# User fields
 ID_FIELD = u"id"
 GENDER_FIELD = u"gender"
 IMAGE_URL_FIELD = u"imageURL"
@@ -28,12 +28,18 @@ UNIVERSITY_FIELD = u"university"
 TAG_FIELD = u"tag"
 COUNT_FIELD = u"count"
 
+USER_PROFILE_FIELDS = (ID_FIELD, COUNT_FIELD, GENDER_FIELD, IMAGE_URL_FIELD, MAJOR_FIELD, NAME_FIELD, PS_FIELD,
+                       SCHEDULE_FIELD, TAG_FIELD, UNIVERSITY_FIELD)
+
+# School fields
+MAJOR_LIST_FIELD = "major_list"
+
+# Transmission fields
 TOKEN_TRANS = "idToken"
 PACKET_TRANS = "packet"
 DATA_TRANS = "data"
 
-USER_PROFILE_FIELDS = (ID_FIELD, COUNT_FIELD, GENDER_FIELD, IMAGE_URL_FIELD, MAJOR_FIELD, NAME_FIELD, PS_FIELD,
-                       SCHEDULE_FIELD, TAG_FIELD, UNIVERSITY_FIELD)
+
 
 
 # -------------------------------------------------------------------------
