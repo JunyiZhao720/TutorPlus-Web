@@ -4,9 +4,16 @@
 
 
 def check_userId():
-    id_token = request.vars.userId
-    decoded_token = auth.verify_id_token(id_token)  # type: dict
-    debug("check_userId", "decoded_token" + decoded_token)
+    id_token = request.vars.idToken
+    print(request.vars)
+    # id_token = str(id_token)
+    print(id_token)
+    try:
+        decoded_token = auth.verify_id_token(id_token)  # type:
+        print(decoded_token)
+    except Exception, e:
+        debug("check_userId", str(e))
+
     return "userId checked"
 
 
@@ -14,6 +21,18 @@ def check_userId():
 # Private methods field
 # -------------------------------------------------------------------------
 # -------Helper functions------------
+def __verify_idToken(idToken):
+    id_token = request.vars.idToken
+    if id_token is None:
+        return None
+    try:
+        decoded_token = auth.verify_id_token(id_token)  # type:
+        return decoded_token[u"user_id"]
+    except Exception, e:
+        debug("__verify_idToken", str(e))
+        return None
+
+
 def __checkStrList(lst):
     if lst and isinstance(lst, list):
         return all(isinstance(elem, basestring) for elem in lst)

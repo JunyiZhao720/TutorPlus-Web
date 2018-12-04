@@ -103,6 +103,11 @@ var app = function() {
          data: post_data
        },console.log("create_profile() gets called")); // Nothing to do upon completion.
     };
+   self.check_idToken = function(){
+      $.post(check_userId_url, {
+        idToken: self.vue.id_token
+      })
+   };
 
 
   /*********************************************************************************************************/
@@ -112,19 +117,21 @@ var app = function() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("User listener: login!");
-        // firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-        //
-        //     console.log(idToken)
-        //     // Send token to your backend via HTTPS
-        //     // $.post(check_userId_url, {
-        //     //     userId: idToken
-        //     // });
-        //
-        // }).catch(function(error) {
-        //   // Handle error
-        //     const errorMessage = error.message;
-        //     alert("Error : " + errorMessage);
-        // });
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+
+            console.log("idToken:" + idToken)
+            self.vue.id_token = idToken
+            //self.check_idToken();
+            // Send token to your backend via HTTPS
+            // $.post(check_userId_url, {
+            //      idToken: idToken
+            // });
+
+        }).catch(function(error) {
+          // Handle error
+            const errorMessage = error.message;
+            alert("Error : " + errorMessage);
+        });
         if (user.emailVerified == true) {
           console.log("At user listener: your email has been verified");
           console.log("The uid of the user is:", user.uid);
@@ -391,6 +398,7 @@ var app = function() {
       main_idx: "HOME",
 
       // self profile
+      id_token: '',
       profile_email: '',
       profile_name: '',
       profile_university: '',
@@ -502,7 +510,8 @@ var app = function() {
   // If we are logged in, shows the form to add posts.
   //self.is_logged_in();
   self.is_logged_in_listener();
-  self.get_profile();
+  //self.get_profile();
+  self.check_idToken();
   //self.update_profile("1112");
   // Gets the posts.
   // self.get_posts();
