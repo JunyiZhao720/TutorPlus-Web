@@ -154,7 +154,7 @@ def __downloadAllFromCollection(collections):
 
 
 # -------------------------------------------------------------------------
-# Profile
+# Profile and User
 # -------------------------------------------------------------------------
 from gluon.contrib import simplejson
 
@@ -227,6 +227,28 @@ def create_profile():
         debug("create_profile", str(e))
         raise HTTP(400, uid + ': Creating info encounters an error')
 
+def download_course_list_for_the_user():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("download_course_list_for_the_user", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("download_course_list_for_the_user", "Empty id")
+        raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+    collections = [USER_COLLECTION, uid, COURSE_COLLECTION]
+    try:
+        courses = __downloadAllFromCollection(collections)
+        course_list_user = []
+        for course in courses:
+            course_list_user.append(course[ID_FIELD])
+        return response.json(dict(course_list_user=course_list_user))
+    except ValueError, e:
+        debug("download_course_list_for_the_user", str(e))
+        raise HTTP(400, "Internal error")
 
 # -------------------------------------------------------------------------
 # School & Course & Major
@@ -298,23 +320,23 @@ def download_major_list():
 
 
 # -------------------------------------------------------------------------
-# Query
+# tutor
 # -------------------------------------------------------------------------
 
 def download_tutor_profile_list():
     # check if packet valid
     data = __parsePacket(request.vars.packet)
     if data is None:
-        debug("query_tutor_profile_list", "Packet errors")
+        debug("download_tutor_profile_list", "Packet errors")
         raise HTTP(400, "Packet errors")
     # parse data
     if ID_FIELD not in data:
-        debug("query_tutor_profile_list", "Empty id")
+        debug("download_tutor_profile_list", "Empty id")
         raise HTTP(400, "Empty id")
     school = data[ID_FIELD]
     school = str(school)
     if COURSE_TRANS not in data:
-        debug("query_tutor_profile_list", "Empty course_id")
+        debug("download_tutor_profile_list", "Empty course_id")
         raise HTTP(400, "Empty course_id")
     course = data[COURSE_TRANS]
     course = str(course)
@@ -334,5 +356,6 @@ def download_tutor_profile_list():
             profile_list.append(__downloadDoc(collections, tutor))
         return response.json(dict(profile_list=profile_list))
     except ValueError, e:
-        debug("query_tutor_profile_list", str(e))
+        debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
+
