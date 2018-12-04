@@ -27,7 +27,7 @@ def __parseCollection(collections):
             raise ValueError('__parseCollection(): collections count not correct')
         else:
             collect_ref = db_fire.collection(collections[0])
-            for i in range(1, len(collections)):
+            for i in range(1, len(collections), 2):
                 collect_ref = collect_ref.document(collections[i]).collection(collections[i + 1])
             return collect_ref
     else:
@@ -105,7 +105,7 @@ def get_profile():
     uid = request.vars.id
     if uid is None:
         debug("get_profile", "Empty uid")
-        return "Empty uid"
+        raise HTTP(400, "Empty id")
     uid = str(uid)
     collections = [USER_COLLECTION]
     try:
@@ -113,19 +113,19 @@ def get_profile():
         return response.json(dict(profile=profile))
     except ValueError, e:
         debug("get_profile", str(e))
-        return uid + ": Document doesn't exist"
+        raise HTTP(400, uid + ": Document doesn't exist")
 
 
 def update_profile():
     data = request.vars.data
     if data is None:
-        debug("create_profile", "Empty data")
-        return "Empty data"
+        debug("update_profile", "Empty data")
+        raise HTTP(400, "Empty data")
     data = simplejson.loads(data)
     uid = data[ID_FIELD]
     if uid is None:
-        debug("create_profile", "Empty id")
-        return "Empty id"
+        debug("update_profile", "Empty id")
+        raise HTTP(400, "Empty id")
     uid = str(uid)
     # test code
     # data = dict()
@@ -134,26 +134,25 @@ def update_profile():
     for field_name in data:
         if field_name not in USER_PROFILE_FIELDS:
             debug("update_profile", uid + ": " + field_name + " is not a user field")
-            return uid + ": " + field_name + " is not a user field"
+            raise HTTP(400, uid + ": " + field_name + " is not a user field")
     collections = [USER_COLLECTION]
     try:
         __updateDoc(collections, uid, data)
-        return uid + ': Updating successfully'
     except ValueError, e:
         debug(update_profile, str(e))
-        return uid + ': Updating info encounters an error'
+        raise HTTP(400, uid + ': Updating info encounters an error')
 
 
 def create_profile():
     data = request.vars.data
     if data is None:
         debug("create_profile", "Empty data")
-        return "Empty data"
+        raise HTTP(400, "Empty data")
     data = simplejson.loads(data)
     uid = data[ID_FIELD]
     if uid is None:
         debug("create_profile", "Empty id")
-        return "Empty id"
+        raise HTTP(400, "Empty id")
     uid = str(uid)
     # test code
     # data = dict()
@@ -162,14 +161,13 @@ def create_profile():
     for field_name in data:
         if field_name not in USER_PROFILE_FIELDS:
             debug("create_profile", uid + ": <" + field_name + "> is not a user field")
-            return uid + ": " + field_name + " is not a user field"
+            raise HTTP(400, uid + ": " + field_name + " is not a user field")
     collections = [USER_COLLECTION]
     try:
         __createDoc(collections, uid, data)
-        return uid + ': Creating a profile succeeds'
     except ValueError, e:
         debug("create_profile", str(e))
-    return uid + ': Creating info encounters an error'
+        raise HTTP(400, uid + ': Creating info encounters an error')
 
 
 # -------------------------------------------------------------------------
@@ -201,7 +199,7 @@ def download_course_list():
         courses = __downloadAllFromCollection(collections)
         course_list = []
         for course in courses:
-            course_list.append(school[ID_FIELD])
+            course_list.append(course[ID_FIELD])
         return response.json(dict(course_list=course_list))
     except ValueError, e:
         debug("download_course_list", str(e))

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,17 +50,17 @@
           <entry key="css" value="605" />
           <entry key="dummy" value="4" />
           <entry key="html" value="2598" />
-          <entry key="js" value="2526" />
-          <entry key="py" value="4742" />
+          <entry key="js" value="2528" />
+          <entry key="py" value="4799" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="605" />
           <entry key="HTML" value="2598" />
-          <entry key="JavaScript" value="2526" />
+          <entry key="JavaScript" value="2528" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="4742" />
+          <entry key="Python" value="4799" />
         </counts>
       </usages-collector>
     </session>
@@ -87,17 +88,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="207" column="41" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
+            <state relative-caret-position="240">
+              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
               <folding>
-                <marker date="1543882703570" expanded="true" signature="756:759" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="794:1357" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="1904:3530" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="2970:3530" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="3749:4142" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="6131:6136" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="6545:6546" ph="..." />
-                <marker date="1543882703570" expanded="true" signature="6545:6550" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="756:759" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="794:1360" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="1907:3533" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="2973:3533" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="3752:4164" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="6137:6142" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="6551:6552" ph="..." />
+                <marker date="1543885273186" expanded="true" signature="6551:6556" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="499" selection-start-line="499" selection-end-line="499" />
+            <state relative-caret-position="193">
+              <caret line="504" column="21" selection-start-line="504" selection-start-column="21" selection-end-line="504" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -158,8 +159,9 @@
       <find>create_profile</find>
       <find>get_profile</find>
       <find>delete_profile</find>
-      <find>update_profile</find>
       <find>&quot;id&quot;</find>
+      <find>update_profile</find>
+      <find>return</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -473,27 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="39" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="499" selection-start-line="499" selection-end-line="499" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -507,19 +492,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="504" column="21" selection-start-line="504" selection-start-column="21" selection-end-line="504" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="207" column="41" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
+        <state relative-caret-position="240">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <marker date="1543882703570" expanded="true" signature="756:759" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="794:1357" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="1904:3530" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="2970:3530" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="3749:4142" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="6131:6136" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="6545:6546" ph="..." />
-            <marker date="1543882703570" expanded="true" signature="6545:6550" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="756:759" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="794:1360" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="1907:3533" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="2973:3533" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="3752:4164" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="6137:6142" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="6551:6552" ph="..." />
+            <marker date="1543885273186" expanded="true" signature="6551:6556" ph="..." />
           </folding>
         </state>
       </provider>

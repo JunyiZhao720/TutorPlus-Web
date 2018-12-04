@@ -502,8 +502,8 @@ var app = function() {
   // If we are logged in, shows the form to add posts.
   //self.is_logged_in();
   self.is_logged_in_listener();
-  //self.get_profile("1112");
-  self.update_profile("1112");
+  self.get_profile();
+  //self.update_profile("1112");
   // Gets the posts.
   // self.get_posts();
 
