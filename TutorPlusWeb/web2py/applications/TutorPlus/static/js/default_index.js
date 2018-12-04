@@ -75,6 +75,7 @@ var app = function() {
   /*********************************************************************************************************/
   /*Profile functions*/
    self.get_profile = function(id) {
+
         $.getJSON(get_profile_url,{id: id}, function(data) {
                 console.log("I got my list");
                 console.log(data);
@@ -123,9 +124,19 @@ var app = function() {
             self.vue.id_token = idToken
             //self.check_idToken();
             // Send token to your backend via HTTPS
-            // $.post(check_userId_url, {
-            //      idToken: idToken
-            // });
+            var packet = {
+                idToken:idToken,
+                data:{
+                  //id:"3g6q663SXcazHSVuw7MFV4h9saX2"
+                }
+            };
+            let post_packet = JSON.stringify(packet);
+            $.getJSON(get_profile_url, {
+                 packet: post_packet
+            },function(data){
+              console.log("I got my data");
+              console.log(data);
+            });
 
         }).catch(function(error) {
           // Handle error
@@ -510,8 +521,8 @@ var app = function() {
   // If we are logged in, shows the form to add posts.
   //self.is_logged_in();
   self.is_logged_in_listener();
-  //self.get_profile();
-  self.check_idToken();
+  //self.get_profile();self.check_idToken();
+  //self.create_profile("1112")
   //self.update_profile("1112");
   // Gets the posts.
   // self.get_posts();

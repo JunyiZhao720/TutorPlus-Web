@@ -2,17 +2,30 @@
 # Auth methods field
 # -------------------------------------------------------------------------
 
+import json
+
 
 def check_userId():
-    id_token = request.vars.idToken
-    print(request.vars)
+    # id_token = request.vars.idToken
+    # print(request.vars)
+    # data = str(request.vars.data)
+    # data = data.replace("'", "\"")
+    # data = json.loads(data)
+    data = simplejson.loads(request.vars.data)
+    print(data["idToken"])
+
+    # data = simplejson.loads(request.vars.data)
+    # print(request.vars.data)
+    # # data = str (request.vars.data)
+    # # data = simplejson.loads(data)
+    # print(data)
     # id_token = str(id_token)
-    print(id_token)
-    try:
-        decoded_token = auth.verify_id_token(id_token)  # type:
-        print(decoded_token)
-    except Exception, e:
-        debug("check_userId", str(e))
+    # print(id_token)
+    # try:
+    #     decoded_token = auth.verify_id_token(id_token)  # type:
+    #     print(decoded_token)
+    # except Exception, e:
+    #     debug("check_userId", str(e))
 
     return "userId checked"
 
@@ -21,16 +34,42 @@ def check_userId():
 # Private methods field
 # -------------------------------------------------------------------------
 # -------Helper functions------------
-def __verify_idToken(idToken):
-    id_token = request.vars.idToken
+
+
+def __verify_idToken(id_token):
     if id_token is None:
-        return None
+        return False
     try:
         decoded_token = auth.verify_id_token(id_token)  # type:
-        return decoded_token[u"user_id"]
+        return decoded_token
     except Exception, e:
         debug("__verify_idToken", str(e))
         return None
+
+
+def __parsePacket(packet, check_data = True):
+    if packet is None:
+        debug("__parsePacket", "Packet is empty")
+        return None
+    else:
+        packet = simplejson.loads(packet)
+        if TOKEN_TRANS not in packet:
+            debug("__parsePacket", "Packet doesn't contain idToken")
+            return None
+        else:
+            cred = __verify_idToken(packet[TOKEN_TRANS])
+            if cred is None:
+                debug("__parsePacket", "IdToken is not valid")
+                return None
+            elif check_data:
+                if DATA_TRANS not in packet:
+                    debug("__parsePacket", "Data is empty")
+                    return None
+                else:
+                    data = packet[DATA_TRANS]
+                    return data
+            else:
+                return dict()
 
 
 def __checkStrList(lst):
@@ -121,10 +160,16 @@ from gluon.contrib import simplejson
 
 
 def get_profile():
-    uid = request.vars.id
-    if uid is None:
-        debug("get_profile", "Empty uid")
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("get_profile", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("get_profile", "Empty id")
         raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
     uid = str(uid)
     collections = [USER_COLLECTION]
     try:
@@ -136,20 +181,17 @@ def get_profile():
 
 
 def update_profile():
-    data = request.vars.data
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
     if data is None:
-        debug("update_profile", "Empty data")
-        raise HTTP(400, "Empty data")
-    data = simplejson.loads(data)
-    uid = data[ID_FIELD]
-    if uid is None:
+        debug("update_profile", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
         debug("update_profile", "Empty id")
         raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
     uid = str(uid)
-    # test code
-    # data = dict()
-    # data["count2"] = 0
-    # end test code
     for field_name in data:
         if field_name not in USER_PROFILE_FIELDS:
             debug("update_profile", uid + ": " + field_name + " is not a user field")
@@ -163,20 +205,17 @@ def update_profile():
 
 
 def create_profile():
-    data = request.vars.data
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
     if data is None:
-        debug("create_profile", "Empty data")
-        raise HTTP(400, "Empty data")
-    data = simplejson.loads(data)
-    uid = data[ID_FIELD]
-    if uid is None:
+        debug("create_profile", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
         debug("create_profile", "Empty id")
         raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
     uid = str(uid)
-    # test code
-    # data = dict()
-    # data["count2"] = 0
-    # end test code
     for field_name in data:
         if field_name not in USER_PROFILE_FIELDS:
             debug("create_profile", uid + ": <" + field_name + "> is not a user field")
@@ -193,6 +232,11 @@ def create_profile():
 # School & Course & Major
 # -------------------------------------------------------------------------
 def download_school_list():
+    data = __parsePacket(request.vars.packet, False)
+    if data is None:
+        debug("download_school_list", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
     collections = [SCHOOL_COLLECTION]
     try:
         schools = __downloadAllFromCollection(collections)
@@ -206,14 +250,18 @@ def download_school_list():
 
 
 def download_course_list():
-    school = request.vars.school
-    if school is None:
-        debug("download_course_list", "Empty school")
-        raise HTTP(400, "Parameter 'school' is empty")
-    collections = [SCHOOL_COLLECTION]
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("download_course_list", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("download_course_list", "Empty id")
+        raise HTTP(400, "Empty id")
+    school = data[ID_FIELD]
     school = str(school)
-    collections.append(school)
-    collections.append(COURSE_COLLECTION)
+    collections = [SCHOOL_COLLECTION, school, COURSE_COLLECTION]
     try:
         courses = __downloadAllFromCollection(collections)
         course_list = []

@@ -1,0 +1,744 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.ValueError'> insecure string pickle"
+p3
+sS'layer'
+p4
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\models\\db.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0000000010778130, file "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\models\\db.py", line 6>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.ValueError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.ValueError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.ValueError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S"'insecure string pickle'"
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.ValueError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.ValueError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.ValueError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.ValueError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.ValueError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.ValueError'>"
+p35
+sS'__doc__'
+p36
+S"'Inappropriate argument value (of correct type).'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.ValueError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.ValueError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.ValueError object>"
+p43
+sS'args'
+p44
+S"('insecure string pickle',)"
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.ValueError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.ValueError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.ValueError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.ValueError object>"
+p55
+ssS'evalue'
+p56
+S'insecure string pickle'
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\xdbg\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>test</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-c5281e09-5dcf-4910-b8d6-8950c405aab7<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_hw3</td><td style="vertical-align:top;">:</td><td><div>3:ac261a65-08f1-48e5-9d78-c2c71eb19157<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_tutorplus</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-21bce8e3-f74c-41cc-a493-af52962be8fd<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-5913a5f5-35da-4c4b-b07f-a68c6c3cbaa5<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_hw3=&quot;3:ac261a65-08f1-48e5-9d78-c2c71eb19157&quot;; session_id_admin=127.0.0.1-c5281e09-5dcf-4910-b8d6-8950c405aab7; session_id_tutorplus=127.0.0.1-21bce8e3-f74c-41cc-a493-af52962be8fd; session_id_welcome=127.0.0.1-5913a5f5-35da-4c4b-b07f-a68c6c3cbaa5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/site</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/test/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>54594</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\test\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\admin\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x48f1d88: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;DESKTOP-C7GQ937&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;test&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_hw3=&quot;3:ac261a65-08f1-48e5-9d78-c2c71eb19157&quot;; session_id_admin=127.0.0.1-c5281e09-5dcf-4910-b8d6-8950c405aab7; session_id_tutorplus=127.0.0.1-21bce8e3-f74c-41cc-a493-af52962be8fd; session_id_welcome=127.0.0.1-5913a5f5-35da-4c4b-b07f-a68c6c3cbaa5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/site</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::e884:20d3:a637:9e4f%20</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::4d4c:b6a:b6c2:d4a1%18</div></td></tr><tr><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td><div>169.233.217.83</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/test/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>54594</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/test/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x000000000311B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x0000000004885408&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x00000000052D2B88&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x000000000311B150&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x0000000004885408&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x00000000052D2B88&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\test\\\\&#x27;, &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py\\\\applications\\\\admin\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x48f1d88: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;DESKTOP-C7GQ937&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\zjylh\\\\Desktop\\\\TutorPlus-Web\\\\TutorPlusWeb\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;test&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>fe80::e884:20d3:a637:9e4f%20</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::4d4c:b6a:b6c2:d4a1%18</div></td></tr><tr><td><div>DESKTOP-C7GQ937</div></td></tr><tr><td><div>169.233.217.83</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 12, 4, 11, 55, 44, 553000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/test/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2018, 12, 4, 19, 55, 44, 553000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x0000000005213048&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0000000010778130, file ...b\\web2py\\applications\\test\\models\\db.py", line 6>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0000000010778130, file ...b\\web2py\\applications\\test\\models\\db.py", line 6>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, ...}, layer=r\'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\models\\db.py\', scode=<code object <module> at 0000000010778130, file ...b\\web2py\\applications\\test\\models\\db.py", line 6>)'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\models\\db.py'
+p90
+sg66
+(dp91
+S'db'
+p92
+S'<DAL uri="sqlite://storage.sqlite">'
+p93
+sS'session.connect'
+p94
+S'<bound method Session.connect of <Storage {}>>'
+p95
+sS'session'
+p96
+S'<Storage {}>'
+p97
+sS'request'
+p98
+S"<Storage {'function': 'index', 'cookies': <Simpl...False, 'is_https': False, 'client': '127.0.0.1'}>"
+p99
+sS'response'
+p100
+S"<Storage {'body': <cStringIO.StringO object at 0...000000000513E898>, 'view': 'default/index.html'}>"
+p101
+ssg72
+I26
+sg73
+(dp102
+I21
+S"    db = DAL(myconf.get('db.uri'),"
+p103
+sI22
+S"             pool_size=myconf.get('db.pool_size'),"
+p104
+sI23
+S"             migrate_enabled=myconf.get('db.migrate'),"
+p105
+sI24
+S"             check_reserved=['all'])"
+p106
+sI25
+S'    # I like to keep the session in the db.'
+p107
+sI26
+S'    session.connect(request, response, db=db)'
+p108
+sI27
+S'else:'
+p109
+sI28
+S"    # connect to Google BigTable (optional 'google:datastore://namespace')"
+p110
+sI29
+S"    db = DAL('google:datastore+ndb')"
+p111
+sI30
+S'    # store sessions and tickets there'
+p112
+ssg85
+S'()'
+p113
+sg87
+S'<module>'
+p114
+sa(dp115
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\globals.py'
+p116
+sg66
+(dp117
+S'migrate'
+p118
+S'True'
+p119
+sS'table_migrate'
+p120
+g119
+ssg72
+I953
+sg73
+(dp121
+I948
+S"                    Field('created_datetime', 'datetime',"
+p122
+sI949
+S'                          default=request.now),'
+p123
+sI950
+S"                    Field('modified_datetime', 'datetime'),"
+p124
+sI951
+S"                    Field('unique_key', length=64),"
+p125
+sI952
+S"                    Field('session_data', 'blob'),"
+p126
+sI953
+S'                    migrate=table_migrate,'
+p127
+sI954
+S'                )'
+p128
+sI955
+S'                table = db[tname]  # to allow for lazy table'
+p129
+sI956
+S'            response.session_db_table = table'
+p130
+sI957
+S'            if response.session_id:'
+p131
+ssg85
+S'(self=<Storage {}>, request=<Storage {\'function\': \'index\', \'cookies\': <Simpl...False, \'is_https\': False, \'client\': \'127.0.0.1\'}>, response=<Storage {\'body\': <cStringIO.StringO object at 0...000000000513E898>, \'view\': \'default/index.html\'}>, db=<DAL uri="sqlite://storage.sqlite">, tablename=\'web2py_session\', masterapp=\'test\', migrate=True, separate=None, check_client=False, cookie_key=None, cookie_expires=None, compression_level=None)'
+p132
+sg87
+S'connect'
+p133
+sa(dp134
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py'
+p135
+sg66
+(dp136
+S'fields'
+p137
+S'(<pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>)'
+p138
+sS'self'
+p139
+S'<DAL uri="sqlite://storage.sqlite">'
+p140
+sS'tablename'
+p141
+S"'web2py_session_test'"
+p142
+sS'kwargs'
+p143
+S"{'migrate': True}"
+p144
+sS'table'
+p145
+S'undefined'
+p146
+sS'self.lazy_define_table'
+p147
+S'<bound method DAL.lazy_define_table of <DAL uri="sqlite://storage.sqlite">>'
+p148
+ssg72
+I590
+sg73
+(dp149
+I585
+S'        if self._lazy_tables:'
+p150
+sI586
+S'            if tablename not in self._LAZY_TABLES or redefine:'
+p151
+sI587
+S'                self._LAZY_TABLES[tablename] = (tablename, fields, kwargs)'
+p152
+sI588
+S'            table = None'
+p153
+sI589
+S'        else:'
+p154
+sI590
+S'            table = self.lazy_define_table(tablename, *fields, **kwargs)'
+p155
+sI591
+S'        if tablename not in self.tables:'
+p156
+sI592
+S'            self.tables.append(tablename)'
+p157
+sI593
+S'        return table'
+p158
+sI594
+S''
+ssg85
+S'(self=<DAL uri="sqlite://storage.sqlite">, tablename=\'web2py_session_test\', *fields=(<pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>), **kwargs={\'migrate\': True})'
+p159
+sg87
+S'define_table'
+p160
+sa(dp161
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py'
+p162
+sg66
+(dp163
+S'polymodel'
+p164
+S'None'
+p165
+ssg72
+I624
+sg73
+(dp166
+I619
+S'            try:'
+p167
+sI620
+S'                GLOBAL_LOCKER.acquire()'
+p168
+sI621
+S'                self._adapter.create_table('
+p169
+sI622
+S'                    table, migrate=migrate,'
+p170
+sI623
+S'                    fake_migrate=fake_migrate,'
+p171
+sI624
+S'                    polymodel=polymodel)'
+p172
+sI625
+S'            finally:'
+p173
+sI626
+S'                GLOBAL_LOCKER.release()'
+p174
+sI627
+S'        else:'
+p175
+sI628
+S'            table._dbt = None'
+p176
+ssg85
+S'(self=<DAL uri="sqlite://storage.sqlite">, tablename=\'web2py_session_test\', *fields=(<pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>, <pydal.objects.Field object>), **kwargs={\'migrate\': True})'
+p177
+sg87
+S'lazy_define_table'
+p178
+sa(dp179
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py'
+p180
+sg66
+(dp181
+S'self'
+p182
+S'<pydal.adapters.sqlite.SQLite object>'
+p183
+sS'args'
+p184
+S'(<Table web2py_session_test (id, locked, client_i...me, modified_datetime, unique_key, session_data)>,)'
+p185
+sS'self.migrator'
+p186
+S'<pydal.migrator.Migrator object>'
+p187
+sS'self.migrator.create_table'
+p188
+S'<bound method Migrator.create_table of <pydal.migrator.Migrator object>>'
+p189
+sS'kwargs'
+p190
+S"{'fake_migrate': False, 'migrate': True, 'polymodel': None}"
+p191
+ssg72
+I798
+sg73
+(dp192
+I800
+S'    def _drop_table_cleanup(self, table):'
+p193
+sI801
+S'        super(SQLAdapter, self)._drop_table_cleanup(table)'
+p194
+sI802
+S'        if table._dbt:'
+p195
+sI793
+S''
+sI794
+S'    def bulk_insert(self, table, items):'
+p196
+sI795
+S'        return [self.insert(table, item) for item in items]'
+p197
+sI796
+S''
+sI797
+S'    def create_table(self, *args, **kwargs):'
+p198
+sI798
+S'        return self.migrator.create_table(*args, **kwargs)'
+p199
+sI799
+S''
+ssg85
+S"(self=<pydal.adapters.sqlite.SQLite object>, *args=(<Table web2py_session_test (id, locked, client_i...me, modified_datetime, unique_key, session_data)>,), **kwargs={'fake_migrate': False, 'migrate': True, 'polymodel': None})"
+p200
+sg87
+S'create_table'
+p201
+sa(dp202
+g64
+S'C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\migrator.py'
+p203
+sg66
+(dp204
+S'global pickle'
+p205
+S"<module 'pickle' from 'E:\\Anaconda\\Lib\\pickle.pyc'>"
+p206
+sS'tfile'
+p207
+S'<pydal.contrib.portalocker.LockedFile object>'
+p208
+sS'sql_fields_old'
+p209
+g146
+sS'pickle.load'
+p210
+S'<function load>'
+p211
+ssg72
+I296
+sg73
+(dp212
+I291
+S'                else:'
+p213
+sI292
+S"                    self.log('success!\\n', table)"
+p214
+sI293
+S'        else:'
+p215
+sI294
+S"            tfile = self.file_open(table._dbt, 'rb')"
+p216
+sI295
+S'            try:'
+p217
+sI296
+S'                sql_fields_old = pickle.load(tfile)'
+p218
+sI297
+S'            except EOFError:'
+p219
+sI298
+S'                self.file_close(tfile)'
+p220
+sI299
+S"                raise RuntimeError('File %s appears corrupted' % table._dbt)"
+p221
+sI300
+S'            self.file_close(tfile)'
+p222
+ssg85
+S'(self=<pydal.migrator.Migrator object>, table=<Table web2py_session_test (id, locked, client_i...me, modified_datetime, unique_key, session_data)>, migrate=True, fake_migrate=False, polymodel=None)'
+p223
+sg87
+g201
+sa(dp224
+g64
+S'E:\\Anaconda\\Lib\\pickle.py'
+p225
+sg66
+(dp226
+S'global Unpickler'
+p227
+S'<class pickle.Unpickler>'
+p228
+sS').load'
+p229
+g146
+sS'file'
+p230
+S'<pydal.contrib.portalocker.LockedFile object>'
+p231
+ssg72
+I1384
+sg73
+(dp232
+I1379
+S'    file = StringIO()'
+p233
+sI1380
+S'    Pickler(file, protocol).dump(obj)'
+p234
+sI1381
+S'    return file.getvalue()'
+p235
+sI1382
+S''
+sI1383
+S'def load(file):'
+p236
+sI1384
+S'    return Unpickler(file).load()'
+p237
+sI1385
+S''
+sI1386
+S'def loads(str):'
+p238
+sI1387
+S'    file = StringIO(str)'
+p239
+sI1388
+S'    return Unpickler(file).load()'
+p240
+ssg85
+S'(file=<pydal.contrib.portalocker.LockedFile object>)'
+p241
+sg87
+S'load'
+p242
+sa(dp243
+g64
+S'E:\\Anaconda\\Lib\\pickle.py'
+p244
+sg66
+(dp245
+S'self'
+p246
+S'<pickle.Unpickler instance>'
+p247
+sS'key'
+p248
+S"'S'"
+p249
+sS'dispatch'
+p250
+S"{'': <function load_eof>, '(': <function load_mark>, ')': <function load_empty_tuple>, '.': <function load_stop>, '0': <function load_pop>, '1': <function load_pop_mark>, '2': <function load_dup>, 'F': <function load_float>, 'G': <function load_binfloat>, 'I': <function load_int>, ...}"
+p251
+ssg72
+I864
+sg73
+(dp252
+I864
+S'                dispatch[key](self)'
+p253
+sI865
+S'        except _Stop, stopinst:'
+p254
+sI866
+S'            return stopinst.value'
+p255
+sI867
+S''
+sI868
+S'    # Return largest index k such that self.stack[k] is self.mark.'
+p256
+sI859
+S'        read = self.read'
+p257
+sI860
+S'        dispatch = self.dispatch'
+p258
+sI861
+S'        try:'
+p259
+sI862
+S'            while 1:'
+p260
+sI863
+S'                key = read(1)'
+p261
+ssg85
+S'(self=<pickle.Unpickler instance>)'
+p262
+sg87
+g242
+sa(dp263
+g64
+S'E:\\Anaconda\\Lib\\pickle.py'
+p264
+sg66
+(dp265
+S'builtinValueError'
+p266
+S"<type 'exceptions.ValueError'>"
+p267
+ssg72
+I972
+sg73
+(dp268
+I967
+S'    def load_string(self):'
+p269
+sI968
+S'        rep = self.readline()[:-1]'
+p270
+sI969
+S'        for q in "\\"\'": # double or single quote'
+p271
+sI970
+S'            if rep.startswith(q):'
+p272
+sI971
+S'                if len(rep) < 2 or not rep.endswith(q):'
+p273
+sI972
+S'                    raise ValueError, "insecure string pickle"'
+p274
+sI973
+S'                rep = rep[len(q):-len(q)]'
+p275
+sI974
+S'                break'
+p276
+sI975
+S'        else:'
+p277
+sI976
+S'            raise ValueError, "insecure string pickle"'
+p278
+ssg85
+S'(self=<pickle.Unpickler instance>)'
+p279
+sg87
+S'load_string'
+p280
+sasS'pyver'
+p281
+S'Python 2.7.15: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv\\Scripts\\python.exe (prefix: C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\venv)'
+p282
+sS'session'
+p283
+g59
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp284
+sS'etype'
+p285
+S"<type 'exceptions.ValueError'>"
+p286
+sS'date'
+p287
+S'Tue Dec  4 11:55:44 2018'
+p288
+sS'response'
+p289
+g59
+(S's\x98\x16\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x0000000005213D88&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_test</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-18b6d982-d9a2-449c-aeb9-7254f9e0e004<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div>: </div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>table3cols</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/index/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_test</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\sessions\\127.0.0.1-18b6d982-d9a2-449c-aeb9-7254f9e0e004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>c0762cbf4baf7f9af97c051e7fcb8083</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_test</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>test</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>db</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/index.html</div></td></tr></table></div>'
+tRp290
+sS'locals'
+p291
+(dp292
+S'q'
+S'"\'"'
+p293
+sS'rep'
+p294
+S'"\'client_ip\'\\r"'
+p295
+sS'self'
+p296
+S'<pickle.Unpickler instance>'
+p297
+sssS'traceback'
+p298
+S'Traceback (most recent call last):\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\applications\\test\\models\\db.py", line 26, in <module>\n    session.connect(request, response, db=db)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\globals.py", line 953, in connect\n    migrate=table_migrate,\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 590, in define_table\n    table = self.lazy_define_table(tablename, *fields, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\base.py", line 624, in lazy_define_table\n    polymodel=polymodel)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 798, in create_table\n    return self.migrator.create_table(*args, **kwargs)\n  File "C:\\Users\\zjylh\\Desktop\\TutorPlus-Web\\TutorPlusWeb\\web2py\\gluon\\packages\\dal\\pydal\\migrator.py", line 296, in create_table\n    sql_fields_old = pickle.load(tfile)\n  File "E:\\Anaconda\\Lib\\pickle.py", line 1384, in load\n    return Unpickler(file).load()\n  File "E:\\Anaconda\\Lib\\pickle.py", line 864, in load\n    dispatch[key](self)\n  File "E:\\Anaconda\\Lib\\pickle.py", line 972, in load_string\n    raise ValueError, "insecure string pickle"\nValueError: insecure string pickle\n'
+p299
+s.
