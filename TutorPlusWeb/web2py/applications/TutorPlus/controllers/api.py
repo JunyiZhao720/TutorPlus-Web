@@ -13,7 +13,7 @@ def check_userId():
 # -------------------------------------------------------------------------
 # Private methods field
 # -------------------------------------------------------------------------
-
+# -------Helper functions------------
 def __checkStrList(lst):
     if lst and isinstance(lst, list):
         return all(isinstance(elem, basestring) for elem in lst)
@@ -34,6 +34,7 @@ def __parseCollection(collections):
         raise ValueError('__parseCollection(): collections type not correct')
 
 
+# -------Single Document------------
 def __downloadDoc(collections, uid):
     if __checkStrList(collections) and isinstance(uid, str):
         try:
@@ -72,9 +73,26 @@ def __createDoc(collections, uid, dic):
 
         except Exception, e:
             raise ValueError(bracket(__createDoc) + str(e))
-
     else:
         raise ValueError(bracket(__createDoc) + 'collections or uid or dic type not correct')
+
+
+# -------Collection------------
+def __downloadAllFromCollection(collections):
+    if __checkStrList(collections):
+        try:
+            collec_ref = __parseCollection(collections)
+            docs = collec_ref.get()
+            docs_back = []
+            for doc in docs:
+                data = doc.to_dict()
+                data[ID_FIELD] = doc.id
+                docs_back.append(data)
+            return docs_back
+        except Exception, e:
+            raise ValueError(bracket("__downloadAllFromCollection") + str(e))
+    else:
+        raise ValueError(bracket("__downloadAllFromCollection") + 'collections type not correct')
 
 
 # -------------------------------------------------------------------------
@@ -104,7 +122,7 @@ def update_profile():
         debug("create_profile", "Empty data")
         return "Empty data"
     data = simplejson.loads(data)
-    uid = data["id"]
+    uid = data[ID_FIELD]
     if uid is None:
         debug("create_profile", "Empty id")
         return "Empty id"
@@ -132,7 +150,7 @@ def create_profile():
         debug("create_profile", "Empty data")
         return "Empty data"
     data = simplejson.loads(data)
-    uid = data["id"]
+    uid = data[ID_FIELD]
     if uid is None:
         debug("create_profile", "Empty id")
         return "Empty id"
@@ -152,3 +170,39 @@ def create_profile():
     except ValueError, e:
         debug("create_profile", str(e))
     return uid + ': Creating info encounters an error'
+
+
+# -------------------------------------------------------------------------
+# School & Course & Major
+# -------------------------------------------------------------------------
+def download_school_list():
+    collections = [SCHOOL_COLLECTION]
+    try:
+        schools = __downloadAllFromCollection(collections)
+        school_list = []
+        for school in schools:
+            school_list.append(school[ID_FIELD])
+        return response.json(dict(school_list=school_list))
+    except Exception, e:
+        debug("download_school_list", str(e))
+        raise HTTP(400, "Internal error")
+
+
+def download_course_list():
+    school = request.vars.school
+    if school is None:
+        debug("download_course_list", "Empty school")
+        raise HTTP(400, "Parameter 'school' is empty")
+    collections = [SCHOOL_COLLECTION]
+    school = str(school)
+    collections.append(school)
+    collections.append(COURSE_COLLECTION)
+    try:
+        courses = __downloadAllFromCollection(collections)
+        course_list = []
+        for course in courses:
+            course_list.append(school[ID_FIELD])
+        return response.json(dict(course_list=course_list))
+    except ValueError, e:
+        debug("download_course_list", str(e))
+        raise HTTP(400, "Internal error")

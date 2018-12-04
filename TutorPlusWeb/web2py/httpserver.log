@@ -17895,3 +17895,11 @@ P/1.1, 200, 0.001000
 127.0.0.1, 2018-12-03 15:24:13, GET, /TutorPlus/static/fonts/poppins/Poppins-SemiBold.ttf, HTTP/1.1, 200, 0.001000
 127.0.0.1, 2018-12-03 15:24:13, GET, /TutorPlus/static/images/icons/favicon.ico, HTTP/1.1, 200, 0.001000
 127.0.0.1, 2018-12-03 15:24:13, POST, /TutorPlus/api/update_profile, HTTP/1.1, 200, 0.120000
+127.0.0.1, 2018-12-03 15:55:00, GET, /TutorPlus/api/download_school_list, HTTP/1.1, 200, 0.464000
+127.0.0.1, 2018-12-03 15:55:00, GET, /favicon.ico, HTTP/1.1, 400, 0.000000
+127.0.0.1, 2018-12-03 15:59:31, GET, /TutorPlus/api/download_school_list, HTTP/1.1, 200, 1.163000
+127.0.0.1, 2018-12-03 15:59:31, GET, /favicon.ico, HTTP/1.1, 400, 0.000000
+127.0.0.1, 2018-12-03 16:08:24, GET, /TutorPlus/api/download_school_list, HTTP/1.1, 200, 0.310000
+127.0.0.1, 2018-12-03 16:08:25, GET, /favicon.ico, HTTP/1.1, 400, 0.000000
+127.0.0.1, 2018-12-03 16:08:43, GET, /TutorPlus/api/download_course_list, HTTP/1.1, 400, 0.010000
+127.0.0.1, 2018-12-03 16:08:43, GET, /favicon.ico, HTTP/1.1, 400, 0.000000

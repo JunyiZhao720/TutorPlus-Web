@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/models/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/models/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/admin/sessions/045/1f3/127.0.0.1-c93253e7-aa28-404e-9bbf-809ca003cc85" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin/sessions/045/1f3/127.0.0.1-c93253e7-aa28-404e-9bbf-809ca003cc85" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +50,7 @@
           <entry key="dummy" value="4" />
           <entry key="html" value="2598" />
           <entry key="js" value="2526" />
-          <entry key="py" value="3918" />
+          <entry key="py" value="4742" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -66,7 +59,7 @@
           <entry key="HTML" value="2598" />
           <entry key="JavaScript" value="2526" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="3918" />
+          <entry key="Python" value="4742" />
         </counts>
       </usages-collector>
     </session>
@@ -91,16 +84,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="110" column="18" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+            <state relative-caret-position="278">
+              <caret line="207" column="41" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
               <folding>
-                <marker date="1543878778480" expanded="true" signature="719:722" ph="..." />
-                <marker date="1543878778480" expanded="true" signature="757:1283" ph="..." />
-                <marker date="1543878778480" expanded="true" signature="1830:2820" ph="..." />
-                <marker date="1543878778480" expanded="true" signature="3039:3432" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="756:759" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="794:1357" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="1904:3530" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="2970:3530" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="3749:4142" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="6131:6136" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="6545:6546" ph="..." />
+                <marker date="1543882703570" expanded="true" signature="6545:6550" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="190">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <marker date="1543796424154" expanded="true" signature="1131:1231" ph="..." />
               </folding>
@@ -118,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="505" column="21" selection-start-line="505" selection-start-column="21" selection-end-line="505" selection-end-column="21" />
+            <state relative-caret-position="130">
+              <caret line="499" selection-start-line="499" selection-end-line="499" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -162,6 +159,7 @@
       <find>get_profile</find>
       <find>delete_profile</find>
       <find>update_profile</find>
+      <find>&quot;id&quot;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,8 +181,8 @@
         <option value="$PROJECT_DIR$/gluon/__init__.py" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" />
       </list>
     </option>
   </component>
@@ -200,7 +198,7 @@
       <path value="$PROJECT_DIR$/node_modules/vue-popup/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-645" />
     <option name="y" value="205" />
     <option name="width" value="1750" />
@@ -489,10 +487,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="499" selection-start-line="499" selection-end-line="499" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="190">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <marker date="1543796424154" expanded="true" signature="1131:1231" ph="..." />
           </folding>
@@ -501,23 +509,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="110" column="18" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+        <state relative-caret-position="278">
+          <caret line="207" column="41" selection-start-line="207" selection-start-column="41" selection-end-line="207" selection-end-column="41" />
           <folding>
-            <marker date="1543878778480" expanded="true" signature="719:722" ph="..." />
-            <marker date="1543878778480" expanded="true" signature="757:1283" ph="..." />
-            <marker date="1543878778480" expanded="true" signature="1830:2820" ph="..." />
-            <marker date="1543878778480" expanded="true" signature="3039:3432" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="505" column="21" selection-start-line="505" selection-start-column="21" selection-end-line="505" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1543882703570" expanded="true" signature="756:759" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="794:1357" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="1904:3530" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="2970:3530" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="3749:4142" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="6131:6136" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="6545:6546" ph="..." />
+            <marker date="1543882703570" expanded="true" signature="6545:6550" ph="..." />
           </folding>
         </state>
       </provider>
