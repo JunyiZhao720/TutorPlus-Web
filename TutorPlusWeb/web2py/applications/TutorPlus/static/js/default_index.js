@@ -127,7 +127,8 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  id:"ucsc"
+                  id:"ucsc",
+                    course_id:"cmps101"
                 }
             };
             let post_packet = JSON.stringify(packet);

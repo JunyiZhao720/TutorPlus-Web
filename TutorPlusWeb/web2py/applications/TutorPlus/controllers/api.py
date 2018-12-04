@@ -288,10 +288,51 @@ def download_major_list():
     collections = [SCHOOL_COLLECTION]
     try:
         school_doc = __downloadDoc(collections, school)
-        if MAJOR_LIST_FIELD in school_doc:
-            return response.json(dict(major_list=school_doc[MAJOR_LIST_FIELD]))
+        if SCHOOL_MAJOR_LIST_FIELD in school_doc:
+            return response.json(dict(major_list=school_doc[SCHOOL_MAJOR_LIST_FIELD]))
         else:
             return response.json(dict(major_list=[]))
     except ValueError, e:
         debug("download_major_list", str(e))
+        raise HTTP(400, "Internal error")
+
+
+# -------------------------------------------------------------------------
+# Query
+# -------------------------------------------------------------------------
+
+def download_tutor_profile_list():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("query_tutor_profile_list", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # parse data
+    if ID_FIELD not in data:
+        debug("query_tutor_profile_list", "Empty id")
+        raise HTTP(400, "Empty id")
+    school = data[ID_FIELD]
+    school = str(school)
+    if COURSE_TRANS not in data:
+        debug("query_tutor_profile_list", "Empty course_id")
+        raise HTTP(400, "Empty course_id")
+    course = data[COURSE_TRANS]
+    course = str(course)
+
+    collections = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, course, TUTOR_COLLECTION]
+    # print(collections)
+    try:
+        # download tutor ids
+        tutors = __downloadAllFromCollection(collections)
+        tutor_list = []
+        profile_list = []
+        for tutor in tutors:
+            tutor_list.append(str(tutor[ID_FIELD]))
+        # download tutor profiles
+        collections = [USER_COLLECTION]
+        for tutor in tutor_list:
+            profile_list.append(__downloadDoc(collections, tutor))
+        return response.json(dict(profile_list=profile_list))
+    except ValueError, e:
+        debug("query_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")

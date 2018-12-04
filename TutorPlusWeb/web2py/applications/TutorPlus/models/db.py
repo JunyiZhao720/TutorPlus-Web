@@ -32,13 +32,14 @@ USER_PROFILE_FIELDS = (ID_FIELD, COUNT_FIELD, GENDER_FIELD, IMAGE_URL_FIELD, MAJ
                        SCHEDULE_FIELD, TAG_FIELD, UNIVERSITY_FIELD)
 
 # School fields
-MAJOR_LIST_FIELD = "major_list"
+SCHOOL_MAJOR_LIST_FIELD = "major_list"
+
 
 # Transmission fields
 TOKEN_TRANS = "idToken"
 PACKET_TRANS = "packet"
 DATA_TRANS = "data"
-
+COURSE_TRANS = "course_id"
 
 
 
