@@ -1,145 +1,427 @@
 {{extend 'import.html'}}
 {{block head}}
 {{end}}
+<!--
 <html>
-    <body>
-        <div id="vue-index">
-            <!----------------------------------- login part -------------------------------->
-            <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" v-show="!logged_in">
+    <body>-->
+<div id="vue-index">
+  <v-app>
+  <!----------------------------------- login part -------------------------------->
+  <!--login_idx is used to control display: LOGIN, SIGNUP-->
+  <div id="login_part" v-show="!logged_in">
 
-                <!---login--->
-                <span v-show="login_idx === 'LOGIN'">
-                    <div class="limiter">
-                        <div class="container-login100">
-                            <div class="wrap-login100 p-t-85 p-b-20">
+    <!---login--->
+    <span v-show="login_idx === 'LOGIN'">
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
 
-                                <div class="login100-form validate-form" id="login_div">
+            <div class="login100-form validate-form" id="login_div">
 
-                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+              <img src="{{=URL('static','images/Logo.png')}}" align="middle">
 
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username" id="username_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                <input class="input100" type="text" name="username" id="username_field">
+                <span class="focus-input100" data-placeholder="Email"></span>
+              </div>
 
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password" id="password_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="password" id="password_field">
+                <span class="focus-input100" data-placeholder="Password"></span>
+              </div>
 
-                                    <div class="container-login100-form-btn">
-                                        <button v-on:click="login()" class="login100-form-btn">Login</button>
-                                    </div>
+              <div class="container-login100-form-btn">
+                <button v-on:click="login()" class="login100-form-btn">Login</button>
+              </div>
 
-                                    <ul class="login-more p-t-190">
-                                        <li>
-                                            <span class="txt1">
-                                                Don’t have an account?
-                                            </span>
+              <ul class="login-more p-t-190">
+                <li>
+                  <span class="txt1">
+                    Don’t have an account?
+                  </span>
 
-                                            <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
-                                                Sign up
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </span>
-
-
-                <!---signup--->
-                <span v-show="login_idx === 'SIGNUP'">
-                    <div class="limiter">
-                        <div class="container-login100">
-                            <div class="wrap-login100 p-t-85 p-b-20">
-
-                                <div class="login100-form validate-form" id="login_div">
-
-                                    <img src="{{=URL('static','images/Logo.png')}}" align="middle">
-
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username-signup" id="username_signup_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password-signup" id="password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="re-password" id="re-password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Re-Password"></span>
-                                    </div>
-
-                                    <div class="container-login50-form-btn">
-                                        <button v-on:click="" class="login50-form-btn">Signup</button>
-                                        <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </span>
-
-                <!---messageBox--->
-                <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
-                    <h3 slot="body">${ login_message }</h3>
-                    <h3 slot="header">Login error</h3>
-                </modal>
+                  <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
+                    Sign up
+                  </a>
+                </li>
+              </ul>
             </div>
-            <!------------------------------------------------------------------------------->
+          </div>
+        </div>
+      </div>
+    </span>
 
 
-            <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="logged_in">
-                <aside>
-                    <figure>
-                        <div id="avatar"></div>
-                        <figcaption>User Name</figcaption>
-                    </figure>
-                    <nav>
-                        <ul>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
-                            <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
-                        </ul>
-                    </nav>
-                </aside>
+    <!---signup--->
+    <span v-show="login_idx === 'SIGNUP'">
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
 
-                <main>
-                    <!---home--->
-                    <div v-show="main_idx === 'HOME'">
-                        <h1>Welcome to Tutor+</h1>
-                        <p>Tutor+ is a right place to find your ideal tutor!</p>
-                        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
-                    </div>
-                    <!---search--->
-                    <div v-show="main_idx === 'SEARCH'">
-                        Search page
-                    </div>
-                    <!---profile--->
-                    <div v-show="main_idx === 'PROFILE'">
-                        Profile page
-                        <button v-on:click="logout()">logout</button>
-                    </div>
-                    <!---result--->
-                    <div v-show="main_idx === 'RESULT'">
-                        Result page
-                    </div>
+            <div class="login100-form validate-form" id="login_div">
 
-                </main>
+              <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                <input class="input100" type="text" name="username-signup" id="username_signup_field">
+                <span class="focus-input100" data-placeholder="Email"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="password-signup" id="password_signup_field">
+                <span class="focus-input100" data-placeholder="Password"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="re-password" id="re-password_signup_field">
+                <span class="focus-input100" data-placeholder="Re-Password"></span>
+              </div>
+
+              <div class="container-login50-form-btn">
+                <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+              </div>
             </div>
-            <!------------------------------------------------------------------------------->
+          </div>
+        </div>
+      </div>
+    </span>
+
+    <!---messageBox--->
+    <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
+      <h3 slot="body">${ login_message }</h3>
+      <h3 slot="header">Login error</h3>
+    </modal>
+  </div>
+  <!------------------------------------------------------------------------------->
+
+
+  <!------------------------------------ main part -------------------------------->
+  <div id="main_part" v-show="logged_in">
+    <aside>
+      <figure>
+        <div id="avatar"></div>
+        <figcaption>${profile_name}</figcaption>
+      </figure>
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
+          <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <!---home--->
+      <div v-show="main_idx === 'HOME'">
+        <h1>Welcome to Tutor+</h1>
+        <p>Tutor+ is a right place to find your ideal tutor!</p>
+        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+        <button v-on:click="logout()">logout</button>
+      </div>
+      <!---search--->
+      <div v-show="main_idx === 'SEARCH'">
+
+        <div class="card card-1" style="min-height:825px">
+          <div class="card-heading"></div>
+          <div class="card-body">
+
+            <h3>You can</h3>
+
+            <v-layout row>
+              <v-flex xs5>
+              <v-autocomplete v-model="search_university" :items="school_list" :label="`University`"  clearable>
+                <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                </v-slide-x-reverse-transition>
+              </v-autocomplete>
+              </v-flex>
+
+              <v-flex xs4>
+                <v-autocomplete v-model="search_course" :items="profile_major_list" :label="`Course`"  clearable>
+                  <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                  </v-slide-x-reverse-transition>
+                </v-autocomplete>
+                <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
+              </v-flex>
+              <v-flex xs2>
+                <v-btn color="info">Search by course</v-btn>
+              </v-flex>
+            </v-layout>
+
+            <h3>or</h3>
+
+            <v-layout row>
+              <v-flex xs5 sm5 md3>
+                <v-text-field v-model="search_name" label="Tutor Name"  clearable></v-text-field>
+              </v-flex>
+
+              <v-flex  xs2>
+                <v-btn color="info">Search by name</v-btn>
+              </v-flex>
+            </v-layout>
+
+            <v-divider></v-divider>
+            </br>
+
+            <v-layout row wrap>
+
+              <v-flex d-flex xs12 sm6 md4>
+                <v-card color="blue" dark class="white--text" style="margin:5px">
+                  <v-layout row>
+                      <v-flex xs7 style="margin-top:auto; margin-bottom:auto">
+                        <v-card-title primary-title>
+                        <div>
+                          <div class="headline">Somebody Name</div>
+                          <div>Overall Rating: 4.8</div>
+                          <div>University of California, Davis</div>
+                          <div>Computer Science</div>
+                          <div>Grade on this course: A</div>
+                        </div>
+                        </v-card-title>
+                      </v-flex>
+                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
+                        <v-img
+                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                          height="125px"
+                          contain
+                        ></v-img>
+                      </v-flex>
+                  </v-layout>
+
+                  <v-divider light></v-divider>
+                  <v-card-actions>
+                    <v-btn flat dark>Details</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+
+              <v-flex d-flex xs12 sm6 md4>
+                <v-card color="blue" dark class="white--text" style="margin:5px">
+                  <v-layout row>
+                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
+                        <v-card-title primary-title>
+                        <div>
+                          <div class="headline">Somebody Name</div>
+                          <div>Overall Rating: 4.8</div>
+                          <div>University of California, Davis</div>
+                          <div>Computer Science</div>
+                          <div>Grade on this course: A</div>
+                        </div>
+                        </v-card-title>
+                      </v-flex>
+                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
+                        <v-img
+                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                          height="125px"
+                          contain
+                        ></v-img>
+                      </v-flex>
+                  </v-layout>
+
+                  <v-divider light></v-divider>
+                  <v-card-actions>
+                    <v-btn flat dark>Details</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+
+              <v-flex d-flex xs12 sm6 md4>
+                <v-card color="blue" dark class="white--text" style="margin:5px">
+                  <v-layout row>
+                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
+                        <v-card-title primary-title>
+                        <div>
+                          <div class="headline">Somebody Name</div>
+                          <div>Overall Rating: 4.8</div>
+                          <div>University of California, Davis</div>
+                          <div>Computer Science</div>
+                          <div>Grade on this course: A</div>
+                        </div>
+                        </v-card-title>
+                      </v-flex>
+                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
+                        <v-img
+                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                          height="125px"
+                          contain
+                        ></v-img>
+                      </v-flex>
+                  </v-layout>
+
+                  <v-divider light></v-divider>
+                  <v-card-actions>
+                    <v-btn flat dark>Details</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+
+              <v-flex d-flex xs12 sm6 md4>
+                <v-card color="blue" dark class="white--text" style="margin:5px">
+                  <v-layout row>
+                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
+                        <v-card-title primary-title>
+                        <div>
+                          <div class="headline">Somebody Name</div>
+                          <div>Overall Rating: 4.8</div>
+                          <div>University of California, Davis</div>
+                          <div>Computer Science</div>
+                          <div>Grade on this course: A</div>
+                        </div>
+                        </v-card-title>
+                      </v-flex>
+                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
+                        <v-img
+                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                          height="125px"
+                          contain
+                        ></v-img>
+                      </v-flex>
+                  </v-layout>
+
+                  <v-divider light></v-divider>
+                  <v-card-actions>
+                    <v-btn flat dark>Details</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+
+            </v-layout>
+
+          </div><!--Card body-->
+        </div><!--Card-->
+      </div>
+
+
+      <!---profile--->
+      <div v-show="main_idx === 'PROFILE'">
+
+        <div class="wrapper wrapper--w680">
+        <div class="card card-1" style="min-height:825px">
+
+            <div class="card-heading"></div>
+            <div class="card-body">
+
+              <div v-if="!become_a_TA">
+                <h2 class="title">Update your Profile</h2>
+
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-text-field
+                      v-bind:value="profile_email"
+                      label="Email"
+                      disabled
+                    ></v-text-field>
+                  </v-flex>
+                </div>
+
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-text-field v-model="profile_name" label="Name"></v-text-field>
+                  </v-flex>
+                </div>
+
+                <div>
+                  <v-autocomplete v-model="profile_university" :items="school_list" :label="`University`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </div>
+
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-autocomplete v-model="profile_major" :items="profile_major_list" :label="`Major`" clearable>
+                      <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                      </v-slide-x-reverse-transition>
+                    </v-autocomplete>
+                    <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
+                  </v-flex>
+                </div>
+
+                <div>
+                  <v-flex xs12 sm6 md3>
+                  <v-autocomplete v-model="profile_gender" :items="['Male','Female']" :label="`Gender`">
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                  </v-flex>
+                </div>
+
+                <v-textarea
+                  v-model="profile_personal_statement"
+                  color="teal"
+                  placeholder="Talk about yourself..."
+                  style="margin-top:45px; margin-bottom:25px"
+                >
+                  <div slot="label">
+                    Personal Statement <small></small>
+                  </div>
+                </v-textarea>
+
+
+                <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
+                  </div>
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=true">Become a Tutor!</button>
+                  </div>
+                </v-layout>
+
+              </div>
+
+              <div v-if="become_a_TA">
+                <h2 class="title">Update your Profile</h2>
+
+
+                <ta-course-card
+                  v-for="TutorCard in tutor_card_list"
+                  v-bind:card="TutorCard"
+                  v-bind:school_list="school_list"
+                  v-bind:school_data="school_data">
+                </ta-course-card>
+
+                <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
+
+                <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateTutorProfile()">Update</button>
+                  </div>
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=false">Back To You Personal Profile</button>
+                  </div>
+                </v-layout>
+
+              </div>
+
+            </div>
 
         </div>
+        </div>
 
-    </body>
+
+
+
+      </div>
+
+
+      <!---result--->
+      <div v-show="main_idx === 'RESULT'">
+        Result page
+      </div>
+
+    </main>
+  </div>
+  <!------------------------------------------------------------------------------->
+</v-app>
+</div>
+
+
+
+<!-- Main JS-->
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
-</html>
 
-
+<!--
+</body>
+</html>-->

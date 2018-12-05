@@ -8,32 +8,35 @@
 
 	<!--========================================Login-CSS==================================================-->
 	<!--===============================================================================================-->
+
 	<link rel="icon" type="image/png" href="{{=URL('static','images/icons/favicon.ico')}}">
 	<!-- <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/bootstrap/css/bootstrap.min.css')}}">-->
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/iconic/css/material-design-iconic-font.min.css')}}">
+
+
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animate/animate.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/css-hamburgers/hamburgers.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animsition/css/animsition.min.css')}}">
+
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/iconic/css/material-design-iconic-font.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/select2/select2.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/daterangepicker/daterangepicker.css')}}">
+
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/util.css')}}">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
 	<!--===============================================================================================-->
 
 
 	<!--========================================Login-CSS-JS==================================================-->
 	<!--===============================================================================================-->
-	<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+
 	<script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
 	<script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
 	<script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-
-
+	<!--
+		<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 		<script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
     <script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
+    <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>-->
 	<script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
 	<!--===============================================================================================-->
 
@@ -51,6 +54,7 @@
 
 	<!--========================================Main-CSS==================================================-->
 	<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/index.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/main.css')}}">
 	<!--===============================================================================================-->
@@ -60,10 +64,6 @@
 	<!--===============================================================================================-->
 	<!--<script src="{{=URL('static','js/main.js')}}"></script>-->
 	<script src="{{=URL('static', 'js/vue.js')}}"></script>
-	<script src="https://unpkg.com/vue@latest"></script>
-	<!--<script src="https://unpkg.com/vue-select@latest"></script>-->
-	<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-	<script src="{{=URL('static','js/vue-resource.js')}}"></script>
 	<!--===============================================================================================-->
 
 	<!--==========================================Other=============================================-->
@@ -108,26 +108,91 @@
 	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
 	<script>
 		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
-			authDomain: "tutorplus-93a0f.firebaseapp.com",
-			databaseURL: "https://tutorplus-93a0f.firebaseio.com",
-			projectId: "tutorplus-93a0f",
-			storageBucket: "tutorplus-93a0f.appspot.com",
-			messagingSenderId: "690236283457"
-		};
-		firebase.initializeApp(config);
-	</script>
+  var config = {
+    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
+    authDomain: "tutorplus-93a0f.firebaseapp.com",
+    databaseURL: "https://tutorplus-93a0f.firebaseio.com",
+    projectId: "tutorplus-93a0f",
+    storageBucket: "tutorplus-93a0f.appspot.com",
+    messagingSenderId: "690236283457"
+  };
+  firebase.initializeApp(config);
+</script>
 	<!--===============================================================================================-->
 </head>
 
-<!--============================================Main==============================================-->
-<!--===============================================================================================-->
-
 <body>
-	{{include}}
-</body>
+
+	<div class="wrapper wrapper--w680">
+		<div class="card card-1">
+			<div class="card-heading"></div>
+			<div class="card-body">
+				<h2 class="title">Update your Profile</h2>
+				<form action="https://www.google.com" method="GET">
+					<div class="input-group">
+						<input class="input--style-1" type="text" id="first_name" value="" placeholder="Fisrt Name" name="first_name">
+					</div>
+					<div class="input-group">
+						<input class="input--style-1" type="text" id="last_name" value="" placeholder="Last Name" name="last_name">
+					</div>
+					<div class="input-group">
+						<div class="rs-select2 js-select-simple select2-search">
+							<select name="university" id="profile_university" value="">
+								<option disabled="disabled" value="" selected>University</option>
+								<option value="">Refuse to Claim</option>
+								<option value="bc">Boston College (BC)</option>
+								<option value="ucsf">University of California, San Francisco (UCSF)</option>
+								<option value="ucsc">University of California, Santa Cruz (UCSC)</option>
+								<option value="ucd">University of California, Davis (UCD)</option>
+								<option value="uic">University of Illinois at Chicago (UIC)</option>
+								<option value="ubc">University of British Columbia (UBC)</option>
+							</select>
+							<div class="select-dropdown"></div>
+						</div>
+					</div>
+					<div class="input-group">
+						<input class="input--style-1" type="text" id="profile_major" value="" placeholder="Major" name="major">
+					</div>
+
+					<div class="row row-space">
+						<div class="col-2">
+							<div class="input-group" id="university-select">
+								<div class="rs-select2 js-select-simple select--no-search">
+									<select name="gender" id="profile_gender">
+										<option disabled="disabled" value="" selected>Gender</option>
+										<option value="">Refuse to Claim</option>
+										<option value="ucsf">Male</option>
+										<option value="ucsc">Female</option>
+									</select>
+									<div class="select-dropdown"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="p-t-20">
+						<button class="btn btn--radius btn--green" type="submit">Update</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+	<!-- Jquery JS-->
+	<script src="{{=URL('static','vendor/jquery/jquery.min.js')}}"></script>
+	<!-- Vendor JS-->
+
+	<script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
+	<script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
+	<script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
+
+	<!-- Main JS-->
+	<script src="{{=URL('static','js/userProfile.js')}}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
-
-<!--===============================================================================================-->
+<!-- end document-->
