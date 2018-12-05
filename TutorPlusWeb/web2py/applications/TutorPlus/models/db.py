@@ -40,7 +40,7 @@ TOKEN_TRANS = "idToken"
 PACKET_TRANS = "packet"
 DATA_TRANS = "data"
 COURSE_TRANS = "course_id"
-
+SCHOOL_TRANS = "school_id"
 
 
 # -------------------------------------------------------------------------

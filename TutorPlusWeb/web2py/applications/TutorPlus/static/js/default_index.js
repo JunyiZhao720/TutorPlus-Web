@@ -127,7 +127,7 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  id:"gb6r7KS0F9YKaJupmTXhdM4pu9b2"
+                  school_id:"ucsc"
 
                 }
             };

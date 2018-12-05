@@ -227,6 +227,7 @@ def create_profile():
         debug("create_profile", str(e))
         raise HTTP(400, uid + ': Creating info encounters an error')
 
+
 def download_course_list_for_the_user():
     # check if packet valid
     data = __parsePacket(request.vars.packet)
@@ -244,11 +245,12 @@ def download_course_list_for_the_user():
         courses = __downloadAllFromCollection(collections)
         course_list_user = []
         for course in courses:
-            course_list_user.append(course[ID_FIELD])
+            course_list_user.append(course)
         return response.json(dict(course_list_user=course_list_user))
     except ValueError, e:
         debug("download_course_list_for_the_user", str(e))
         raise HTTP(400, "Internal error")
+
 
 # -------------------------------------------------------------------------
 # School & Course & Major
@@ -271,51 +273,25 @@ def download_school_list():
         raise HTTP(400, "Internal error")
 
 
-def download_course_list():
-    # check if packet valid
+def download_school_fields():
     data = __parsePacket(request.vars.packet)
     if data is None:
-        debug("download_course_list", "Packet errors")
+        debug("download_school_fields", "Packet errors")
         raise HTTP(400, "Packet errors")
-    # main fields
-    if ID_FIELD not in data:
-        debug("download_course_list", "Empty id")
-        raise HTTP(400, "Empty id")
-    school = data[ID_FIELD]
+    # parse data
+    if SCHOOL_TRANS not in data:
+        debug("download_school_fields", "Empty school_id")
+        raise HTTP(400, "Empty school_id")
+    school = data[SCHOOL_TRANS]
     school = str(school)
-    collections = [SCHOOL_COLLECTION, school, COURSE_COLLECTION]
-    try:
-        courses = __downloadAllFromCollection(collections)
-        course_list = []
-        for course in courses:
-            course_list.append(course[ID_FIELD])
-        return response.json(dict(course_list=course_list))
-    except ValueError, e:
-        debug("download_course_list", str(e))
-        raise HTTP(400, "Internal error")
-
-
-def download_major_list():
-    # check if packet valid
-    data = __parsePacket(request.vars.packet)
-    if data is None:
-        debug("download_major_list", "Packet errors")
-        raise HTTP(400, "Packet errors")
-    # main fields
-    if ID_FIELD not in data:
-        debug("download_major_list", "Empty id")
-        raise HTTP(400, "Empty id")
-    school = data[ID_FIELD]
-    school = str(school)
+    # main field
     collections = [SCHOOL_COLLECTION]
     try:
-        school_doc = __downloadDoc(collections, school)
-        if SCHOOL_MAJOR_LIST_FIELD in school_doc:
-            return response.json(dict(major_list=school_doc[SCHOOL_MAJOR_LIST_FIELD]))
-        else:
-            return response.json(dict(major_list=[]))
+        # download school fields
+        school = __downloadDoc(collections, school)
+        return response.json(dict(school=school))
     except ValueError, e:
-        debug("download_major_list", str(e))
+        debug("download_school_fields", str(e))
         raise HTTP(400, "Internal error")
 
 
@@ -330,10 +306,10 @@ def download_tutor_profile_list():
         debug("download_tutor_profile_list", "Packet errors")
         raise HTTP(400, "Packet errors")
     # parse data
-    if ID_FIELD not in data:
-        debug("download_tutor_profile_list", "Empty id")
-        raise HTTP(400, "Empty id")
-    school = data[ID_FIELD]
+    if SCHOOL_TRANS not in data:
+        debug("download_tutor_profile_list", "Empty school_id")
+        raise HTTP(400, "Empty school_id")
+    school = data[SCHOOL_TRANS]
     school = str(school)
     if COURSE_TRANS not in data:
         debug("download_tutor_profile_list", "Empty course_id")
@@ -342,7 +318,6 @@ def download_tutor_profile_list():
     course = str(course)
 
     collections = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, course, TUTOR_COLLECTION]
-    # print(collections)
     try:
         # download tutor ids
         tutors = __downloadAllFromCollection(collections)
@@ -358,4 +333,3 @@ def download_tutor_profile_list():
     except ValueError, e:
         debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
-
