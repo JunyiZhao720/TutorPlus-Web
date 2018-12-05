@@ -252,6 +252,47 @@ def download_course_list_for_the_user():
         raise HTTP(400, "Internal error")
 
 
+def upload_course_list_for_the_user():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("upload_course_list_for_the_user", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # check id
+    if ID_FIELD not in data:
+        debug("upload_course_list_for_the_user", "Empty id")
+        raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+
+    # check course field
+    if COURSE_FIELD not in data:
+        debug("upload_course_list_for_the_user", "Empty course list")
+        raise HTTP(400, "Empty course list")
+    course_list = data[COURSE_FIELD]
+
+    # server changes data
+    update_list = []
+    delete_list = []
+    for course in course_list:
+        if ACTIVE_TRANS not in course or DATA_TRANS not in course:
+            debug("upload_course_list_for_the_user", "Course doesn't a is_active field or data field for " + course)
+            raise HTTP(400, "Course doesn't a is_active field or data field for  " + course)
+        else:
+            state = bool(course[ACTIVE_TRANS])
+            update_list.append(course[DATA_TRANS]) if state else delete_list.append(course[DATA_TRANS])
+
+    # db change fields
+    collections_user = [USER_COLLECTION]
+    collections_school = [SCHOOL_COLLECTION]
+    try:
+        # update list
+        # delete list
+    except ValueError, e:
+        debug("download_course_list_for_the_user", str(e))
+        raise HTTP(400, "Internal error")
+
+
 # -------------------------------------------------------------------------
 # School & Course & Major
 # -------------------------------------------------------------------------
