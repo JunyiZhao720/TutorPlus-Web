@@ -285,12 +285,12 @@ def upload_course_list_for_the_user():
     # db change fields
     collections_user = [USER_COLLECTION]
     collections_school = [SCHOOL_COLLECTION]
-    try:
-        # update list
-        # delete list
-    except ValueError, e:
-        debug("download_course_list_for_the_user", str(e))
-        raise HTTP(400, "Internal error")
+    # try:
+    #     # update list
+    #     # delete list
+    # except ValueError, e:
+    #     debug("download_course_list_for_the_user", str(e))
+    #     raise HTTP(400, "Internal error")
 
 
 # -------------------------------------------------------------------------

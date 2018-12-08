@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/controllers/api.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1543876801769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1544298126497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="888496440">
@@ -19,10 +19,11 @@
         <counts>
           <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="6" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="6" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -86,18 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
-              <folding>
-                <marker date="1543885273186" expanded="true" signature="756:759" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="794:1360" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="1907:3533" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="2973:3533" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="3752:4164" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="6137:6142" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="6551:6552" ph="..." />
-                <marker date="1543885273186" expanded="true" signature="6551:6556" ph="..." />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="287" selection-start-line="287" selection-end-line="292" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -107,9 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1159">
               <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <marker date="1543796424154" expanded="true" signature="1131:1231" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -212,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,52 +225,16 @@
               <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../执行/正在做/CS142/Project/project files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -352,8 +303,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29289544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2969169" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -490,9 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1159">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <marker date="1543796424154" expanded="true" signature="1131:1231" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -508,18 +457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
-          <folding>
-            <marker date="1543885273186" expanded="true" signature="756:759" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="794:1360" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="1907:3533" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="2973:3533" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="3752:4164" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="6137:6142" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="6551:6552" ph="..." />
-            <marker date="1543885273186" expanded="true" signature="6551:6556" ph="..." />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="287" selection-start-line="287" selection-end-line="292" selection-end-column="43" />
         </state>
       </provider>
     </entry>

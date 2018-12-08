@@ -20426,3 +20426,6 @@ P/1.1, 200, 0.002000
 127.0.0.1, 2018-12-04 16:37:03, GET, /TutorPlus/static/fonts/poppins/Poppins-SemiBold.ttf, HTTP/1.1, 200, 0.002000
 127.0.0.1, 2018-12-04 16:37:03, GET, /TutorPlus/static/images/icons/favicon.ico, HTTP/1.1, 200, 0.001000
 127.0.0.1, 2018-12-04 16:37:04, GET, /TutorPlus/api/download_school_fields, HTTP/1.1, 200, 0.178000
+127.0.0.1, 2018-12-08 11:42:12, GET, /, HTTP/1.1, 200, 1.649000
+127.0.0.1, 2018-12-08 11:42:13, GET, /TutorPlus/static/images/icons/favicon.ico, HTTP/1.1, 200, 0.000000
+127.0.0.1, 2018-12-08 11:42:14, GET, /api/download_school_fields, HTTP/1.1, 200, 0.653000
