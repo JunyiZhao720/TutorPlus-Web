@@ -38,7 +38,7 @@ def check_userId():
 
 def __verify_idToken(id_token):
     if id_token is None:
-        return False
+        return None
     try:
         decoded_token = auth.verify_id_token(id_token)  # type:
         return decoded_token
@@ -130,9 +130,9 @@ def __createDoc(collections, uid, dic):
             debug("__createDoc", uid + ": {}".format(dic))
 
         except Exception, e:
-            raise ValueError(bracket(__createDoc) + str(e))
+            raise ValueError(bracket("__createDoc") + str(e))
     else:
-        raise ValueError(bracket(__createDoc) + 'collections or uid or dic type not correct')
+        raise ValueError(bracket("__createDoc") + 'collections or uid or dic type not correct')
 
 
 # -------Collection------------
@@ -255,6 +255,7 @@ def download_course_list_for_the_user():
 def upload_course_list_for_the_user():
     # check if packet valid
     data = __parsePacket(request.vars.packet)
+
     if data is None:
         debug("upload_course_list_for_the_user", "Packet errors")
         raise HTTP(400, "Packet errors")
@@ -276,43 +277,39 @@ def upload_course_list_for_the_user():
     delete_list = []
     for course in course_list:
         if ACTIVE_TRANS not in course or DATA_TRANS not in course:
-            debug("upload_course_list_for_the_user", "Course doesn't a is_active field or data field for " + course)
-            raise HTTP(400, "Course doesn't a is_active field or data field for  " + course)
+            debug("upload_course_list_for_the_user", "Course doesn't contain a is_active field or data field for " + str(course))
+            raise HTTP(400, "Course doesn't contain a is_active field or data field for  " + str(course))
         else:
+            # append different state list to different lists
             state = bool(course[ACTIVE_TRANS])
             update_list.append(course[DATA_TRANS]) if state else delete_list.append(course[DATA_TRANS])
-
     # db change fields
-    collections_user = [USER_COLLECTION]
-    collections_school = [SCHOOL_COLLECTION]
-    # try:
-    #     # update list
-    #     # delete list
-    # except ValueError, e:
-    #     debug("download_course_list_for_the_user", str(e))
-    #     raise HTTP(400, "Internal error")
+    collections_user = [USER_COLLECTION, uid, COURSE_COLLECTION]
+
+    try:
+        # update list
+        for course in update_list:
+            school = str(course[u"school"])
+            courseName = str(course[u"course"])
+            name = str(school + u"-" + courseName)
+            # update list to our own collection
+            __createDoc(collections_user, name, course)
+            # update list to school collection
+            collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
+            tutor_data = dict()
+            tutor_data[ID_FIELD] = str(uid).decode('unicode-escape')
+            __createDoc(collections_school, uid, tutor_data)
+
+        # delete list from our own collection
+        # delete list from school collection
+    except ValueError, e:
+        debug("upload_course_list_for_the_user", str(e))
+        raise HTTP(400, "Internal error")
 
 
 # -------------------------------------------------------------------------
 # School & Course & Major
 # -------------------------------------------------------------------------
-def download_school_list():
-    data = __parsePacket(request.vars.packet, False)
-    if data is None:
-        debug("download_school_list", "Packet errors")
-        raise HTTP(400, "Packet errors")
-    # main fields
-    collections = [SCHOOL_COLLECTION]
-    try:
-        schools = __downloadAllFromCollection(collections)
-        school_list = []
-        for school in schools:
-            school_list.append(school[ID_FIELD])
-        return response.json(dict(school_list=school_list))
-    except Exception, e:
-        debug("download_school_list", str(e))
-        raise HTTP(400, "Internal error")
-
 
 def download_school_fields():
     data = __parsePacket(request.vars.packet)

@@ -120,15 +120,24 @@ var app = function() {
         console.log("User listener: login!");
         firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
 
-            console.log("idToken:" + idToken)
-            self.vue.id_token = idToken
+            console.log("idToken:" + idToken);
+            self.vue.id_token = idToken;
             //self.check_idToken();
             // Send token to your backend via HTTPS
             var packet = {
                 idToken:idToken,
                 data:{
-                  school_id:"ucsc"
-
+                  id:"gb6r7KS0F9YKaJupmTXhdM4pu9b2",
+                  courses:[
+                      {
+                        data:{
+                          course: "cmps102",
+                          school: "ucsc",
+                          grade: "A"
+                        },
+                        is_active: true
+                      }
+                  ]
                 }
             };
             let post_packet = JSON.stringify(packet);
