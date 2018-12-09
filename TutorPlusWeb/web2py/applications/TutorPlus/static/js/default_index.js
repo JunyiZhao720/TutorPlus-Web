@@ -127,7 +127,7 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  id:"gb6r7KS0F9YKaJupmTXhdM4pu9b2",
+                  id:"jhlUrLQl6ucogip1caYqTBHVQwb2",
                   courses:[
                       {
                         data:{
@@ -135,7 +135,7 @@ var app = function() {
                           school: "ucsc",
                           grade: "A"
                         },
-                        is_active: false
+                        is_active: true
                       }
                   ]
                 }

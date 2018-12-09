@@ -1,36 +1,4 @@
 # -------------------------------------------------------------------------
-# Auth methods field
-# -------------------------------------------------------------------------
-
-import json
-
-
-def check_userId():
-    # id_token = request.vars.idToken
-    # print(request.vars)
-    # data = str(request.vars.data)
-    # data = data.replace("'", "\"")
-    # data = json.loads(data)
-    data = simplejson.loads(request.vars.data)
-    print(data["idToken"])
-
-    # data = simplejson.loads(request.vars.data)
-    # print(request.vars.data)
-    # # data = str (request.vars.data)
-    # # data = simplejson.loads(data)
-    # print(data)
-    # id_token = str(id_token)
-    # print(id_token)
-    # try:
-    #     decoded_token = auth.verify_id_token(id_token)  # type:
-    #     print(decoded_token)
-    # except Exception, e:
-    #     debug("check_userId", str(e))
-
-    return "userId checked"
-
-
-# -------------------------------------------------------------------------
 # Private methods field
 # -------------------------------------------------------------------------
 # -------Helper functions------------
@@ -145,7 +113,7 @@ def __deleteDoc(collections, uid):
         except Exception, e:
             raise ValueError(bracket("__deleteDoc") + str(e))
     else:
-        raise ValueError(bracket("__deleteDoc") + 'collections or uid or dic type not correct')
+        raise ValueError(bracket("__deleteDoc") + 'collections or uid type not correct')
 
 
 # -------Collection------------
@@ -268,7 +236,6 @@ def download_course_list_for_the_user():
 def upload_course_list_for_the_user():
     # check if packet valid
     data = __parsePacket(request.vars.packet)
-
     if data is None:
         debug("upload_course_list_for_the_user", "Packet errors")
         raise HTTP(400, "Packet errors")
@@ -285,9 +252,25 @@ def upload_course_list_for_the_user():
         raise HTTP(400, "Empty course list")
     course_list = data[COURSE_FIELD]
 
-    # server changes data
+    # delete all previous data
+    collections_user = [USER_COLLECTION, uid, COURSE_COLLECTION]
+    try:
+        courses = __downloadAllFromCollection(collections_user)
+        for course in courses:
+            school = str(course["school"])
+            courseName = str(course["course"])
+            Name = school + "-" + courseName
+            # delete from school
+            collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
+            __deleteDoc(collections_school, uid)
+            # delete from our field
+            __deleteDoc(collections_user, Name)
+    except Exception, e:
+        debug("upload_course_list_for_the_user: delete previous data: ", str(e))
+        raise HTTP(400, "Internal error")
+
+    # check is active
     update_list = []
-    delete_list = []
     for course in course_list:
         if ACTIVE_TRANS not in course or DATA_TRANS not in course:
             debug("upload_course_list_for_the_user",
@@ -296,10 +279,9 @@ def upload_course_list_for_the_user():
         else:
             # append different state list to different lists
             state = bool(course[ACTIVE_TRANS])
-            update_list.append(course[DATA_TRANS]) if state else delete_list.append(course[DATA_TRANS])
-    # db change fields
-    collections_user = [USER_COLLECTION, uid, COURSE_COLLECTION]
+            if state: update_list.append(course[DATA_TRANS])
 
+    # db insert
     try:
         # update list
         for course in update_list:
@@ -311,18 +293,6 @@ def upload_course_list_for_the_user():
             # to school collection
             collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
             __createDoc(collections_school, uid, {ID_FIELD: str(uid).decode('unicode-escape')})
-        # delete list
-        for course in delete_list:
-            school = str(course[u"school"])
-            courseName = str(course[u"course"])
-            name = str(school + u"-" + courseName)
-            # from our own collection
-            __deleteDoc(collections_user, name)
-            # from school collection
-            collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
-            __deleteDoc(collections_school, uid)
-
-
     except ValueError, e:
         debug("upload_course_list_for_the_user", str(e))
         raise HTTP(400, "Internal error")
@@ -392,3 +362,5 @@ def download_tutor_profile_list():
     except ValueError, e:
         debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
+
+# def download_tutor_replies():
