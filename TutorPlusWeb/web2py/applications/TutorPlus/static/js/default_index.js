@@ -135,7 +135,7 @@ var app = function() {
                           school: "ucsc",
                           grade: "A"
                         },
-                        is_active: true
+                        is_active: false
                       }
                   ]
                 }

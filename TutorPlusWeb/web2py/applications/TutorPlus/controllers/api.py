@@ -135,6 +135,19 @@ def __createDoc(collections, uid, dic):
         raise ValueError(bracket("__createDoc") + 'collections or uid or dic type not correct')
 
 
+def __deleteDoc(collections, uid):
+    if __checkStrList(collections) and isinstance(uid, str):
+        try:
+            doc_ref = __parseCollection(collections).document(uid)
+            doc_ref.delete()
+            debug("__deleteDoc", uid + " was successfully deleted.")
+
+        except Exception, e:
+            raise ValueError(bracket("__deleteDoc") + str(e))
+    else:
+        raise ValueError(bracket("__deleteDoc") + 'collections or uid or dic type not correct')
+
+
 # -------Collection------------
 def __downloadAllFromCollection(collections):
     if __checkStrList(collections):
@@ -277,7 +290,8 @@ def upload_course_list_for_the_user():
     delete_list = []
     for course in course_list:
         if ACTIVE_TRANS not in course or DATA_TRANS not in course:
-            debug("upload_course_list_for_the_user", "Course doesn't contain a is_active field or data field for " + str(course))
+            debug("upload_course_list_for_the_user",
+                  "Course doesn't contain a is_active field or data field for " + str(course))
             raise HTTP(400, "Course doesn't contain a is_active field or data field for  " + str(course))
         else:
             # append different state list to different lists
@@ -292,16 +306,23 @@ def upload_course_list_for_the_user():
             school = str(course[u"school"])
             courseName = str(course[u"course"])
             name = str(school + u"-" + courseName)
-            # update list to our own collection
+            # to our own collection
             __createDoc(collections_user, name, course)
-            # update list to school collection
+            # to school collection
             collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
-            tutor_data = dict()
-            tutor_data[ID_FIELD] = str(uid).decode('unicode-escape')
-            __createDoc(collections_school, uid, tutor_data)
+            __createDoc(collections_school, uid, {ID_FIELD: str(uid).decode('unicode-escape')})
+        # delete list
+        for course in delete_list:
+            school = str(course[u"school"])
+            courseName = str(course[u"course"])
+            name = str(school + u"-" + courseName)
+            # from our own collection
+            __deleteDoc(collections_user, name)
+            # from school collection
+            collections_school = [SCHOOL_COLLECTION, school, COURSE_COLLECTION, courseName, TUTOR_COLLECTION]
+            __deleteDoc(collections_school, uid)
 
-        # delete list from our own collection
-        # delete list from school collection
+
     except ValueError, e:
         debug("upload_course_list_for_the_user", str(e))
         raise HTTP(400, "Internal error")
