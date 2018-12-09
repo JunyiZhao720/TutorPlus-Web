@@ -363,4 +363,28 @@ def download_tutor_profile_list():
         debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
 
-# def download_tutor_replies():
+
+def download_tutor_replies():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("download_tutor_replies", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("download_tutor_replies", "Empty id")
+        raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+    collections = [USER_COLLECTION, uid, RATING_COLLECTION]
+    try:
+        replies = __downloadAllFromCollection(collections)
+        tutor_reply_list = []
+        for reply in replies:
+            tutor_reply_list.append(reply)
+        return response.json(dict(tutor_reply_list=tutor_reply_list))
+    except ValueError, e:
+        debug("download_tutor_replies", str(e))
+        raise HTTP(400, "Internal error")
+
+# def upload_user_rating():
