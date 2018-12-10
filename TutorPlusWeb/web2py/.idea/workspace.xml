@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
     </list>
@@ -30,7 +31,7 @@
         <counts>
           <entry key="css" value="8" />
           <entry key="html" value="13" />
-          <entry key="js" value="9" />
+          <entry key="js" value="10" />
           <entry key="json" value="1" />
           <entry key="py" value="9" />
         </counts>
@@ -40,7 +41,7 @@
           <entry key="CSS" value="8" />
           <entry key="HTML" value="13" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="9" />
+          <entry key="JavaScript" value="10" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
@@ -48,16 +49,16 @@
         <counts>
           <entry key="css" value="605" />
           <entry key="dummy" value="4" />
-          <entry key="html" value="2568" />
-          <entry key="js" value="1903" />
+          <entry key="html" value="2604" />
+          <entry key="js" value="1907" />
           <entry key="py" value="1388" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="605" />
-          <entry key="HTML" value="2568" />
-          <entry key="JavaScript" value="1903" />
+          <entry key="HTML" value="2604" />
+          <entry key="JavaScript" value="1907" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1388" />
         </counts>
@@ -111,8 +112,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="171">
+              <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -208,6 +218,7 @@
       <find>limiter</find>
       <find>RESULT</find>
       <find>unpkg</find>
+      <find>Username</find>
     </findStrings>
     <replaceStrings>
       <replace>#005dc3</replace>
@@ -228,12 +239,12 @@
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/app.js" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/copy.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/style.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/import.html" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
       </list>
     </option>
@@ -317,6 +328,14 @@
               <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web2py" type="57c3d0a0:Web2PyBaseDirNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="TutorPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web2py" type="b2602c69:ProjectViewProjectNode" />
@@ -531,13 +550,6 @@
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/web2py.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="250" column="25" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/login.jpg" />
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/Logo.png">
       <provider selected="true" editor-type-id="images" />
@@ -603,10 +615,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="171">
+          <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
         </state>
       </provider>
     </entry>

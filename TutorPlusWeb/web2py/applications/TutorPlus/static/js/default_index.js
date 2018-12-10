@@ -246,6 +246,15 @@ var app = function() {
             // form_content: "",
             // post_list: [],
             // star_indices: [1, 2, 3, 4, 5],
+            show1: false,
+            show2: true,
+            show3: false,
+            show4: false,
+            password: 'Password',
+            rules: {
+              min: v => v.length >= 8 || 'Min 8 characters',
+              emailMatch: () => ('The email and password you entered don\'t match')
+            }
         },
         methods: {
             // login-part
