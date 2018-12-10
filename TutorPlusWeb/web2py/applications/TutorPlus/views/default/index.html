@@ -7,7 +7,7 @@
     let update_profile_url = "{{=URL('api', 'update_profile')}}";
     let create_profile_url = "{{=URL('api', 'create_profile')}}";
     let check_userId_url = "{{=URL('api', 'check_userId')}}";
-    let get_school_list_url = "{{=URL('api', 'get_profile')}}"
+    let get_school_list_url = "{{=URL('api', 'download_tutor_profile_list_by_name')}}"
 </script>
 {{block end}}
 <!--========================================Front-end==================================================-->
@@ -135,8 +135,11 @@
       </div>
       <!--========================================SEARCH==================================================-->
 	<!--===============================================================================================-->
-      <div v-show="main_idx === 'SEARCH'">
-        Search page
+      <div class="search-div" v-show="main_idx === 'SEARCH'">
+        <h1>Welcome to Tutor+</h1>
+        <p>Tutor+ is a right place to find your ideal tutor!</p>
+        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+        <button v-on:click="logout()">logout</button>
 
       </div>
       <!--========================================PROFILE==================================================-->
@@ -255,9 +258,9 @@
       <!--========================================RESULT==================================================-->
 	<!--===============================================================================================-->
       <div v-show="main_idx === 'RESULT'">
-      {{=URL('api', 'get_profile')}}
+        <h1>Tutor Name</h1>
+        <h2>Tutor description</h2>
       </div>
-
     </main>
   </div>
   <!------------------------------------------------------------------------------->

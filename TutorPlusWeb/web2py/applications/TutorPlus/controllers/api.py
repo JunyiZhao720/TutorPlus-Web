@@ -409,19 +409,62 @@ def download_tutor_profile_list():
                 profile[RATING_COUNT_FIELD]) if RATING_SUM_FIELD in profile and RATING_COUNT_FIELD in profile else 0
             major = profile[MAJOR_FIELD] if MAJOR_FIELD in profile else ""
             grade = courseInfo[GRADE_TUTOR] if courseInfo is not None and GRADE_TUTOR in courseInfo else "Null"
+            imageURL = profile[IMAGE_URL_FIELD] if IMAGE_URL_FIELD in profile else ""
             profile_list.append({
-                "id": tutor,
-                "name": name,
-                "university": university,
-                "major": major,
-                "rating": rating,
-                "grade": grade
+                ID_FIELD: tutor,
+                NAME_FIELD: name,
+                UNIVERSITY_FIELD: university,
+                MAJOR_FIELD: major,
+                RATING_FIELD: rating,
+                GRADE_TUTOR: grade,
+                IMAGE_URL_FIELD: imageURL
             })
         return response.json(dict(profile_list=profile_list))
     except ValueError, e:
         debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
 
+
+def download_tutor_profile_list_by_name():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("download_tutor_profile_list_by_name", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # parse data
+    if NAME_FIELD not in data:
+        debug("download_tutor_profile_list_by_name", "Empty name")
+        raise HTTP(400, "Empty school_id")
+    name = str(data[NAME_FIELD]).decode('unicode-escape')
+
+    try:
+        # download tutor ids
+        collect = __parseCollection([USER_COLLECTION])
+        docs = collect.where(NAME_FIELD, u'==', name).get()
+        profile_list = []
+        for tutor in docs:
+            tutor_id = tutor.id
+            tutor = tutor.to_dict()
+            name = tutor[NAME_FIELD]
+            university = tutor[UNIVERSITY_FIELD] if UNIVERSITY_FIELD in tutor else ""
+            rating = float(tutor[RATING_SUM_FIELD]) / float(
+                tutor[RATING_COUNT_FIELD]) if RATING_SUM_FIELD in tutor and RATING_COUNT_FIELD in tutor else 0
+            major = tutor[MAJOR_FIELD] if MAJOR_FIELD in tutor else ""
+            grade = None
+            imageURL = tutor[IMAGE_URL_FIELD] if IMAGE_URL_FIELD in tutor else ""
+            profile_list.append({
+                ID_FIELD: tutor_id,
+                NAME_FIELD: name,
+                UNIVERSITY_FIELD: university,
+                MAJOR_FIELD: major,
+                RATING_FIELD: rating,
+                GRADE_TUTOR: grade,
+                IMAGE_URL_FIELD: imageURL
+            })
+        return response.json(dict(profile_list=profile_list))
+    except ValueError, e:
+        debug("download_tutor_profile_list", str(e))
+        raise HTTP(400, "Internal error")
 
 def download_tutor_replies():
     # check if packet valid
