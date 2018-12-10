@@ -33,14 +33,22 @@
 
 	<!--========================================Login-CSS-JS==================================================-->
 	<!--===============================================================================================-->
-	<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-	<script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
-	<script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
-	<script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
-	<script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fjquery-3.2.1.min.js?alt=media&token=9025de31-9923-46b0-b8d9-3793fc8133bb
+"></script>
+	<script src="{https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fanimsition.min.js?alt=media&token=6ac85505-2307-439b-8486-ef9f559c7bd1
+"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fpopper.js?alt=media&token=2464add3-d016-4ebf-9c1e-8c276172c1f3
+"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fbootstrap.min.js?alt=media&token=38140b7e-10fd-459a-9a00-16bdb6402846
+"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fselect2.min.js?alt=media&token=985e12d3-a118-4d61-ac2e-766ea8ff2c73
+"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fmoment.min.js?alt=media&token=7dde9652-7801-44ec-9df3-f26d8f79213f
+"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fdaterangepicker.js?alt=media&token=71454977-a755-4370-acaa-55e7cfbd1bc0
+"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fcountdowntime.js?alt=media&token=ccaa43c7-e499-4ac3-ac2c-d7227ffe4fb1
+"></script>
 	<!--===============================================================================================-->
 
 
@@ -51,61 +59,31 @@
 
 
 	<!-- Main CSS-->
-	<link rel="stylesheet" href="{{=URL('static', 'css/userProfile.css')}}">
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2FuserProfile.css?alt=media&token=eb89ac7b-b59b-4388-96d2-e045c0b64772">
 	<!--===============================================================================================-->
 
 
 	<!--========================================Main-CSS==================================================-->
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/index.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/main.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Findex.css?alt=media&token=dd20fca6-f487-4916-8ea2-467775465d16
+">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fmain.css?alt=media&token=3a9fb0b8-200a-4aa8-b4e0-24148d55ed70
+">
 	<!--===============================================================================================-->
 
 
 	<!--==========================================JS=============================================-->
 	<!--===============================================================================================-->
-	<!--<script src="{{=URL('static','js/main.js')}}"></script>-->
-	<!--<script src="{{=URL('static', 'js/vue.js')}}"></script>-->
 	<script src="https://unpkg.com/vue@latest"></script>
 	<!--<script src="https://unpkg.com/vue-select@latest"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-	<script src="{{=URL('static','js/vue-resource.js')}}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 	<!--===============================================================================================-->
 
 	<!--==========================================Other=============================================-->
 	<!--===============================================================================================-->
 	{{include "web2py_ajax.html"}}
-	<!--===============================================================================================-->
-
-	<!--==========================================MessageBox-Modal======================================-->
-	<!--===============================================================================================-->
-	<script type="text/x-template" id="modal-template">
-		<transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
-          <div class="modal-header">
-            <slot name="header">
-              Error
-            </slot>
-          </div>
-          <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
-          </div>
-          <div class="modal-footer">
-            <slot name="footer">
-              <button class=".modal-default-button" @click="$emit('close')">
-                OK
-              </button>
-            </slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </transition>
-</script>
 	<!--===============================================================================================-->
 
 

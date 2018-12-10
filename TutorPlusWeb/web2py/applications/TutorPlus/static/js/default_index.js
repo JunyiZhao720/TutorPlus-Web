@@ -180,19 +180,19 @@ var app = function() {
                     return;
                 }
                 console.log("User listener: login!");
-            // firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-            //
-            //     console.log(idToken)
-            //     // Send token to your backend via HTTPS
-            //     // $.post(check_userId_url, {
-            //     //     userId: idToken
-            //     // });
-            //
-            // }).catch(function(error) {
-            //   // Handle error
-            //     const errorMessage = error.message;
-            //     alert("Error : " + errorMessage);
-            // });
+            firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+
+                console.log(idToken)
+                // Send token to your backend via HTTPS
+                // $.post(check_userId_url, {
+                //     userId: idToken
+                // });
+
+            }).catch(function(error) {
+              // Handle error
+                const errorMessage = error.message;
+                alert("Error : " + errorMessage);
+            });
                 self.vue.logged_in = true;
             } else{
               // not logging in
