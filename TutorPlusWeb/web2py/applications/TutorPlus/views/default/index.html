@@ -10,7 +10,7 @@
 
             <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" class="limiter" v-show="!logged_in">
+            <div id="login_part" class="limiter" v-show="logged_in">
                 <!---messageBox--->
                         <v-alert
                           :value="alert"
@@ -127,7 +127,7 @@
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="logged_in">
+            <div id="main_part" v-show="!logged_in">
                 <aside>
                     <figure>
                         <figcaption>User Name</figcaption>
@@ -173,7 +173,7 @@
                                         <v-flex xs6>
                                             <div class="col-md-6 w3-banner-grid-left">
                                 <div class="w3-banner-img">
-                                    <h3 class="test">Chris Adam</h3>
+                                    <h3 class="test">Chris Adam<b>&nbsp &#9733</b><b>4.7</b></h3>
                                 </div>
                                 <div class=" w3-right-addres-1">
                                     <ul class="address">
@@ -193,6 +193,12 @@
                                             <ul class="agileits-address-text">
                                                 <li class="agile-it-adress-left"><b>Major</b></li>
                                                 <li>Computer Science</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li class="agile-it-adress-left"><b>Email</b></li>
+                                                <li>123@123.com</li>
                                             </ul>
                                         </li>
                                     </ul>
