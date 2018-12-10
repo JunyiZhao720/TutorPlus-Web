@@ -56,7 +56,7 @@ var app = function() {
 
           firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
             self.vue.idToken = idToken;
-            //console.log(idToken);
+            console.log(idToken);
           });
 
           self.vue.user_uid = user.uid;
@@ -163,8 +163,9 @@ var app = function() {
       var user = firebase.auth().currentUser;
       if (user) {
         console.log("In signup: detected a user");
-        var db = firebase.firestore();
+        //var db = firebase.firestore();
         var user_uid = user.uid;
+        /*
         db.collection("users").doc(user_uid).set({
           email: user.email,
           gender: '',
@@ -172,7 +173,7 @@ var app = function() {
           name: '',
           university: '',
           ps: ''
-        });
+        });*/
         user.sendEmailVerification().then(function() {
           // Email sent.
           console.log("A email is sent to the user");
@@ -393,41 +394,42 @@ var app = function() {
       updateTutorProfile: self.updateTutorProfile,
       searchTutorByCourse: self.searchTutorByCourse,
       searchTutorByName: self.searchTutorByName,
-      queryTest: self.searchTutorByCourse,
+
+      queryTest: function() {
+        console.log("hello in query1");
+        var packet = {
+          idToken: self.vue.idToken,
+          data: {
+            id: "SAMPLE"
+          }
+        }
+        console.log(packet);
+        $.get("https://tutorplus-93a0f.appspot.com/get-profile", packet,
+        function(data, status){
+          console.log("hello wolrd in query2");
+          console.log(data);
+          console.log(data.profile)
+        });
+      },
 
       showTutorDetail: function(uid){
         this.detailPage= uid;
         this.main_idx = 'RESULT';
-
-      }
-      /*function() {
-        this.$http.get("https://tutorplus-93a0f.appspot.com/echo",
-        {
-          params: {
-            idToken: this.idToken,
-            data:{
-              id: this.user_uid,
-              school_id: "ucsc"
-            }
+        var packet = {
+          idToken: self.vue.idToken,
+          data: {
+            id: uid,
           }
-        })
-        .then(function (data) {
-          //console.log(data);
-          console.log(data.body);
+        }
+        //console.log(packet);
+        console.log("before get")
+        $.get("https://tutorplus-93a0f.appspot.com/get-profile", packet,
+        function(data, status){
+          console.log("after get")
+          console.log(data.profile)
         });
-      }*/
-      // add_post: self.add_post,
-      // // Likers.
-      // like_mouseover: self.like_mouseover,
-      // like_mouseout: self.like_mouseout,
-      // like_click: self.like_click,
-      // // Show/hide who liked.
-      // show_likers: self.show_likers,
-      // hide_likers: self.hide_likers,
-      // // Star ratings.
-      // stars_out: self.stars_out,
-      // stars_over: self.stars_over,
-      // set_stars: self.set_stars
+      }
+
     },
     watch: {
       profile_university: function(newSchool, oldSchool) {
