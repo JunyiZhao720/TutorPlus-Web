@@ -127,12 +127,12 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  //"id": "gb6r7KS0F9YKaJupmTXhdM4pu9b2",
+                  "id": "gb6r7KS0F9YKaJupmTXhdM4pu9b2",
                   // "tutor_id": "jhlUrLQl6ucogip1caYqTBHVQwb2",
                   // "rating": 4,
                   // "reply": "this is just a test"
-                    "school_id": "ucsc",
-                    "course_id": "cmps102"
+                  //   "school_id": "ucsc",
+                  //   "course_id": "cmps102"
                 }
             };
             let post_packet = JSON.stringify(packet);
@@ -195,15 +195,8 @@ var app = function() {
               });
             } else {
               // doc.data() will be undefined in this case
-              console.log("Cannot find user doc, creating new document.");
-              db.collection("users").doc(user_uid).set({
-                email: user.email,
-                gender: '',
-                major: '',
-                name: '',
-                university: '',
-                ps: ''
-              });
+              console.log("Cannot find user doc");
+
             }
           });
         } else {

@@ -156,44 +156,44 @@ from gluon.contrib import simplejson
 def get_profile():
     # check if packet valid
     data = __parsePacket(request.vars.packet, True, True)
-    # if data is None:
-    #     debug("get_profile", "Packet errors")
-    #     raise HTTP(400, "Packet errors")
-    # # main fields
-    # if ID_FIELD not in data:
-    #     debug("get_profile", "Empty id")
-    #     raise HTTP(400, "Empty id")
-    # uid = data[ID_FIELD]
-    # uid = str(uid)
-    # cred = data[TOKEN_TRANS]
-    # cred = str(cred[u"uid"])
-    # if cred != uid:
-    #     debug("get_profile", cred + " " + uid + " doesn't match")
-    #     raise HTTP(400, "Id doesn't match!")
+    if data is None:
+        debug("get_profile", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data:
+        debug("get_profile", "Empty id")
+        raise HTTP(400, "Empty id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+    cred = data[TOKEN_TRANS]
+    cred = str(cred[u"uid"])
+    if cred != uid:
+        debug("get_profile", cred + " " + uid + " doesn't match")
+        raise HTTP(400, "Id doesn't match!")
 
-    # # get data
-    # collections = [USER_COLLECTION]
-    # try:
-    #     if __ifDocExist(collections, uid):
-    #         profile = __downloadDoc(collections, uid)
-    #     else:
-    #         profile = {
-    #             COUNT_FIELD: 0,
-    #             GENDER_FIELD: "",
-    #             ID_FIELD: uid,
-    #             IMAGE_URL_FIELD: "",
-    #             MAJOR_FIELD: "",
-    #             NAME_FIELD: "",
-    #             PS_FIELD: "",
-    #             SCHEDULE_FIELD: "",
-    #             TAG_FIELD: [],
-    #             UNIVERSITY_FIELD: ""
-    #         }
-    #         # __createDoc(collections, uid, profile)
-    #     return response.json(dict(profile=profile))
-    # except ValueError, e:
-    #     debug("get_profile", str(e))
-    #     raise HTTP(400, uid + ": Document doesn't exist")
+    # get data
+    collections = [USER_COLLECTION]
+    try:
+        if __ifDocExist(collections, uid):
+            profile = __downloadDoc(collections, uid)
+        else:
+            profile = {
+                COUNT_FIELD: 0,
+                GENDER_FIELD: "",
+                ID_FIELD: str(uid).decode('unicode-escape'),
+                IMAGE_URL_FIELD: "",
+                MAJOR_FIELD: "",
+                NAME_FIELD: "",
+                PS_FIELD: "",
+                SCHEDULE_FIELD: "",
+                TAG_FIELD: [],
+                UNIVERSITY_FIELD: ""
+            }
+            __createDoc(collections, uid, profile)
+        return response.json(dict(profile=profile))
+    except ValueError, e:
+        debug("get_profile", str(e))
+        raise HTTP(400, uid + ": Document doesn't exist")
 
 
 def update_profile():
@@ -218,6 +218,37 @@ def update_profile():
     except ValueError, e:
         debug(update_profile, str(e))
         raise HTTP(400, uid + ': Updating info encounters an error')
+
+
+# def create_profile():
+#     # check if packet valid
+#     data = __parsePacket(request.vars.packet)
+#     if data is None:
+#         debug("create_profile", "Packet errors")
+#         raise HTTP(400, "Packet errors: data is null")
+#     # main fields
+#     if ID_FIELD not in data:
+#         debug("create_profile", "Empty id")
+#         raise HTTP(400, "Empty id")
+#     uid = data[ID_FIELD]
+#     uid = str(uid)
+#     try:
+#             profile = {
+#                 COUNT_FIELD: 0,
+#                 GENDER_FIELD: "",
+#                 ID_FIELD: str(uid).decode('unicode-escape'),
+#                 IMAGE_URL_FIELD: "",
+#                 MAJOR_FIELD: "",
+#                 NAME_FIELD: "",
+#                 PS_FIELD: "",
+#                 SCHEDULE_FIELD: "",
+#                 TAG_FIELD: [],
+#                 UNIVERSITY_FIELD: ""
+#             }
+#             __createDoc([USER_COLLECTION], uid, profile)
+#     except ValueError, e:
+#         debug("create_profile", str(e))
+#         raise HTTP(400, uid + ': Creating info encounters an error')
 
 
 def download_course_list_for_the_user():
