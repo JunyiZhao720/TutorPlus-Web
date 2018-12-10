@@ -10,13 +10,22 @@
 
             <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" v-show="!logged_in">
-
+            <div id="login_part" class="limiter" v-show="!logged_in">
+                <!---messageBox--->
+                        <v-alert
+                          :value="alert"
+                          type="error"
+                          color="red"
+                          transition="scale-transition"
+                          dismissible
+                        >
+                          ${alert_message}
+                        </v-alert>
 
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
 
-                    <div class="limiter">
+
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
 
@@ -34,17 +43,17 @@
                                   ></v-text-field>
                                     <v-text-field
                                         id="password_field"
-                                        :append-icon="show1 ? 'visibility_off' : 'visibility'"
-                                        :type="show1 ? 'text' : 'password'"
+                                        :append-icon="show_password ? 'visibility_off' : 'visibility'"
+                                        :type="show_password ? 'text' : 'password'"
                                         name="input-10-1"
                                         label="Password"
-                                        hint="At least 8 characters"
-                                        counter
-                                        @click:append="show1 = !show1"
+                                        @click:append="show_password = !show_password"
                                         color="blue"
                                         box
                                         dark
                                       ></v-text-field>
+
+
 
 
                                     <div class="container-login100-form-btn">
@@ -59,13 +68,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </span>
 
 
                 <!---signup--->
                 <span v-show="login_idx === 'SIGNUP'">
-                    <div class="limiter">
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
 
@@ -73,20 +80,33 @@
 
                                     <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
 
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username-signup" id="username_signup_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password-signup" id="password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="re-password" id="re-password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Re-Password"></span>
-                                    </div>
+                                    <v-text-field
+                                        id="username_signup_field"
+                                        label="Username"
+                                        box
+                                        color="blue"
+                                        dark
+                                  ></v-text-field>
+                                    <v-text-field
+                                        id="password_signup_field"
+                                        :append-icon="show_password ? 'visibility_off' : 'visibility'"
+                                        :type="show_password ? 'text' : 'password'"
+                                        name="input-10-1"
+                                        label="Password"
+                                        @click:append="show_password = !show_password"
+                                        color="blue"
+                                        box
+                                        dark
+                                      ></v-text-field>
+                                    <v-text-field
+                                        id="re-password_signup_field"
+                                        :type="show_password ? 'text' : 'password'"
+                                        name="input-10-1"
+                                        label="Re-Password"
+                                        color="blue"
+                                        box
+                                        dark
+                                      ></v-text-field>
 
                                     <div class="container-login50-form-btn">
                                         <button v-on:click="" class="login50-form-btn">Signup</button>
@@ -95,14 +115,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </span>
 
-                <!---messageBox--->
-                <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
-                    <h3 slot="body">${ login_message }</h3>
-                    <h3 slot="header">Login error</h3>
-                </modal>
+
             </div>
             <!------------------------------------------------------------------------------->
 
