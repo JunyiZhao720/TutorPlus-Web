@@ -13,8 +13,6 @@
             <div id="login_part" v-show="logged_in">
 
 
-
-
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
 
@@ -27,15 +25,27 @@
 
                                     <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
 
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username" id="username_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
+                                    <v-text-field
+                                        id="username_field"
+                                        label="Username"
+                                        box
+                                        color="blue"
+                                        dark
+                                  ></v-text-field>
+                                    <v-text-field
+                                        id="password_field"
+                                        :append-icon="show1 ? 'visibility_off' : 'visibility'"
+                                        :type="show1 ? 'text' : 'password'"
+                                        name="input-10-1"
+                                        label="Password"
+                                        hint="At least 8 characters"
+                                        counter
+                                        @click:append="show1 = !show1"
+                                        color="blue"
+                                        box
+                                        dark
+                                      ></v-text-field>
 
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password" id="password_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
 
                                     <div class="container-login100-form-btn">
                                         <button v-on:click="login()" class="login100-form-btn">Login</button>
@@ -46,17 +56,6 @@
                                         <button v-on:click="login_idx = 'SIGNUP'" class="login100-form-btn">Sign Up</button>
                                     </div>
 
-                                    <!--<ul class="login-more p-t-190">
-                                        <li>
-                                            <span class="txt1">
-                                                Don’t have an account?
-                                            </span>
-
-                                            <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
-                                                Sign up
-                                            </a>
-                                        </li>
-                                    </ul>-->
                                 </div>
                             </div>
                         </div>
@@ -206,14 +205,14 @@
                                         <v-layout align-space-between column>
                                     <v-layout row>
                                         <v-flex xs8>
-                                            <v-rating v-model="rating" hover="true"></v-rating>
+                                            <v-rating v-model="rating" hover readonly></v-rating>
                                         </v-flex>
 
                                         <v-flex xs2>
-                                            <v-btn flat color="primary">Edit</v-btn>
+                                            <v-btn flat color="primary" v-show="false">Edit</v-btn>
                                         </v-flex>
                                         <v-flex xs2>
-                                            <v-btn flat color="primary">Submit</v-btn>
+                                            <v-btn flat color="primary" v-show="false">Submit</v-btn>
                                         </v-flex>
                                     </v-layout>
                                     <v-textarea class="replies"
@@ -222,7 +221,7 @@
                                       label="Label"
                                       auto-grow
                                       value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
-                                      readonly = 1
+                                      readonly
                                       background-color = "white"
                                     ></v-textarea>
                                 </v-layout>
@@ -234,12 +233,11 @@
                     </div>
             <!--------------------------------------------------------------------------->
                 </main>
-
+            </div>
+        </div>
     </body>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
 
 
 
 </html>
-
-
