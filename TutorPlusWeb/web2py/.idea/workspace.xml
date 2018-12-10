@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/admin/sessions/029/1b2/127.0.0.1-58a7071f-31f5-4e6d-b41b-83009198801e" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin/sessions/029/1b2/127.0.0.1-58a7071f-31f5-4e6d-b41b-83009198801e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
@@ -33,17 +31,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
-          <entry key="html" value="13" />
+          <entry key="css" value="10" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="14" />
+          <entry key="ico" value="1" />
+          <entry key="jpeg" value="1" />
+          <entry key="jpg" value="5" />
           <entry key="js" value="10" />
           <entry key="json" value="1" />
+          <entry key="png" value="7" />
           <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
-          <entry key="HTML" value="13" />
+          <entry key="CSS" value="10" />
+          <entry key="HTML" value="14" />
+          <entry key="Image" value="15" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="10" />
           <entry key="Python" value="9" />
@@ -51,18 +55,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="605" />
+          <entry key="css" value="659" />
           <entry key="dummy" value="4" />
-          <entry key="html" value="2604" />
-          <entry key="js" value="1907" />
+          <entry key="html" value="2786" />
+          <entry key="js" value="1988" />
           <entry key="py" value="1388" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="605" />
-          <entry key="HTML" value="2604" />
-          <entry key="JavaScript" value="1907" />
+          <entry key="CSS" value="659" />
+          <entry key="HTML" value="2786" />
+          <entry key="JavaScript" value="1988" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Python" value="1388" />
         </counts>
@@ -113,11 +117,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+            <state relative-caret-position="473">
+              <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -145,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="209" column="23" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
+            <state relative-caret-position="-538">
+              <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -214,8 +218,10 @@
       <find>RESULT</find>
       <find>unpkg</find>
       <find>Username</find>
-      <find>limi</find>
-      <find>login-p</find>
+      <find>show1</find>
+      <find>=====</find>
+      <find>figure</find>
+      <find>figu</find>
     </findStrings>
     <replaceStrings>
       <replace>#005dc3</replace>
@@ -238,9 +244,9 @@
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/style.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/import.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
       </list>
@@ -525,9 +531,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/login.jpg" />
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/Logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/copy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-840">
@@ -541,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -575,6 +571,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="250" column="31" selection-start-line="250" selection-start-column="31" selection-end-line="250" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/twitter.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/star.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/skill2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/ojbk1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/ojbk.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/main-component.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/Logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/facebook.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/dott.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/c2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/big_image_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/big_image_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/images/bbc.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -584,22 +639,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="209" column="23" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1601">
-          <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
+        <state relative-caret-position="-538">
+          <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+        <state relative-caret-position="473">
+          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
         </state>
       </provider>
     </entry>

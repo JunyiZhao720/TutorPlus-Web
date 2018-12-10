@@ -242,18 +242,13 @@ var app = function() {
             // main-part
             main_idx: "HOME",
 
-            // form_title: "",
-            // form_content: "",
-            // post_list: [],
-            // star_indices: [1, 2, 3, 4, 5],
-            show1: false,
-            show2: true,
-            show3: false,
-            show4: false,
-            password: 'Password',
+            show_password: false,
+            alert: true,
+            alert_message: "default alert message",
+            rating: 1,
             rules: {
-              min: v => v.length >= 8 || 'Min 8 characters',
-              emailMatch: () => ('The email and password you entered don\'t match')
+              required: value => !!value || 'Required',
+              min: v => !!v && v.length >= 6 || 'Min 6 characters',
             }
         },
         methods: {

@@ -48,7 +48,10 @@ img{
     cursor: pointer;
 }
 figure{
-
+    background-image: url("../images/bbc.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 figcaption{
@@ -74,7 +77,7 @@ nav ul{
     display: block;
     list-style-type: none;
     padding: 0;
-    margin-top: 5em;
+    margin-top: 0em;
     position: relative !important;
     background: none !important;
 }

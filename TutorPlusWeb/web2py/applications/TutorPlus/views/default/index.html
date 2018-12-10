@@ -10,13 +10,22 @@
 
             <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" v-show="logged_in">
-
+            <div id="login_part" class="limiter" v-show="!logged_in">
+                <!---messageBox--->
+                        <v-alert
+                          :value="alert"
+                          type="error"
+                          color="red"
+                          transition="scale-transition"
+                          dismissible
+                        >
+                          ${alert_message}
+                        </v-alert>
 
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
 
-                    <div class="limiter">
+
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
 
@@ -27,6 +36,7 @@
 
                                     <v-text-field
                                         id="username_field"
+                                        :rules="[rules.required]"
                                         label="Username"
                                         box
                                         color="blue"
@@ -34,18 +44,16 @@
                                   ></v-text-field>
                                     <v-text-field
                                         id="password_field"
-                                        :append-icon="show1 ? 'visibility_off' : 'visibility'"
-                                        :type="show1 ? 'text' : 'password'"
+                                        :append-icon="show_password ? 'visibility_off' : 'visibility'"
+                                        :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required]"
                                         name="input-10-1"
                                         label="Password"
-                                        hint="At least 8 characters"
-                                        counter
-                                        @click:append="show1 = !show1"
+                                        @click:append="show_password = !show_password"
                                         color="blue"
                                         box
                                         dark
                                       ></v-text-field>
-
 
                                     <div class="container-login100-form-btn">
                                         <button v-on:click="login()" class="login100-form-btn">Login</button>
@@ -59,13 +67,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </span>
 
 
                 <!---signup--->
                 <span v-show="login_idx === 'SIGNUP'">
-                    <div class="limiter">
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
 
@@ -73,20 +79,38 @@
 
                                     <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
 
-                                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-                                        <input class="input100" type="text" name="username-signup" id="username_signup_field">
-                                        <span class="focus-input100" data-placeholder="Username"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="password-signup" id="password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Password"></span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                                        <input class="input100" type="password" name="re-password" id="re-password_signup_field">
-                                        <span class="focus-input100" data-placeholder="Re-Password"></span>
-                                    </div>
+                                    <v-text-field
+                                        id="username_signup_field"
+                                        :rules="[rules.required]"
+                                        label="Username"
+                                        box
+                                        color="blue"
+                                        dark
+                                  ></v-text-field>
+                                    <v-text-field
+                                        id="password_signup_field"
+                                        :append-icon="show_password ? 'visibility_off' : 'visibility'"
+                                        :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required, rules.min]"
+                                        name="input-10-1"
+                                        counter
+                                        label="Password"
+                                        @click:append="show_password = !show_password"
+                                        color="blue"
+                                        box
+                                        dark
+                                      ></v-text-field>
+                                    <v-text-field
+                                        id="re-password_signup_field"
+                                        :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required, rules.min]"
+                                        name="input-10-1"
+                                        counter
+                                        label="Re-Password"
+                                        color="blue"
+                                        box
+                                        dark
+                                      ></v-text-field>
 
                                     <div class="container-login50-form-btn">
                                         <button v-on:click="" class="login50-form-btn">Signup</button>
@@ -95,23 +119,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </span>
 
-                <!---messageBox--->
-                <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
-                    <h3 slot="body">${ login_message }</h3>
-                    <h3 slot="header">Login error</h3>
-                </modal>
+
             </div>
             <!------------------------------------------------------------------------------->
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="!logged_in">
+            <div id="main_part" v-show="logged_in">
                 <aside>
                     <figure>
-                        <div id="avatar" href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'"></div>
                         <figcaption>User Name</figcaption>
                     </figure>
                     <nav>
@@ -155,7 +173,7 @@
                                         <v-flex xs6>
                                             <div class="col-md-6 w3-banner-grid-left">
                                 <div class="w3-banner-img">
-                                    <h3 class="test">Chris Adam <b>&nbsp</b>&#9733<b>4.8</b></h3>
+                                    <h3 class="test">Chris Adam</h3>
                                 </div>
                                 <div class=" w3-right-addres-1">
                                     <ul class="address">
@@ -175,12 +193,6 @@
                                             <ul class="agileits-address-text">
                                                 <li class="agile-it-adress-left"><b>Major</b></li>
                                                 <li>Computer Science</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul class="agileits-address-text ">
-                                                <li class="agile-it-adress-left"><b>Email</b></li>
-                                                <li>123@gmail.com</li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -204,12 +216,15 @@
                                     <v-container fluid grid-list-md>
                                         <v-layout align-space-between column>
                                     <v-layout row>
-                                        <v-flex xs8>
+                                        <v-flex xs6>
                                             <v-rating v-model="rating" hover readonly></v-rating>
                                         </v-flex>
 
                                         <v-flex xs2>
                                             <v-btn flat color="primary" v-show="false">Edit</v-btn>
+                                        </v-flex>
+                                        <v-flex xs2>
+                                            <v-btn flat color="primary" v-show="false">Delete</v-btn>
                                         </v-flex>
                                         <v-flex xs2>
                                             <v-btn flat color="primary" v-show="false">Submit</v-btn>
@@ -238,6 +253,6 @@
     </body>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
 
-
-
 </html>
+
+
