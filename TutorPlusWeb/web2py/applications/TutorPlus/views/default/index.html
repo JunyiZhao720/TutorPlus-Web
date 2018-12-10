@@ -12,24 +12,23 @@
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
             <div id="login_part" class="limiter" v-show="!logged_in">
                 <!---messageBox--->
-                        <v-alert
-                          :value="alert"
-                          type="error"
+                <template>
+                    <v-alert
+                          v-model="alert"
+                          v-bind:type="alert_type"
                           color="red"
                           transition="scale-transition"
                           dismissible
                         >
                           ${alert_message}
-                        </v-alert>
-
+                    </v-alert>
+                </template>
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
 
 
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
-
-
                                 <div class="login100-form validate-form" id="login_div">
 
                                     <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
