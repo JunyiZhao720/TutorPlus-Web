@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>TutorPlus</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--========================================Login-CSS==================================================-->
-<!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{=URL('static','images/icons/favicon.ico')}}">
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/iconic/css/material-design-iconic-font.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animate/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/css-hamburgers/hamburgers.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animsition/css/animsition.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/select2/select2.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/daterangepicker/daterangepicker.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','css/util.css')}}">
-<!--===============================================================================================-->
+	<!--========================================Login-CSS==================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{=URL('static','images/icons/favicon.ico')}}">
+	<!-- <link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/bootstrap/css/bootstrap.min.css')}}">-->
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','vendor/daterangepicker/daterangepicker.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/util.css')}}">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+	<!--===============================================================================================-->
 
 
-<!--========================================Login-CSS-JS==================================================-->
-<!--===============================================================================================-->
+	<!--========================================Login-CSS-JS==================================================-->
+	<!--===============================================================================================-->
 	<script src="{{=URL('static','vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
-    <script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
-    <script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{=URL('static','vendor/animsition/js/animsition.min.js')}}"></script>
+	<script src="{{=URL('static','vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{=URL('static','vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{=URL('static','vendor/select2/select2.min.js')}}"></script>
     <script src="{{=URL('static','vendor/daterangepicker/moment.min.js')}}"></script>
     <script src="{{=URL('static','vendor/daterangepicker/daterangepicker.js')}}"></script>
-    <script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
-<!--===============================================================================================-->
+	<script src="{{=URL('static','vendor/countdowntime/countdowntime.js')}}"></script>
+	<!--===============================================================================================-->
 
 
-<!--========================================Main-CSS==================================================-->
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="{{=URL('static','css/index.css')}}">
-<link rel="stylesheet" type="text/css" href="{{=URL('static','css/main.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{=URL('static','css/style.css')}}">
-<!--===============================================================================================-->
+	<!--========================================Profile-Page-CSS-JS==================================================-->
+	<!--===============================================================================================-->
+	<!-- Font special for pages-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
 
-<!--==========================================JS=============================================-->
-<!--===============================================================================================-->
-    <script src="{{=URL('static','js/main.js')}}"></script>
-    <script src="{{=URL('static', 'js/vue.js')}}"></script>
-<!--===============================================================================================-->
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="{{=URL('static', 'css/userProfile.css')}}">
+	<!--===============================================================================================-->
 
-<!--==========================================Other=============================================-->
-<!--===============================================================================================-->
-    {{include "web2py_ajax.html"}}
-<!--===============================================================================================-->
 
-<!--==========================================MessageBox-Modal======================================-->
-<!--===============================================================================================-->
-<script type="text/x-template" id="modal-template">
-  <transition name="modal">
+	<!--========================================Main-CSS==================================================-->
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/index.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/main.css')}}">
+	<!--===============================================================================================-->
+
+
+	<!--==========================================JS=============================================-->
+	<!--===============================================================================================-->
+	<!--<script src="{{=URL('static','js/main.js')}}"></script>-->
+	<script src="{{=URL('static', 'js/vue.js')}}"></script>
+	<script src="https://unpkg.com/vue@latest"></script>
+	<!--<script src="https://unpkg.com/vue-select@latest"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+	<script src="{{=URL('static','js/vue-resource.js')}}"></script>
+	<!--===============================================================================================-->
+
+	<!--==========================================Other=============================================-->
+	<!--===============================================================================================-->
+	{{include "web2py_ajax.html"}}
+	<!--===============================================================================================-->
+
+	<!--==========================================MessageBox-Modal======================================-->
+	<!--===============================================================================================-->
+	<script type="text/x-template" id="modal-template">
+		<transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
@@ -81,33 +98,35 @@
     </div>
   </transition>
 </script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 
 
-<!--==========================================Firebase=============================================-->
-<!--===============================================================================================-->
-<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
-    authDomain: "tutorplus-93a0f.firebaseapp.com",
-    databaseURL: "https://tutorplus-93a0f.firebaseio.com",
-    projectId: "tutorplus-93a0f",
-    storageBucket: "tutorplus-93a0f.appspot.com",
-    messagingSenderId: "690236283457"
-  };
-  firebase.initializeApp(config);
-</script>
-<!--===============================================================================================-->
-
+	<!--==========================================Firebase=============================================-->
+	<!--===============================================================================================-->
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
+			authDomain: "tutorplus-93a0f.firebaseapp.com",
+			databaseURL: "https://tutorplus-93a0f.firebaseio.com",
+			projectId: "tutorplus-93a0f",
+			storageBucket: "tutorplus-93a0f.appspot.com",
+			messagingSenderId: "690236283457"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<!--===============================================================================================-->
+</head>
 
 <!--============================================Main==============================================-->
 <!--===============================================================================================-->
-<html>
-    <body>
-        {{include}}
-    </body>
+
+<body>
+	{{include}}
+</body>
+
 </html>
 
 <!--===============================================================================================-->
+

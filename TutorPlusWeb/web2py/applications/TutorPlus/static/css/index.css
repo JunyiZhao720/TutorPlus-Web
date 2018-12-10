@@ -29,6 +29,9 @@
     grid-template-columns: 20% auto;
     padding: 3em;
 }
+main{
+    border-radius: 10px;
+}
 
 aside{
     background: #DCE1F6;
@@ -37,6 +40,8 @@ aside{
     padding: 0;
     grid-template-columns: auto;
     grid-template-rows: 20% auto;
+    border-radius:10px
+;
 }
 
 img{
@@ -118,6 +123,9 @@ p{
     font-size: 1.5em;
     line-height: 1.5em;
 }
+a{
+    font-family: 'Play', sans-serif;
+}
 
 .cta{
     display: inline-block;
@@ -193,4 +201,9 @@ p{
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+.reply-div {
+    background: rgba(191, 191, 191, .5);
+    /*background: #0F192;*/
+    border-radius: 10px;
 }

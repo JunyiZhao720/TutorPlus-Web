@@ -20,27 +20,27 @@ class FirebaseUser:
 # Initialize global variables
 # -------------------------------------------------------------------------
 
-from firebase_admin import auth
+#from firebase_admin import auth
 
-user = FirebaseUser()
-auth = auth
+#user = FirebaseUser()
+#auth = auth
 
 # -------------------------------------------------------------------------
 # Initialize Firebase credentials and default_app
 # -------------------------------------------------------------------------
-import os.path
-import firebase_admin
-from firebase_admin import credentials
-
-my_path = os.path.abspath(os.path.dirname(__file__))
-path = os.path.join(my_path, "../private/tutorPlusKey.json")
-if not len(firebase_admin._apps):
-    cred = credentials.Certificate(path)
-    default_app = firebase_admin.initialize_app(cred)
-    print(default_app.name)
-    print("Default_app Initialized!")
-else:
-    print("Default_app already initialized")
+# import os.path
+# import firebase_admin
+# from firebase_admin import credentials
+#
+# my_path = os.path.abspath(os.path.dirname(__file__))
+# path = os.path.join(my_path, "../private/tutorPlusKey.json")
+# if not len(firebase_admin._apps):
+#     cred = credentials.Certificate(path)
+#     default_app = firebase_admin.initialize_app(cred)
+#     print(default_app.name)
+#     print("Default_app Initialized!")
+# else:
+#     print("Default_app already initialized")
 # -------------------------------------------------------------------------
 # AppConfig configuration made easy. Look inside private/appconfig.ini
 # Auth is for authenticaiton and access control

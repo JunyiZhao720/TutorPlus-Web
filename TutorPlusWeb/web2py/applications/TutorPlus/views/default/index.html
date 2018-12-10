@@ -5,11 +5,12 @@
     <body>
 
 
+
         <div id="vue-index">
 
             <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" v-show="!logged_in">
+            <div id="login_part" v-show="logged_in">
 
 
 
@@ -108,7 +109,7 @@
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="logged_in">
+            <div id="main_part" v-show="!logged_in">
                 <aside>
                     <figure>
                         <div id="avatar" href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'"></div>
@@ -142,8 +143,17 @@
                     </div>
                     <!---result--->
                     <div v-show="main_idx === 'RESULT'" class="result">
-                        <div class="w3-banner-grids">
-                            <div class="col-md-6 w3-banner-grid-left">
+
+                        <!--reply-->
+
+                        <template>
+
+                            <v-layout column>
+
+                                <div class="w3-banner-grids">
+                                    <v-layout row>
+                                        <v-flex xs6>
+                                            <div class="col-md-6 w3-banner-grid-left">
                                 <div class="w3-banner-img">
                                     <h3 class="test">Chris Adam</h3>
                                 </div>
@@ -152,41 +162,95 @@
                                         <li>
                                             <ul class="agileits-address-text ">
                                                 <li class="agile-it-adress-left"><b>Gender</b></li>
-                                                <li><span>:</span>Male</li>
+                                                <li>Male</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="agileits-address-text">
                                                 <li class="agile-it-adress-left"><b>School</b></li>
-                                                <li><span>     :</span>UCSC</li>
+                                                <li>UCSC</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="agileits-address-text">
                                                 <li class="agile-it-adress-left"><b>Major</b></li>
-                                                <li><span>:</span>Computer Science</li>
+                                                <li>Computer Science</li>
                                             </ul>
                                         </li>
                                         <li>
                                             <ul class="agileits-address-text">
                                                 <li class="agile-it-adress-left"><b>Courses and Grades</b></li>
-                                                <li><span>:</span></li>
+                                                <li></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-6 w3-banner-grid-right">
+
+                                        </v-flex>
+                                        <v-flex xs5>
+                                            <div class="col-md-6 w3-banner-grid-right">
                                 <div class="w3-banner-text">
                                     <h3>Personal Statement</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim velit sed nibh placerat, non aliquam purus pretium. Donec at justo dignissim, maximus elit et, vestibulum mi.</p>
                                 </div>
 
                             </div>
+                                        </v-flex>
+
+
+
+                                    </v-layout>
+
                         </div>
+                                <br>
+
+
+                                <div class="reply-div">
+
+                            <v-container fluid grid-list-md>
+                                <v-layout align-space-between column>
+                                    <v-layout row>
+                                        <v-flex xs8>
+                                            <v-rating v-model="rating" hover="true"></v-rating>
+                                        </v-flex>
+
+                                        <v-flex xs2>
+                                            <v-btn flat color="primary">Edit</v-btn>
+                                        </v-flex>
+                                        <v-flex xs2>
+                                            <v-btn flat color="primary">Submit</v-btn>
+                                        </v-flex>
+
+                                    </v-layout>
+                                    <v-textarea
+                                      name="input-7-1"
+                                      box
+                                      label="Label"
+                                      auto-grow
+                                      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+                                      readonly = 1
+                                      background-color = "white"
+
+                                    ></v-textarea>
+
+                                </v-layout>
+                            </v-container>
+
+                        </div>
+
+                            </v-layout>
+
+
+
+
+                        </template>
+
+
+
                     </div>
             <!--------------------------------------------------------------------------->
-
+                </main>
 
     </body>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
