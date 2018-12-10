@@ -164,7 +164,7 @@
             <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
             <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
             <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
-            <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
+            <!--<li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>-->
           </ul>
         </nav>
       </aside>
@@ -349,7 +349,7 @@
                   <v-flex xs6>
                     <div class="col-md-6 w3-banner-grid-left">
                       <div class="w3-banner-img">
-                        <h3 class="test">${result_name}<b>&nbsp &#9733</b><b>${reault_rating}</b></h3>
+                        <h3 class="test">${result_name}<b>&nbsp &#9733</b><b>${reault_rating.toFixed(2)}</b></h3>
                       </div>
                       <div class=" w3-right-addres-1">
                         <ul class="address">
@@ -398,8 +398,12 @@
               <reply-card
                 v-bind:reply_list="result_reply_list"
                 v-bind:user_uid="user_uid"
+                v-bind:tutor_uid="detailPage"
+                v-bind:user_name="profile_name"
+                v-bind:id_token="idToken"
               ></reply-card>
 
+              <!--
               <div class="reply-div" style="margin-top:100px">
                 <v-container fluid grid-list-md>
                   <v-layout align-space-between column>
@@ -447,6 +451,7 @@
                   </v-layout>
                 </v-container>
               </div>
+              -->
 
 
             </v-layout>

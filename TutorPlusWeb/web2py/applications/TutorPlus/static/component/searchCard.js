@@ -6,7 +6,7 @@ var Template = `
           <v-card-title primary-title>
           <div>
             <div class="headline">{{name}}</div>
-            <div>Overall Rating: {{rating}}</div>
+            <div>Overall Rating: {{show_rating}}</div>
             <div>{{university}}</div>
             <div>{{major}}</div>
             <div v-if="show_grade">Grade on this course: {{grade}}</div>
@@ -43,6 +43,7 @@ Vue.component('search-result-card', {
   data: function() {
     return {
       schoolFullName: '',
+      show_rating: ''
     }
   },
   methods: {
@@ -53,6 +54,11 @@ Vue.component('search-result-card', {
     }
   },
   created(){
+    if (this.rating != "N/A") {
+      this.show_rating = this.rating.toFixed(2);
+    } else {
+      this.show_rating = this.rating;
+    }
   },
   computed: {},
   template: Template

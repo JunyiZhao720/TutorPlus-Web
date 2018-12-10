@@ -338,6 +338,7 @@ var app = function() {
       result_major: '',
       result_personal_statement: '',
       result_reply_list:{ptr:[]},
+      detailPage: "",
 
       school_name_dict: {
         bc: 'Boston College (BC)',
@@ -383,7 +384,7 @@ var app = function() {
 
       school_data: {},
 
-      detailPage: "BalaBla"
+
       //signup part
       // form_title: "",
       // form_content: "",
@@ -446,12 +447,12 @@ var app = function() {
           }
         }
         //console.log(packet);
-        console.log("before get")
+        //console.log("before get")
         var that = this;
         $.get("https://tutorplus-93a0f.appspot.com/get-profile", packet,
           function(data, status) {
-            console.log("after get");
-            console.log(data.profile);
+            //console.log("after get");
+            //console.log(data.profile);
             that.result_name= data.profile.name;
             if (data.profile.rating_count == 0) {
               that.reault_rating = "N/A";
@@ -478,9 +479,7 @@ var app = function() {
         };
         $.get("https://tutorplus-93a0f.appspot.com/download-tutor-replies", packet,
           function(data, status) {
-            for (var i=0; i< data.tutor_reply_list.lenth; i++) {
-              that.result_reply_list.push(data.tutor_reply_list[i]);
-            }
+            that.result_reply_list = data.tutor_reply_list.slice();
             console.log(that.result_reply_list);
         });
       }
