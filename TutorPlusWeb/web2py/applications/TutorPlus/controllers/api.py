@@ -116,6 +116,18 @@ def __deleteDoc(collections, uid):
         raise ValueError(bracket("__deleteDoc") + 'collections or uid type not correct')
 
 
+def __ifDocExist(collections, uid):
+    if __checkStrList(collections) and isinstance(uid, str):
+        try:
+            doc_ref = __parseCollection(collections).document(uid)
+            return doc_ref.get().exists
+
+        except Exception, e:
+            raise ValueError(bracket("__ifDocExist") + str(e))
+    else:
+        raise ValueError(bracket("__ifDocExist") + 'collections or uid type not correct')
+
+
 # -------Collection------------
 def __downloadAllFromCollection(collections):
     if __checkStrList(collections):
@@ -387,4 +399,60 @@ def download_tutor_replies():
         debug("download_tutor_replies", str(e))
         raise HTTP(400, "Internal error")
 
-# def upload_user_rating():
+
+def upload_user_rating():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("upload_user_rating", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data or TUTOR_ID_TRANS not in data:
+        debug("upload_user_rating", "Empty id or tutor_id")
+        raise HTTP(400, "Empty id or tutor_id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+    tutor_id = data[TUTOR_ID_TRANS]
+    tutor_id = str(tutor_id)
+
+    # check if exists
+    collections_tutor = [USER_COLLECTION, tutor_id, RATING_COLLECTION]
+    exist_state = __ifDocExist(collections_tutor, uid)
+
+    # db storage
+    try:
+        new_reply = {
+            ID_FIELD: str(uid).decode('unicode-escape'),
+            REPLY_FIELD: str(data[REPLY_FIELD]).decode('unicode-escape'),
+            RATING_FIELD: str(data[RATING_FIELD]).decode('unicode-escape')
+        }
+        tutor_profile = __downloadDoc([USER_COLLECTION], tutor_id)
+
+        # got previous tutor profile
+        if RATING_COUNT_FIELD in tutor_profile and RATING_SUM_FIELD in tutor_profile:
+            tutor_sum = tutor_profile[RATING_SUM_FIELD]
+            tutor_count = tutor_profile[RATING_COUNT_FIELD]
+        else:
+            tutor_sum = 0
+            tutor_count = 0
+
+        # check if the reply already exists
+        if exist_state:
+            old_reply = __downloadDoc(collections_tutor, uid)
+            old_rating = int(old_reply[RATING_FIELD])
+
+            tutor_sum -= old_rating
+            tutor_sum += int(data[RATING_FIELD])
+        else:
+            tutor_sum += int(data[RATING_FIELD])
+            tutor_count += 1
+
+        __createDoc(collections_tutor, uid, new_reply)
+        tutor_profile[RATING_COUNT_FIELD] = tutor_count
+        tutor_profile[RATING_SUM_FIELD] = tutor_sum
+        print(tutor_count)
+        print()
+        __createDoc([USER_COLLECTION], tutor_id, tutor_profile)
+    except ValueError, e:
+        debug("upload_user_rating", str(e))
+        raise HTTP(400, uid + ': Internal error')

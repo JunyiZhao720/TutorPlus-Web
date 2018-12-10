@@ -127,17 +127,10 @@ var app = function() {
             var packet = {
                 idToken:idToken,
                 data:{
-                  id:"jhlUrLQl6ucogip1caYqTBHVQwb2",
-                  courses:[
-                      {
-                        data:{
-                          course: "cmps102",
-                          school: "ucsc",
-                          grade: "A"
-                        },
-                        is_active: true
-                      }
-                  ]
+                  "id": "11223345",
+                  "tutor_id": "jhlUrLQl6ucogip1caYqTBHVQwb2",
+                  "rating": 4,
+                  "reply": "this is just a test"
                 }
             };
             let post_packet = JSON.stringify(packet);

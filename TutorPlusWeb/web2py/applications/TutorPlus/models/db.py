@@ -28,6 +28,9 @@ COURSE_FIELD = u"courses"
 UNIVERSITY_FIELD = u"university"
 TAG_FIELD = u"tag"
 COUNT_FIELD = u"count"
+RATING_SUM_FIELD = u'rating_sum'
+RATING_COUNT_FIELD = u'rating_count'
+
 # Tutor fields
 RATING_FIELD = u"rating"
 REPLY_FIELD = u"reply"
@@ -47,6 +50,7 @@ DATA_TRANS = "data"
 COURSE_TRANS = "course_id"
 SCHOOL_TRANS = "school_id"
 ACTIVE_TRANS = "is_active"
+TUTOR_ID_TRANS = "tutor_id"
 
 # -------------------------------------------------------------------------
 # Helper Functions
