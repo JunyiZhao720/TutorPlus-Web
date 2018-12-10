@@ -1,6 +1,18 @@
 
+#vue-index{
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/images%2Fstar.gif?alt=media&token=0ada553f-d09a-4953-ac94-966df708a472");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+#myBackground{
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/images%2Fstar.gif?alt=media&token=0ada553f-d09a-4953-ac94-966df708a472");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
@@ -43,6 +55,13 @@
 /*}*/
 
 /*---------------------------------------------*/
+.login-part {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/images%2Fstar.gif?alt=media&token=0ada553f-d09a-4953-ac94-966df708a472");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .login-more p-t-190 a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
@@ -146,7 +165,7 @@ iframe {
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #57b846;
+  color: #005dc3;
   line-height: 1.5;
 }
 
@@ -156,6 +175,10 @@ iframe {
 .limiter {
   width: 100%;
   margin: 0 auto;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/images%2Fstar.gif?alt=media&token=0ada553f-d09a-4953-ac94-966df708a472");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-login100 {
@@ -170,12 +193,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #fff;
+  /*background: #fff;  */
 }
 
 .wrap-login100 {
   width: 390px;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 
@@ -255,7 +278,7 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #57b846;
+  background: #005dc3;
 }
 
 .focus-input100::after {
@@ -337,14 +360,14 @@ iframe {
   padding: 0 20px;
   width: 50%;
   height: 50px;
-  background-color: #57b846;
+  background-color: #005DC3;
   border-radius: 25px;
 
-  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -459,4 +482,51 @@ iframe {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
+}
+/*Result/////////////////////////////////////
+ */
+.w3-banner-grids {
+    padding: 9em 0 0 0;
+}
+.col-md-6.w3-banner-grid-left {
+    width: 70%;
+    float: left;
+}
+.col-md-6.w3-banner-grid-right{
+    width: 70%;
+    float: left;
+}
+.w3-banner-text p {
+    width: 150%;
+}
+ul.address li ul.agileits-address-text li {
+    display: inline-block;
+    font-size: 1em;
+    color:rgba(255, 255, 255, 0.76);
+    margin-top: 1em;
+    font-weight: 600;
+    font-family: 'Text Me One', sans-serif;
+}
+ul.address li ul.agileits-address-text li:nth-child(1) {
+    width: 20%;
+}
+ul.address {
+    margin-top: 0.5em;
+      border-top: 2px dotted #00bcd4;
+    padding-top: 0.5em;
+}
+li.agile-it-adress-left b {
+    color: #fff;
+}
+h3{
+  color: white;
+}
+.w3-banner-text p{
+  color: white;
+}
+.w3-right-addres-1{
+  margin-left: auto;
+}
+.replies{
+  border-radius: 10px;
 }

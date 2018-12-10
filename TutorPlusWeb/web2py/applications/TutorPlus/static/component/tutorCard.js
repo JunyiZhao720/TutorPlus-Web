@@ -1,5 +1,6 @@
 var Template = `
-<div v-if="card.is_active" style="padding:10px; margin-bottom:30px; border-radius: 3px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
+<v-flex xs6>
+<div style="background:#FFFFFFC0; padding:10px; margin:10px; border-radius: 10px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
 
   <v-autocomplete v-model="school" :items="school_list" :label="'University'" clearable>
     <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
@@ -25,6 +26,7 @@ var Template = `
     <i class="fa fa-minus-circle" style="font-size:30px; margin:auto; margin-right:10px" v-on:click="deleteThis()"></i>
   </v-layout>
 </div>
+</v-flex>
 `;
 
 Vue.component('ta-course-card', {
@@ -56,6 +58,7 @@ Vue.component('ta-course-card', {
   methods: {
     deleteThis: function() {
       this.card.is_active = false;
+      this.$destroy()
       //this.tutor_card.is_active = false;
       //this.$emit(this.tutor_card.index);
     }

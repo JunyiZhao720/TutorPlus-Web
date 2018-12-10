@@ -1,5 +1,6 @@
 /* import font */
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Play');
 
 
 
@@ -7,15 +8,20 @@
 #main_part,#vue-index,body,html{
     height: 100%;
     font-family: 'Source Serif Pro', serif;
+    /*
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/images%2Fstar.gif?alt=media&token=0ada553f-d09a-4953-ac94-966df708a472");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 #main_part, #vue-index,body{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0039b3+0,34cfbe+100 */
-    background: #0039b3; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #0039b3 0%, #34cfbe 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #0039b3 0%,#34cfbe 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #0039b3 0%,#34cfbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0039b3', endColorstr='#34cfbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /*background: #0039b3; /* Old browsers */
+    /*background: -moz-linear-gradient(-45deg, #0039b3 0%, #34cfbe 100%); /* FF3.6-15 */
+    /*background: -webkit-linear-gradient(-45deg, #0039b3 0%,#34cfbe 100%); /* Chrome10-25,Safari5.1-6 */
+    /*background: linear-gradient(135deg, #0039b3 0%,#34cfbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0039b3', endColorstr='#34cfbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     /* make the background color not repeat */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,13 +33,19 @@
     grid-template-columns: 20% auto;
     padding: 3em;
 }
+main{
+    border-radius: 10px;
+}
+
 aside{
-    background: #DCE1F6;
-    color: #fff;
+    background: rgba(220, 225, 226, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     display: grid;
     padding: 0;
     grid-template-columns: auto;
     grid-template-rows: 20% auto;
+    border-radius:10px
+;
 }
 
 img{
@@ -41,12 +53,20 @@ img{
     cursor: pointer;
 }
 figure{
+    background-image: url("../images/images.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius: 10px;
 
 }
 
 figcaption{
+    font-family: Arial;
     font-size: 1.3em;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 nav{
@@ -66,7 +86,7 @@ nav ul{
     display: block;
     list-style-type: none;
     padding: 0;
-    margin-top: 5em;
+    margin-top: 0em;
     position: relative !important;
     background: none !important;
 }
@@ -74,7 +94,8 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8em;
+    font-family: 'Play', sans-serif;
+    font-size: 1em;
     display: block;
     padding: 1.5em 3em;
     background-color: rgba(255,255,255,.35);
@@ -86,7 +107,7 @@ nav ul li a:hover{
 }
 
 main{
-    background: white url('../images/main-component.jpg') no-repeat;
+    background: white url('../images/big_image_1.jpg') no-repeat;
     background-size: cover;
     padding: 2em;
 }
@@ -96,21 +117,33 @@ main{
     width: 50px;
     height: 50px;
     margin: 2em auto 1em auto;
+    overflow: hidden;
 }
+
+#avatar img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
 figcaption{
     text-align: center;
     color: #000;
 }
 
 h1{
-
+    font-family: 'Play', sans-serif;
     font-size: 3em;
     margin-top: 2em;
+    color: white;
 }
 
 p{
     font-size: 1.5em;
     line-height: 1.5em;
+}
+a{
+    font-family: 'Play', sans-serif;
 }
 
 .cta{
@@ -187,4 +220,12 @@ p{
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+.reply-div {
+    background: rgba(191, 191, 191, .5);
+    /*background: #0F192;*/
+    border-radius: 10px;
+}
+.v-text-field{
+    font-family: Arial;
 }

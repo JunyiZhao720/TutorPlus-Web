@@ -4,13 +4,15 @@
 <!--
 <html>
     <body>-->
-<div id="vue-index">
-  <v-app>
-  <!----------------------------------- login part -------------------------------->
-  <!--login_idx is used to control display: LOGIN, SIGNUP-->
-  <div id="login_part" v-show="!logged_in">
 
-    <!---login--->
+<div id="vue-index">
+  <v-app id="myBackground">
+    <!----------------------------------- login part -------------------------------->
+    <!--login_idx is used to control display: LOGIN, SIGNUP-->
+    <div id="login_part" v-show="!logged_in">
+
+      <!---login--->
+      <!--
     <span v-show="login_idx === 'LOGIN'">
       <div class="limiter">
         <div class="container-login100">
@@ -50,149 +52,195 @@
         </div>
       </div>
     </span>
+    -->
+
+      <span v-show="login_idx === 'LOGIN'">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
 
 
-    <!---signup--->
-    <span v-show="login_idx === 'SIGNUP'">
-      <div class="limiter">
+            <div class="login100-form validate-form" id="login_div">
+
+              <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
+
+              <v-text-field id="username_field" :rules="[rules.required]" label="Username" box color="blue" dark></v-text-field>
+              <v-text-field id="password_field" :append-icon="show_password ? 'visibility_off' : 'visibility'" :type="show_password ? 'text' : 'password'" :rules="[rules.required]" name="input-10-1" label="Password" @click:append="show_password = !show_password"
+                color="blue" box dark></v-text-field>
+
+              <div class="container-login100-form-btn">
+                <button v-on:click="login()" class="login100-form-btn">Login</button>
+              </div>
+              <br>
+
+              <div class="container-login100-form-btn">
+                <button v-on:click="login_idx = 'SIGNUP'" class="login100-form-btn">Sign Up</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </span>
+
+
+      <!---signup--->
+      <!--
+      <span v-show="login_idx === 'SIGNUP'">
+        <div class="limiter">
+          <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+
+              <div class="login100-form validate-form" id="login_div">
+
+                <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+
+                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                  <input class="input100" type="text" name="username-signup" id="username_signup_field">
+                  <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                  <input class="input100" type="password" name="password-signup" id="password_signup_field">
+                  <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                  <input class="input100" type="password" name="re-password" id="re-password_signup_field">
+                  <span class="focus-input100" data-placeholder="Re-Password"></span>
+                </div>
+
+                <div class="container-login50-form-btn">
+                  <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                  <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+      -->
+
+      <span v-show="login_idx === 'SIGNUP'">
         <div class="container-login100">
           <div class="wrap-login100 p-t-85 p-b-20">
 
             <div class="login100-form validate-form" id="login_div">
 
-              <img src="{{=URL('static','images/Logo.png')}}" align="middle">
+              <img src="{{=URL('static','images/ojbk1.png')}}" align="middle">
 
-              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
-                <input class="input100" type="text" name="username-signup" id="username_signup_field">
-                <span class="focus-input100" data-placeholder="Email"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                <input class="input100" type="password" name="password-signup" id="password_signup_field">
-                <span class="focus-input100" data-placeholder="Password"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                <input class="input100" type="password" name="re-password" id="re-password_signup_field">
-                <span class="focus-input100" data-placeholder="Re-Password"></span>
-              </div>
+              <v-text-field id="username_signup_field" :rules="[rules.required]" label="Username" box color="blue" dark></v-text-field>
+              <v-text-field id="password_signup_field" :append-icon="show_password ? 'visibility_off' : 'visibility'" :type="show_password ? 'text' : 'password'" :rules="[rules.required, rules.min]" name="input-10-1" counter label="Password"
+                @click:append="show_password = !show_password" color="blue" box dark></v-text-field>
+              <v-text-field id="re-password_signup_field" :type="show_password ? 'text' : 'password'" :rules="[rules.required, rules.min]" name="input-10-1" counter label="Re-Password" color="blue" box dark></v-text-field>
 
               <div class="container-login50-form-btn">
-                <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                <button v-on:click="" class="login50-form-btn">Signup</button>
                 <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </span>
+      </span>
 
-    <!---messageBox--->
-    <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
-      <h3 slot="body">${ login_message }</h3>
-      <h3 slot="header">Login error</h3>
-    </modal>
-  </div>
-  <!------------------------------------------------------------------------------->
-
-
-  <!------------------------------------ main part -------------------------------->
-  <div id="main_part" v-show="logged_in">
-    <aside>
-      <figure>
-        <div id="avatar"></div>
-        <figcaption>${profile_name}</figcaption>
-      </figure>
-      <nav>
-        <ul>
-          <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
-          <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
-          <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
-          <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main>
-      <!---home--->
-      <div v-show="main_idx === 'HOME'">
-        <h1>Welcome to Tutor+</h1>
-        <p>Tutor+ is a right place to find your ideal tutor!</p>
-        <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
-        <button v-on:click="logout()">logout</button>
-      </div>
-      <!---search--->
-      <div v-show="main_idx === 'SEARCH'">
-
-        <div class="card card-1" style="min-height:825px">
-          <div class="card-heading"></div>
-          <div class="card-body">
-
-            <h3>To find a tutor, you can</h3>
-
-            <v-layout row>
-              <v-flex xs5>
-              <v-autocomplete v-model="search_university" :items="school_list" :label="`University`"  clearable>
-                <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
-                </v-slide-x-reverse-transition>
-              </v-autocomplete>
-              </v-flex>
-
-              <v-flex xs4>
-                <v-autocomplete v-model="search_course" :items="search_course_list" :label="`Course`"  clearable>
-                  <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
-                  </v-slide-x-reverse-transition>
-                </v-autocomplete>
-                <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
-              </v-flex>
-              <v-flex xs2>
-                <v-btn color="info" v-on:click="searchTutorByCourse()">Search by course</v-btn>
-              </v-flex>
-            </v-layout>
-
-            <h3>or</h3>
-
-            <v-layout row>
-              <v-flex xs5 sm5 md3>
-                <v-text-field v-model="search_name" label="Tutor Name"  clearable></v-text-field>
-              </v-flex>
-
-              <v-flex  xs2>
-                <v-btn color="info" v-on:click="searchTutorByName()">Search by name</v-btn>
-              </v-flex>
-            </v-layout>
-
-            <v-divider></v-divider>
-            </br>
-
-            <v-layout row wrap>
-              <search-result-card
-                v-for= "eachTutor in search_result"
-                v-bind:show_grade="search_show_grade"
-                v-bind:grade="eachTutor.grade"
-                v-bind:uid="eachTutor.id"
-                v-bind:major="eachTutor.major"
-                v-bind:name="eachTutor.name"
-                v-bind:rating="eachTutor.rating"
-                v-bind:imageurl="eachTutor.imageURL"
-                v-bind:university="school_full_name_dict[eachTutor.university]"
-                v-on:show-detail="showTutorDetail($event)"
-              ></search-result-card>
-
-            </v-layout>
-
-          </div><!--Card body-->
-        </div><!--Card-->
-      </div>
+      <!---messageBox--->
+      <modal v-show="is_login_messagebox_show" @close="is_login_messagebox_show = false">
+        <h3 slot="body">${ login_message }</h3>
+        <h3 slot="header">Login error</h3>
+      </modal>
+    </div>
+    <!------------------------------------------------------------------------------->
 
 
-      <!---profile--->
-      <div v-show="main_idx === 'PROFILE'">
+    <!------------------------------------ main part -------------------------------->
+    <div id="main_part" v-show="logged_in">
+      <aside>
+        <figure>
+          <div id="avatar">
+            <img v-bind:src="profile_img_url" />
+          </div>
+          <figcaption>${profile_name}</figcaption>
+        </figure>
+        <nav>
+          <ul>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-        <div class="wrapper wrapper--w680">
-        <div class="card card-1" style="min-height:825px">
+      <main>
+        <!---home--->
+        <div v-show="main_idx === 'HOME'">
+          <h1>Welcome to Tutor+</h1>
+          <p>Tutor+ is a right place to find your ideal tutor!</p>
+          <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+          <button v-on:click="logout()">logout</button>
+        </div>
+        <!---search--->
+        <div v-show="main_idx === 'SEARCH'">
 
+          <div class="card card-1" style="min-height:825px">
             <div class="card-heading"></div>
+            <div class="card-body">
+
+              <h3 style="color:#000">To find a tutor, you can</h3>
+
+              <v-layout row>
+                <v-flex xs5>
+                  <v-autocomplete v-model="search_university" :items="school_list" :label="`University`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </v-flex>
+
+                <v-flex xs4>
+                  <v-autocomplete v-model="search_course" :items="search_course_list" :label="`Course`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                  <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
+                </v-flex>
+                <v-flex xs2>
+                  <v-btn color="info" v-on:click="searchTutorByCourse()">Search by course</v-btn>
+                </v-flex>
+              </v-layout>
+
+              <h3 style="color:#000">or</h3>
+
+              <v-layout row>
+                <v-flex xs5 sm5 md3>
+                  <v-text-field v-model="search_name" label="Tutor Name" clearable></v-text-field>
+                </v-flex>
+
+                <v-flex xs2>
+                  <v-btn color="info" v-on:click="searchTutorByName()">Search by name</v-btn>
+                </v-flex>
+              </v-layout>
+
+              <v-divider></v-divider>
+              </br>
+
+              <v-layout row wrap>
+                <search-result-card v-for="eachTutor in search_result" v-bind:show_grade="search_show_grade" v-bind:grade="eachTutor.grade" v-bind:uid="eachTutor.id" v-bind:major="eachTutor.major" v-bind:name="eachTutor.name" v-bind:rating="eachTutor.rating"
+                  v-bind:imageurl="eachTutor.imageURL" v-bind:university="school_full_name_dict[eachTutor.university]" v-on:show-detail="showTutorDetail($event)"></search-result-card>
+
+              </v-layout>
+
+            </div>
+            <!--Card body-->
+          </div>
+          <!--Card-->
+        </div>
+
+
+        <!---profile--->
+        <div v-show="main_idx === 'PROFILE'">
+
+          <!--<div class="wrapper wrapper--w680">-->
+          <div class="card card-1" style="min-height:825px">
+
+            <!--<div class="card-heading"></div>-->
             <div class="card-body">
 
               <div v-if="!become_a_TA">
@@ -200,18 +248,18 @@
 
                 <div>
                   <v-flex xs12 sm6>
-                    <v-text-field
-                      v-bind:value="profile_email"
-                      label="Email"
-                      disabled
-                    ></v-text-field>
+                    <v-text-field v-bind:value="profile_email" label="Email" disabled></v-text-field>
                   </v-flex>
                 </div>
 
                 <div>
-                  <v-flex xs12 sm6>
-                    <v-text-field v-model="profile_name" label="Name"></v-text-field>
-                  </v-flex>
+                  <v-layout row>
+                    <v-flex xs12 sm6>
+                      <v-text-field v-model="profile_name" label="Name"></v-text-field>
+                    </v-flex>
+
+
+                  </v-layout>
                 </div>
 
                 <div>
@@ -231,21 +279,14 @@
                   </v-flex>
                 </div>
 
-                <div>
-                  <v-flex xs12 sm6 md3>
+                <v-flex xs12 sm6 md3>
                   <v-autocomplete v-model="profile_gender" :items="['Male','Female']" :label="`Gender`">
                     <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
                     </v-slide-x-reverse-transition>
                   </v-autocomplete>
-                  </v-flex>
-                </div>
+                </v-flex>
 
-                <v-textarea
-                  v-model="profile_personal_statement"
-                  color="teal"
-                  placeholder="Talk about yourself..."
-                  style="margin-top:45px; margin-bottom:25px"
-                >
+                <v-textarea v-model="profile_personal_statement" color="teal" placeholder="Talk about yourself..." style="margin-top:45px; margin-bottom:25px">
                   <div slot="label">
                     Personal Statement <small></small>
                   </div>
@@ -266,14 +307,10 @@
               <div v-show="become_a_TA">
                 <h2 class="title">Update your Profile</h2>
 
-
-                <ta-course-card
-                  v-for="TutorCard in tutor_card_list"
-                  v-bind:card="TutorCard"
-                  v-bind:school_list="school_list"
-                  v-bind:school_name_dict="school_name_dict"
-                  v-bind:school_data="school_data">
-                </ta-course-card>
+                <v-layout row>
+                  <ta-course-card v-for="TutorCard in tutor_card_list" v-if="TutorCard.is_active" v-bind:card="TutorCard" v-bind:school_list="school_list" v-bind:school_name_dict="school_name_dict" v-bind:school_data="school_data">
+                  </ta-course-card>
+                </v-layout>
 
                 <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
 
@@ -290,31 +327,146 @@
 
             </div>
 
+          </div>
+          <!--</div>-->
+
+
+
+
         </div>
+
+
+        <!---result--->
+        <div v-if="main_idx === 'RESULT'" class="result">
+
+          <!--reply-->
+
+          <template>
+            <v-layout column>
+
+              <div class="w3-banner-grids">
+                <v-layout row>
+                  <v-flex xs6>
+                    <div class="col-md-6 w3-banner-grid-left">
+                      <div class="w3-banner-img">
+                        <h3 class="test">${result_name}<b>&nbsp &#9733</b><b>${reault_rating}</b></h3>
+                      </div>
+                      <div class=" w3-right-addres-1">
+                        <ul class="address">
+                          <li>
+                            <ul class="agileits-address-text ">
+                              <li class="agile-it-adress-left"><b>Gender</b></li>
+                              <li>${result_gender}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>School</b></li>
+                              <li>${result_university}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>Major</b></li>
+                              <li>${result_major}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>Email</b></li>
+                              <li>${result_email}</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </v-flex>
+                  <v-flex xs5>
+                    <div class="col-md-6 w3-banner-grid-right">
+                      <div class="w3-banner-text">
+                        <h3>Personal Statement</h3>
+                        <p>${result_personal_statement}</p>
+                      </div>
+
+                    </div>
+                  </v-flex>
+                </v-layout>
+              </div>
+              <br>
+
+              <reply-card
+                v-bind:reply_list="result_reply_list"
+                v-bind:user_uid="user_uid"
+              ></reply-card>
+
+              <div class="reply-div" style="margin-top:100px">
+                <v-container fluid grid-list-md>
+                  <v-layout align-space-between column>
+                    <v-layout row>
+                      <v-flex xs4>
+                        <v-rating v-model="rating" hover readonly></v-rating>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Edit</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Delete</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Submit</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-layout row>
+
+                          <v-flex xs3>
+                            <v-btn fab dark small color="primary">
+                              <v-icon dark>chevron_left</v-icon>
+                            </v-btn>
+                          </v-flex>
+
+                          <v-flex xs3>
+                            <v-btn fab dark small color="primary">
+                              <v-icon dark>chevron_right</v-icon>
+                            </v-btn>
+                          </v-flex>
+
+                          <v-flex xs2>
+                            <div>[1/20]</div>
+                          </v-flex>
+
+                        </v-layout>
+                      </v-flex>
+
+                    </v-layout>
+                    <v-textarea class="replies" name="input-7-1" box label="Label" auto-grow value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through." readonly background-color="white"></v-textarea>
+                  </v-layout>
+                </v-container>
+              </div>
+
+
+            </v-layout>
+          </template>
         </div>
 
 
-
-
-      </div>
-
-
-      <!---result--->
-      <div v-show="main_idx === 'RESULT'">
-        Result page
-        <button class="btn btn--radius btn--green" v-on:click="queryTest()">Query Test</button>
-        ${detailPage}
-      </div>
-
-    </main>
-  </div>
-  <!------------------------------------------------------------------------------->
-</v-app>
+      </main>
+    </div>
+  </v-app>
 </div>
+
+<!------------------------------------------------------------------------------->
+
+
 
 
 
 <!-- Main JS-->
+<script src="{{=URL('static', 'component/replyCard.js')}}"></script>
 <script src="{{=URL('static', 'component/searchCard.js')}}"></script>
 <script src="{{=URL('static', 'component/tutorCard.js')}}"></script>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>

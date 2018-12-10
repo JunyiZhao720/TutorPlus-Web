@@ -1,6 +1,6 @@
 var Template = `
 <v-flex d-flex xs12 sm6 md4 style="min-width:390px; min-height:210px">
-  <v-card color="blue" dark class="white--text" style="margin:5px">
+  <v-card dark class="white--text" style="background:#959595B0; margin:5px">
     <v-layout row style="min-height:177px">
         <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
           <v-card-title primary-title>

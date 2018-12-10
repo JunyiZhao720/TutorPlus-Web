@@ -61,10 +61,11 @@ var app = function() {
 
           self.vue.user_uid = user.uid;
           self.vue.profile_email = user.email;
-
+          /*
           var db = firebase.firestore();
           var user_uid = user.uid;
           var userRef = db.collection("users").doc(user_uid);
+
           userRef.get().then(function(doc) {
             if (doc.exists) {
               user_profile = doc.data();
@@ -81,7 +82,7 @@ var app = function() {
                 ps: ''
               });
             }
-          });
+          });*/
         } else {
           console.log("At user listener: your email is not verified yet");
           self.vue.logged_in = false;
@@ -199,22 +200,21 @@ var app = function() {
     if (self.vue.profile_university) {
       profile_university = /\(([^)]+)\)/.exec(self.vue.profile_university)[1].toLowerCase();
     }
-    $.get("https://tutorplus-93a0f.appspot.com/update-profile",
-    {
-      idToken: self.vue.idToken,
-      data: {
-        id: self.vue.user_uid,
-        //email: self.vue.profile_email,
-        university: profile_university,
-        gender: self.vue.profile_gender.toLowerCase(),
-        major: self.vue.profile_major,
-        name: self.vue.profile_name,
-        ps: self.vue.profile_personal_statement
-      }
-    },
-    function(data, status) {
-      console.log(data);
-    });
+    $.get("https://tutorplus-93a0f.appspot.com/update-profile", {
+        idToken: self.vue.idToken,
+        data: {
+          //id: self.vue.user_uid,
+          //email: self.vue.profile_email,
+          university: profile_university,
+          gender: self.vue.profile_gender.toLowerCase(),
+          major: self.vue.profile_major,
+          name: self.vue.profile_name,
+          ps: self.vue.profile_personal_statement
+        }
+      },
+      function(data, status) {
+        console.log(data);
+      });
   }
 
   self.updateTutorProfile = function() {
@@ -226,10 +226,12 @@ var app = function() {
       }
     };
     var strPacket = JSON.stringify(packet);
-    $.get("https://tutorplus-93a0f.appspot.com/upload-course-list-for-the-user", {packet: strPacket},
-    function(data, status){
-      console.log(data);
-    });
+    $.get("https://tutorplus-93a0f.appspot.com/upload-course-list-for-the-user", {
+        packet: strPacket
+      },
+      function(data, status) {
+        console.log(data);
+      });
   }
 
   self.searchTutorByCourse = function() {
@@ -244,12 +246,12 @@ var app = function() {
         }
       };
       $.get("https://tutorplus-93a0f.appspot.com/download-tutor-profile-list", packet,
-      function(data, status){
-        //console.log("hello wolrd in GUHU")
-        //console.log(data.profile_list);
-        self.vue.search_result = data.profile_list;
-        self.vue.search_show_grade = true;
-      });
+        function(data, status) {
+          //console.log("hello wolrd in GUHU")
+          //console.log(data.profile_list);
+          self.vue.search_result = data.profile_list;
+          self.vue.search_show_grade = true;
+        });
     }
   }
 
@@ -263,14 +265,16 @@ var app = function() {
         }
       };
       $.get("https://tutorplus-93a0f.appspot.com/download-tutor-profile-list-by-name", packet,
-      function(data, status){
-        //console.log("hello wolrd in GUHU");
-        //console.log(data.profile_list);
-        self.vue.search_result = data.profile_list;
-        self.vue.search_show_grade = false;
+        function(data, status) {
+          //console.log("hello wolrd in GUHU");
+          //console.log(data.profile_list);
+          self.vue.search_result = data.profile_list;
+          self.vue.search_show_grade = false;
       });
     }
   }
+
+
 
 
 
@@ -289,6 +293,16 @@ var app = function() {
       login_idx: "LOGIN",
       idToken: '',
       user_uid: '',
+
+      show_password: false,
+      alert: true,
+      alert_message: "default alert message",
+      rating: 1,
+      rules: {
+        required: value => !!value || 'Required',
+        min: v => !!v && v.length >= 6 || 'Min 6 characters',
+      },
+
       // login-part message box
       is_login_messagebox_show: false,
       login_message: "",
@@ -305,6 +319,7 @@ var app = function() {
       profile_personal_statement: '',
       become_a_TA: false,
       profile_major_list: [],
+      profile_img_url: "",
 
       tutor_card_list: [],
 
@@ -314,6 +329,15 @@ var app = function() {
       search_course_list: [],
       search_result: [],
       search_show_grade: true,
+
+      result_name: '',
+      reault_rating: '',
+      result_email: '',
+      result_university: '',
+      result_gender: '',
+      result_major: '',
+      result_personal_statement: '',
+      result_reply_list:{ptr:[]},
 
       school_name_dict: {
         bc: 'Boston College (BC)',
@@ -405,15 +429,15 @@ var app = function() {
         }
         console.log(packet);
         $.get("https://tutorplus-93a0f.appspot.com/get-profile", packet,
-        function(data, status){
-          console.log("hello wolrd in query2");
-          console.log(data);
-          console.log(data.profile)
-        });
+          function(data, status) {
+            console.log("hello wolrd in query2");
+            console.log(data);
+            console.log(data.profile)
+          });
       },
 
-      showTutorDetail: function(uid){
-        this.detailPage= uid;
+      showTutorDetail: function(uid) {
+        this.detailPage = uid;
         this.main_idx = 'RESULT';
         var packet = {
           idToken: self.vue.idToken,
@@ -423,10 +447,41 @@ var app = function() {
         }
         //console.log(packet);
         console.log("before get")
+        var that = this;
         $.get("https://tutorplus-93a0f.appspot.com/get-profile", packet,
-        function(data, status){
-          console.log("after get")
-          console.log(data.profile)
+          function(data, status) {
+            console.log("after get");
+            console.log(data.profile);
+            that.result_name= data.profile.name;
+            if (data.profile.rating_count == 0) {
+              that.reault_rating = "N/A";
+            } else {
+              that.reault_rating = data.profile.rating_sum / data.profile.rating_count;
+            }
+            that.result_email= data.profile.email;
+            if (data.profile.university) {
+              that.result_university = that.school_full_name_dict[data.profile.university];
+            } else {
+              that.result_university = "";
+            }
+            that.result_gender = data.profile.gender;
+            that.result_major = data.profile.major;
+            that.result_personal_statement = data.profile.ps;
+        });
+
+
+        var packet = {
+          idToken: self.vue.idToken,
+          data: {
+            id: uid,
+          }
+        };
+        $.get("https://tutorplus-93a0f.appspot.com/download-tutor-replies", packet,
+          function(data, status) {
+            for (var i=0; i< data.tutor_reply_list.lenth; i++) {
+              that.result_reply_list.push(data.tutor_reply_list[i]);
+            }
+            console.log(that.result_reply_list);
         });
       }
 
@@ -439,7 +494,11 @@ var app = function() {
           var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
           if (!(schoolAbbr in this.school_data)) {
             var that = this;
-            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {params: {school_id: schoolAbbr}}).then(function (data){
+            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {
+              params: {
+                school_id: schoolAbbr
+              }
+            }).then(function(data) {
               that.school_data[schoolAbbr] = data.body.school;
               course_list = data.body.school.course_list;
               that.profile_major_list = that.school_data[schoolAbbr].major_list;
@@ -447,7 +506,7 @@ var app = function() {
               var course_name_dict = {};
               for (i = 0; i < course_list.length; i++) {
                 var course_key = course_list[i].split(" - ")[0].replace(/[\s]+/g, '').toLowerCase();
-                course_name_dict[course_key]= course_list[i];
+                course_name_dict[course_key] = course_list[i];
               }
               that.school_data[schoolAbbr].course_name_dict = course_name_dict;
             });
@@ -463,14 +522,18 @@ var app = function() {
           var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
           if (!(schoolAbbr in this.school_data)) {
             var that = this;
-            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {params: {school_id: schoolAbbr}}).then(function (data){
+            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {
+              params: {
+                school_id: schoolAbbr
+              }
+            }).then(function(data) {
               that.school_data[schoolAbbr] = data.body.school;
               that.search_course_list = that.school_data[schoolAbbr].course_list;
 
               var course_name_dict = {};
               for (i = 0; i < course_list.length; i++) {
                 var course_key = course_list[i].split(" - ")[0].replace(/[\s]+/g, '').toLowerCase();
-                course_name_dict[course_key]= course_list[i];
+                course_name_dict[course_key] = course_list[i];
               }
               that.school_data[schoolAbbr].course_name_dict = course_name_dict;
             });
@@ -482,67 +545,75 @@ var app = function() {
       idToken: function(newStatus, oldStatus) {
         if (newStatus) {
           var that = this;
-          this.$http.get("https://tutorplus-93a0f.appspot.com/get-profile",
-          {
-            params: {
-              idToken: this.idToken,
-              data:{id: this.user_uid}
-            }
-          })
-          .then(function (data){
-            user_profile = data.body.profile;
-            if (user_profile.name) {
-              that.profile_name = user_profile.name;
-            } else {
-              that.profile_name = '';
-            }
-            if (user_profile.university) {
-              that.profile_university = that.school_name_dict[user_profile.university];
-            } else {
-              that.profile_university = '';
-            }
-            if (user_profile.gender) {
-              that.profile_gender = (user_profile.gender.toLowerCase() == 'male') ? 'Male' : 'Female';
-            } else {
-              that.profile_gender = '';
-            }
-            if (user_profile.major) {
-              that.profile_major = user_profile.major;
-            } else {
-              that.profile_major = '';
-            }
-            if(user_profile.ps) {
-              that.profile_personal_statement = user_profile.ps;
-            } else {
-              that.profile_personal_statement = '';
-            }
-            //that.profile_email = user_profile.email;
-          });
-          this.tutor_card_list = [];
-          this.$http.get("https://tutorplus-93a0f.appspot.com/download-course-list-for-the-user",
-          {
-            params: {
-              idToken: this.idToken,
-              data:{id: this.user_uid}
-            }
-          })
-          .then(function (data){
-            var tutorCourseList = data.body.course_list_user;
-            var newList = []
-            for (i = 0; i < tutorCourseList.length; i++) {
-              var tutorCard = {
+          this.$http.get("https://tutorplus-93a0f.appspot.com/get-profile", {
+              params: {
+                idToken: this.idToken,
                 data: {
-                  school: tutorCourseList[i].school,
-                  course: tutorCourseList[i].course,
-                  grade: tutorCourseList[i].grade
-                },
-                index: i,
-                is_active: true
-              };
-              newList.push(tutorCard);
-            }
-            that.tutor_card_list = newList;
-          });
+                  id: this.user_uid
+                }
+              }
+            })
+            .then(function(data) {
+              user_profile = data.body.profile;
+              if (user_profile.name) {
+                that.profile_name = user_profile.name;
+              } else {
+                that.profile_name = '';
+              }
+              if (user_profile.university) {
+                that.profile_university = that.school_name_dict[user_profile.university];
+              } else {
+                that.profile_university = '';
+              }
+              if (user_profile.gender) {
+                that.profile_gender = (user_profile.gender.toLowerCase() == 'male') ? 'Male' : 'Female';
+              } else {
+                that.profile_gender = '';
+              }
+              if (user_profile.major) {
+                that.profile_major = user_profile.major;
+              } else {
+                that.profile_major = '';
+              }
+              if (user_profile.ps) {
+                that.profile_personal_statement = user_profile.ps;
+              } else {
+                that.profile_personal_statement = '';
+              }
+              if (user_profile.imageURL) {
+                that.profile_img_url = user_profile.imageURL;
+              } else {
+                that.profile_img_url = "https://cdn.vuetifyjs.com/images/cards/halcyon.png";
+              }
+
+              //that.profile_email = user_profile.email;
+            });
+          this.tutor_card_list = [];
+          this.$http.get("https://tutorplus-93a0f.appspot.com/download-course-list-for-the-user", {
+              params: {
+                idToken: this.idToken,
+                data: {
+                  id: this.user_uid
+                }
+              }
+            })
+            .then(function(data) {
+              var tutorCourseList = data.body.course_list_user;
+              var newList = []
+              for (i = 0; i < tutorCourseList.length; i++) {
+                var tutorCard = {
+                  data: {
+                    school: tutorCourseList[i].school,
+                    course: tutorCourseList[i].course,
+                    grade: tutorCourseList[i].grade
+                  },
+                  index: i,
+                  is_active: true
+                };
+                newList.push(tutorCard);
+              }
+              that.tutor_card_list = newList;
+            });
         } else {
           this.profile_name = '';
           this.profile_university = '';
