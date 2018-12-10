@@ -128,7 +128,7 @@
           <div class="card-heading"></div>
           <div class="card-body">
 
-            <h3>You can</h3>
+            <h3>To find a tutor, you can</h3>
 
             <v-layout row>
               <v-flex xs5>
@@ -139,14 +139,14 @@
               </v-flex>
 
               <v-flex xs4>
-                <v-autocomplete v-model="search_course" :items="profile_major_list" :label="`Course`"  clearable>
+                <v-autocomplete v-model="search_course" :items="search_course_list" :label="`Course`"  clearable>
                   <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
                   </v-slide-x-reverse-transition>
                 </v-autocomplete>
                 <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
               </v-flex>
               <v-flex xs2>
-                <v-btn color="info">Search by course</v-btn>
+                <v-btn color="info" v-on:click="searchTutorByCourse()">Search by course</v-btn>
               </v-flex>
             </v-layout>
 
@@ -167,125 +167,19 @@
 
             <v-layout row wrap>
 
-              <v-flex d-flex xs12 sm6 md4>
-                <v-card color="blue" dark class="white--text" style="margin:5px">
-                  <v-layout row>
-                      <v-flex xs7 style="margin-top:auto; margin-bottom:auto">
-                        <v-card-title primary-title>
-                        <div>
-                          <div class="headline">Somebody Name</div>
-                          <div>Overall Rating: 4.8</div>
-                          <div>University of California, Davis</div>
-                          <div>Computer Science</div>
-                          <div>Grade on this course: A</div>
-                        </div>
-                        </v-card-title>
-                      </v-flex>
-                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
-                        <v-img
-                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                          height="125px"
-                          contain
-                        ></v-img>
-                      </v-flex>
-                  </v-layout>
 
-                  <v-divider light></v-divider>
-                  <v-card-actions>
-                    <v-btn flat dark>Details</v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-flex>
+              <search-result-card
+                v-for= "eachTutor in search_result"
+                v-bind:show_grade="search_show_grade"
+                v-bind:grade="eachTutor.grade"
+                v-bind:uid="eachTutor.id"
+                v-bind:major="eachTutor.major"
+                v-bind:name="eachTutor.name"
+                v-bind:rating="eachTutor.rating"
+                v-bind:university="school_full_name_dict[eachTutor.university]"
+                v-bind:school_dict="school_full_name_dict"
+              ></search-result-card>
 
-              <v-flex d-flex xs12 sm6 md4>
-                <v-card color="blue" dark class="white--text" style="margin:5px">
-                  <v-layout row>
-                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
-                        <v-card-title primary-title>
-                        <div>
-                          <div class="headline">Somebody Name</div>
-                          <div>Overall Rating: 4.8</div>
-                          <div>University of California, Davis</div>
-                          <div>Computer Science</div>
-                          <div>Grade on this course: A</div>
-                        </div>
-                        </v-card-title>
-                      </v-flex>
-                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
-                        <v-img
-                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                          height="125px"
-                          contain
-                        ></v-img>
-                      </v-flex>
-                  </v-layout>
-
-                  <v-divider light></v-divider>
-                  <v-card-actions>
-                    <v-btn flat dark>Details</v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-flex>
-
-              <v-flex d-flex xs12 sm6 md4>
-                <v-card color="blue" dark class="white--text" style="margin:5px">
-                  <v-layout row>
-                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
-                        <v-card-title primary-title>
-                        <div>
-                          <div class="headline">Somebody Name</div>
-                          <div>Overall Rating: 4.8</div>
-                          <div>University of California, Davis</div>
-                          <div>Computer Science</div>
-                          <div>Grade on this course: A</div>
-                        </div>
-                        </v-card-title>
-                      </v-flex>
-                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
-                        <v-img
-                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                          height="125px"
-                          contain
-                        ></v-img>
-                      </v-flex>
-                  </v-layout>
-
-                  <v-divider light></v-divider>
-                  <v-card-actions>
-                    <v-btn flat dark>Details</v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-flex>
-
-              <v-flex d-flex xs12 sm6 md4>
-                <v-card color="blue" dark class="white--text" style="margin:5px">
-                  <v-layout row>
-                      <v-flex xs7  style="margin-top:auto; margin-bottom:auto">
-                        <v-card-title primary-title>
-                        <div>
-                          <div class="headline">Somebody Name</div>
-                          <div>Overall Rating: 4.8</div>
-                          <div>University of California, Davis</div>
-                          <div>Computer Science</div>
-                          <div>Grade on this course: A</div>
-                        </div>
-                        </v-card-title>
-                      </v-flex>
-                      <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
-                        <v-img
-                          src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                          height="125px"
-                          contain
-                        ></v-img>
-                      </v-flex>
-                  </v-layout>
-
-                  <v-divider light></v-divider>
-                  <v-card-actions>
-                    <v-btn flat dark>Details</v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-flex>
 
             </v-layout>
 
@@ -330,7 +224,7 @@
                 </div>
 
                 <div>
-                  <v-flex xs12 sm6>
+                  <v-flex xs12>
                     <v-autocomplete v-model="profile_major" :items="profile_major_list" :label="`Major`" clearable>
                       <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
                       </v-slide-x-reverse-transition>
@@ -371,7 +265,7 @@
 
               </div>
 
-              <div v-if="become_a_TA">
+              <div v-show="become_a_TA">
                 <h2 class="title">Update your Profile</h2>
 
 
@@ -379,6 +273,7 @@
                   v-for="TutorCard in tutor_card_list"
                   v-bind:card="TutorCard"
                   v-bind:school_list="school_list"
+                  v-bind:school_name_dict="school_name_dict"
                   v-bind:school_data="school_data">
                 </ta-course-card>
 
@@ -409,6 +304,8 @@
       <!---result--->
       <div v-show="main_idx === 'RESULT'">
         Result page
+        <button class="btn btn--radius btn--green" v-on:click="queryTest()">Query Test</button>
+
       </div>
 
     </main>
@@ -420,6 +317,8 @@
 
 
 <!-- Main JS-->
+<script src="{{=URL('static', 'component/searchCard.js')}}"></script>
+<script src="{{=URL('static', 'component/tutorCard.js')}}"></script>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
 
 <!--
