@@ -7,50 +7,6 @@ Vue.component('modal', {
 //Vue.component('v-select', VueSelect.VueSelect);
 
 
-var Template_TA_Course_Card = `
-<div v-if="card.is_active" style="padding:10px; margin-bottom:30px; border-radius: 3px; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15); border: 1px solid #e0e0e0;">
-<v-autocomplete v-model="card.data.school" :items="school_list" :label="'University'" clearable>
-  <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
-  </v-slide-x-reverse-transition>
-</v-autocomplete>
-
-  <v-layout row wrap>
-    <v-flex xs12 sm6 md3 style="margin-right:15px">
-      <v-text-field v-model="card.data.course" label="Course"></v-text-field>
-    </v-flex>
-    <v-flex xs12 sm6 md3>
-      <v-text-field v-model="card.data.grade" label="Grade"></v-text-field>
-    </v-flex>
-    <i class="fa fa-minus-circle" style="font-size:30px; margin:auto; margin-right:10px" v-on:click="deleteThis()"></i>
-  </v-layout>
-</div>
-`;
-
-Vue.component('ta-course-card', {
-  props: [
-    'card',
-    'school_list',
-    'school_data'
-  ],
-  data: function() {
-    return {
-      grade: '',
-      course: '',
-      school: ''
-    }
-  },
-  methods: {
-    deleteThis: function() {
-      this.card.is_active = false;
-      //this.tutor_card.is_active = false;
-      //this.$emit(this.tutor_card.index);
-    }
-  },
-  computed: {},
-  template: Template_TA_Course_Card
-});
-
-
 var app = function() {
 
   var self = {};
@@ -73,7 +29,6 @@ var app = function() {
   };
 
 
-
   /*********************************************************************************************************/
   /*Login functions*/
   self.is_logged_in_listener = function() {
@@ -81,8 +36,8 @@ var app = function() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("User listener: login!");
-        // firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-        //
+
+        //firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
         //     console.log(idToken)
         //     // Send token to your backend via HTTPS
         //     // $.post(check_userId_url, {
@@ -98,6 +53,15 @@ var app = function() {
           console.log("At user listener: your email has been verified");
           console.log("The uid of the user is:", user.uid);
           self.vue.logged_in = true;
+
+          firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
+            self.vue.idToken = idToken;
+            //console.log(idToken);
+          });
+
+          self.vue.user_uid = user.uid;
+          self.vue.profile_email = user.email;
+
           var db = firebase.firestore();
           var user_uid = user.uid;
           var userRef = db.collection("users").doc(user_uid);
@@ -105,40 +69,6 @@ var app = function() {
             if (doc.exists) {
               user_profile = doc.data();
               console.log("User document found");
-              if (user_profile.name) {
-                self.vue.profile_name = user_profile.name;
-              }
-              if (user_profile.university) {
-                self.vue.profile_university = self.vue.school_name_dict[user_profile.university];
-              }
-              if (user_profile.gender) {
-                self.vue.profile_gender = (user_profile.gender == 'male') ? 'Male' : 'Female';
-              }
-              if (user_profile.major) {
-                self.vue.profile_major = user_profile.major;
-              }
-              if(user_profile.ps) {
-                self.vue.profile_personal_statement = user_profile.ps;
-              }
-              self.vue.profile_email = user.email;
-              db.collection("users").doc(user_uid).collection("courses").get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                  // doc.data() is never undefined for query doc snapshots
-                  tutorProf = doc.data();
-                  //console.log(doc.id, " => ", doc.data());
-                  var index = self.vue.tutor_card_list.length;
-                  var tutorCard = {
-                    data: {
-                      school: self.vue.school_name_dict[tutorProf.school],
-                      course: tutorProf.course,
-                      grade: tutorProf.grade
-                    },
-                    index: index,
-                    is_active: true
-                  };
-                  self.vue.tutor_card_list.push(tutorCard);
-                });
-              });
             } else {
               // doc.data() will be undefined in this case
               console.log("Cannot find user doc, creating new document.");
@@ -264,78 +194,61 @@ var app = function() {
   }
 
   self.updateProfile = function() {
-    var db = firebase.firestore();
-    var user = firebase.auth().currentUser;
-    var user_uid = user.uid;
-    db.collection("users").doc(user_uid).set({
-        email: user.email,
+    var profile_university = '';
+    if (self.vue.profile_university) {
+      profile_university = /\(([^)]+)\)/.exec(self.vue.profile_university)[1].toLowerCase();
+    }
+    $.get("https://tutorplus-93a0f.appspot.com/update-profile",
+    {
+      idToken: self.vue.idToken,
+      data: {
+        id: self.vue.user_uid,
+        //email: self.vue.profile_email,
+        university: profile_university,
         gender: self.vue.profile_gender.toLowerCase(),
         major: self.vue.profile_major,
         name: self.vue.profile_name,
-        university: /\(([^)]+)\)/.exec(self.vue.profile_university)[1].toLowerCase(),
         ps: self.vue.profile_personal_statement
-      })
-      .then(function() {
-        console.log("Document successfully written!");
-        self.vue.main_idx = "HOME";
-      })
-      .catch(function(error) {
-        console.error("Error writing document: ", error);
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("An error happened when handling signup");
-        console.log("errorCode = ", errorCode, " errorMessage = ", errorMessage);
-        self.vue.login_message = errorMessage;
-        self.vue.is_login_messagebox_show = true;
-      });
+      }
+    },
+    function(data, status) {
+      console.log(data);
+    });
   }
 
   self.updateTutorProfile = function() {
-    var db = firebase.firestore();
-    var user = firebase.auth().currentUser;
-    var user_uid = user.uid;
-    /* tutorCard format:
-    var tutorCard = {
+    var packet = {
+      idToken: self.vue.idToken,
       data: {
-        school: this.profile_university,
-        course: '',
-        grade: ''
-      },
-      index: index,
-      is_active: true
-    };*/
-    for (index in self.vue.tutor_card_list) {
-      var tutorCard = self.vue.tutor_card_list[index];
-      if ((!tutorCard.is_active) && tutorCard.data.school && tutorCard.data.course) {
-        var schoolName = /\(([^)]+)\)/.exec(tutorCard.data.school)[1].toLowerCase();
-        var courseName = tutorCard.data.course.replace(/[^A-Za-z0-9]+/g, '').toLowerCase();
-        var courseKey = schoolName + "-" + courseName;
-        db.collection("users").doc(user_uid).collection("courses").doc(courseKey).delete()
-        db.collection("schools").doc(schoolName).collection("courses").doc(courseName).collection("tutors").doc(user_uid).delete();
+        id: self.vue.user_uid,
+        courses: self.vue.tutor_card_list,
       }
-    }
-    for (index in self.vue.tutor_card_list) {
-      var tutorCard = self.vue.tutor_card_list[index];
-      if (tutorCard.is_active && tutorCard.data.school && tutorCard.data.course && tutorCard.data.grade) {
-        var schoolName = /\(([^)]+)\)/.exec(tutorCard.data.school)[1].toLowerCase();
-        var courseName = tutorCard.data.course.replace(/[^A-Za-z0-9]+/g, '').toLowerCase();
-        var grade = tutorCard.data.grade.toUpperCase();
-        var courseKey = schoolName + "-" + courseName;
-        db.collection("users").doc(user_uid).collection("courses").doc(courseKey).set({
-          school: schoolName,
-          course: courseName,
-          grade: grade
-        })
-        db.collection("schools").doc(schoolName).collection("courses").doc(courseName).set({});
-        db.collection("schools").doc(schoolName).collection("courses").doc(courseName).collection("tutors").doc(user_uid).set({
-          school: schoolName,
-          course: courseName,
-          grade: grade
-        });
-      }
-    }
-    //self.vue.main_idx = "HOME";
+    };
+    var strPacket = JSON.stringify(packet);
+    $.get("https://tutorplus-93a0f.appspot.com/upload-course-list-for-the-user", {packet: strPacket},
+    function(data, status){
+      console.log(data);
+    });
+  }
 
+  self.searchTutorByCourse = function() {
+    console.log("hello")
+    if (self.vue.search_course && self.vue.search_university) {
+      var packet = {
+        idToken: self.vue.idToken,
+        data: {
+          id: self.vue.user_uid,
+          course_id: self.vue.search_course.split(" - ")[0].replace(/[\s]+/g, '').toLowerCase(),
+          school_id: /\(([^)]+)\)/.exec(self.vue.search_university)[1].toLowerCase(),
+        }
+      };
+      $.get("https://tutorplus-93a0f.appspot.com/download-tutor-profile-list", packet,
+      function(data, status){
+        console.log("hello wolrd in GUHU")
+        console.log(data.profile_list);
+        self.vue.search_result = data.profile_list;
+      });
+    }
   }
 
   /*********************************************************************************************************/
@@ -351,7 +264,8 @@ var app = function() {
       // login-part
       logged_in: false,
       login_idx: "LOGIN",
-
+      idToken: '',
+      user_uid: '',
       // login-part message box
       is_login_messagebox_show: false,
       login_message: "",
@@ -371,6 +285,13 @@ var app = function() {
 
       tutor_card_list: [],
 
+      search_university: '',
+      search_course: '',
+      search_name: '',
+      search_course_list: [],
+      search_result: [],
+      search_show_grade: true,
+
       school_name_dict: {
         bc: 'Boston College (BC)',
         ucb: 'University of California, Berkeley (UCB)',
@@ -387,19 +308,30 @@ var app = function() {
         ubc: 'University of British Columbia (UBC)'
       },
 
-      school_list: ['Boston College (BC)',
+      school_full_name_dict: {
+        bc: 'Boston College',
+        ucb: 'University of California, Berkeley',
+        ucsd: 'University of California, San Diego',
+        ucla: 'University of California, Los Angeles',
+        ucsb: 'University of California, Santa Barbara',
+        ucsf: 'University of California, San Francisco',
+        uci: 'University of California, Irvine',
+        ucr: 'University of California, Riverside',
+        ucsc: 'University of California, Santa Cruz',
+        urm: 'University of California, Merced',
+        ucd: 'University of California, Davis',
+        uic: 'University of Illinois at Chicago',
+        ubc: 'University of British Columbia'
+      },
+
+
+      school_list: [
         'University of California, Berkeley (UCB)',
         'University of California, San Diego (UCSD)',
         'University of California, Los Angeles (UCLA)',
-        'University of California, Santa Barbara (UCSB)',
-        'University of California, San Francisco (UCSF)',
         'University of California, Irvine (UCI)',
-        'University of California, Riverside (UCR)',
         'University of California, Santa Cruz (UCSC)',
-        'University of California, Merced (UCM)',
         'University of California, Davis (UCD)',
-        'University of Illinois at Chicago (UIC)',
-        'University of British Columbia (UBC)'
       ],
 
       school_data: {}
@@ -422,17 +354,38 @@ var app = function() {
         var index = this.tutor_card_list.length;
         var tutorCard = {
           data: {
-            school: this.profile_university,
+            school: '',
             course: '',
             grade: ''
           },
           index: index,
           is_active: true
         };
+        if (this.profile_university) {
+          tutorCard.data.school = /\(([^)]+)\)/.exec(this.profile_university)[1].toLowerCase();
+        }
         this.tutor_card_list.push(tutorCard);
       },
       updateTutorProfile: self.updateTutorProfile,
+      searchTutorByCourse: self.searchTutorByCourse,
 
+      queryTest: self.searchTutorByCourse,
+      /*function() {
+        this.$http.get("https://tutorplus-93a0f.appspot.com/echo",
+        {
+          params: {
+            idToken: this.idToken,
+            data:{
+              id: this.user_uid,
+              school_id: "ucsc"
+            }
+          }
+        })
+        .then(function (data) {
+          //console.log(data);
+          console.log(data.body);
+        });
+      }*/
       // add_post: self.add_post,
       // // Likers.
       // like_mouseover: self.like_mouseover,
@@ -448,21 +401,156 @@ var app = function() {
     },
     watch: {
       profile_university: function(newSchool, oldSchool) {
-        var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
-        if (!(schoolAbbr in this.school_data)) {
-          var db = firebase.firestore();
-          var schoolRef = db.collection("schools").doc(schoolAbbr);
-          var that = this;
-          schoolRef.get().then(function(doc){
-            if(doc.exists) {
-              that.school_data[schoolAbbr] = doc.data();
+        if (!newSchool) {
+          this.profile_major_list = [];
+        } else {
+          var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
+          if (!(schoolAbbr in this.school_data)) {
+            var that = this;
+            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {params: {school_id: schoolAbbr}}).then(function (data){
+              that.school_data[schoolAbbr] = data.body.school;
+              course_list = data.body.school.course_list;
               that.profile_major_list = that.school_data[schoolAbbr].major_list;
+
+              var course_name_dict = {};
+              for (i = 0; i < course_list.length; i++) {
+                var course_key = course_list[i].split(" - ")[0].replace(/[\s]+/g, '').toLowerCase();
+                course_name_dict[course_key]= course_list[i];
+              }
+              that.school_data[schoolAbbr].course_name_dict = course_name_dict;
+            });
+          } else {
+            this.profile_major_list = this.school_data[schoolAbbr].major_list;
+          }
+        }
+      },
+      search_university: function(newSchool, oldSchool) {
+        if (!newSchool) {
+          this.search_course_list = [];
+        } else {
+          var schoolAbbr = /\(([^)]+)\)/.exec(newSchool)[1].toLowerCase();
+          if (!(schoolAbbr in this.school_data)) {
+            var that = this;
+            this.$http.get("https://tutorplus-93a0f.appspot.com/download-school-fields", {params: {school_id: schoolAbbr}}).then(function (data){
+              that.school_data[schoolAbbr] = data.body.school;
+              that.search_course_list = that.school_data[schoolAbbr].course_list;
+
+              var course_name_dict = {};
+              for (i = 0; i < course_list.length; i++) {
+                var course_key = course_list[i].split(" - ")[0].replace(/[\s]+/g, '').toLowerCase();
+                course_name_dict[course_key]= course_list[i];
+              }
+              that.school_data[schoolAbbr].course_name_dict = course_name_dict;
+            });
+          } else {
+            this.search_course_list = this.school_data[schoolAbbr].course_list;
+          }
+        }
+      },
+      idToken: function(newStatus, oldStatus) {
+        if (newStatus) {
+          var that = this;
+          this.$http.get("https://tutorplus-93a0f.appspot.com/get-profile",
+          {
+            params: {
+              idToken: this.idToken,
+              data:{id: this.user_uid}
             }
+          })
+          .then(function (data){
+            user_profile = data.body.profile;
+            if (user_profile.name) {
+              that.profile_name = user_profile.name;
+            } else {
+              that.profile_name = '';
+            }
+            if (user_profile.university) {
+              that.profile_university = that.school_name_dict[user_profile.university];
+            } else {
+              that.profile_university = '';
+            }
+            if (user_profile.gender) {
+              that.profile_gender = (user_profile.gender.toLowerCase() == 'male') ? 'Male' : 'Female';
+            } else {
+              that.profile_gender = '';
+            }
+            if (user_profile.major) {
+              that.profile_major = user_profile.major;
+            } else {
+              that.profile_major = '';
+            }
+            if(user_profile.ps) {
+              that.profile_personal_statement = user_profile.ps;
+            } else {
+              that.profile_personal_statement = '';
+            }
+            //that.profile_email = user_profile.email;
+          });
+          this.tutor_card_list = [];
+          this.$http.get("https://tutorplus-93a0f.appspot.com/download-course-list-for-the-user",
+          {
+            params: {
+              idToken: this.idToken,
+              data:{id: this.user_uid}
+            }
+          })
+          .then(function (data){
+            var tutorCourseList = data.body.course_list_user;
+            var newList = []
+            for (i = 0; i < tutorCourseList.length; i++) {
+              var tutorCard = {
+                data: {
+                  school: tutorCourseList[i].school,
+                  course: tutorCourseList[i].course,
+                  grade: tutorCourseList[i].grade
+                },
+                index: i,
+                is_active: true
+              };
+              newList.push(tutorCard);
+            }
+            that.tutor_card_list = newList;
           });
         } else {
-          this.profile_major_list = this.school_data[schoolAbbr].major_list;
+          this.profile_name = '';
+          this.profile_university = '';
+          this.profile_gender = '';
+          this.profile_major = '';
+          this.profile_personal_statement = '';
+          this.tutor_card_list = [];
         }
+      },
+      become_a_TA: function() {
+        /*
+        if (this.become_a_TA) {
+          var that = this;
+          this.$http.get("https://tutorplus-93a0f.appspot.com/download-course-list-for-the-user",
+          {
+            params: {
+              idToken: this.idToken,
+              data:{id: this.user_uid}
+            }
+          })
+          .then(function (data){
+            var tutorCourseList = data.body.course_list_user;
+            var newList = []
+            for (i = 0; i < tutorCourseList.length; i++) {
+              var tutorCard = {
+                data: {
+                  school: tutorCourseList[i].school,
+                  course: tutorCourseList[i].course,
+                  grade: tutorCourseList[i].grade
+                },
+                index: i,
+                is_active: true
+              };
+              newList.push(tutorCard);
+            }
+            that.tutor_card_list = newList;
+          });
+        }*/
       }
+
     },
 
   });
