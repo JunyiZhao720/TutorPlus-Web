@@ -10,7 +10,7 @@
 
             <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
-            <div id="login_part" class="limiter" v-show="logged_in">
+            <div id="login_part" class="limiter" v-show="!logged_in">
                 <!---messageBox--->
                         <v-alert
                           :value="alert"
@@ -127,7 +127,7 @@
 
 
             <!------------------------------------ main part -------------------------------->
-            <div id="main_part" v-show="!logged_in">
+            <div id="main_part" v-show="logged_in">
                 <aside>
                     <figure>
                         <figcaption>User Name</figcaption>
@@ -235,6 +235,11 @@
                                         <v-flex xs2>
                                             <v-btn flat color="primary" v-show="false">Submit</v-btn>
                                         </v-flex>
+
+                                        <v-btn fab dark small color="primary"><v-icon dark>chevron_left</v-icon></v-btn>
+                                        <v-btn fab dark small color="primary"><v-icon dark>chevron_right</v-icon></v-btn>
+                                        <div>[1/20]</div>
+
                                     </v-layout>
                                     <v-textarea class="replies"
                                       name="input-7-1"
