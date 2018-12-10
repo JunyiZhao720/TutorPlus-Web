@@ -3,16 +3,24 @@
 {{end}}
 <html>
     <body>
+
+
         <div id="vue-index">
-            <!----------------------------------- login part -------------------------------->
+
+            <!----------------------------------- login part ------------------------------->
             <!--login_idx is used to control display: LOGIN, SIGNUP-->
             <div id="login_part" v-show="!logged_in">
 
+
+
+
                 <!---login--->
                 <span v-show="login_idx === 'LOGIN'">
+
                     <div class="limiter">
                         <div class="container-login100">
                             <div class="wrap-login100 p-t-85 p-b-20">
+
 
                                 <div class="login100-form validate-form" id="login_div">
 
@@ -31,8 +39,13 @@
                                     <div class="container-login100-form-btn">
                                         <button v-on:click="login()" class="login100-form-btn">Login</button>
                                     </div>
+                                    <br>
 
-                                    <ul class="login-more p-t-190">
+                                    <div class="container-login100-form-btn">
+                                        <button v-on:click="login_idx = 'SIGNUP'" class="login100-form-btn">Sign Up</button>
+                                    </div>
+
+                                    <!--<ul class="login-more p-t-190">
                                         <li>
                                             <span class="txt1">
                                                 Don’t have an account?
@@ -42,7 +55,7 @@
                                                 Sign up
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul>-->
                                 </div>
                             </div>
                         </div>
@@ -98,7 +111,7 @@
             <div id="main_part" v-show="logged_in">
                 <aside>
                     <figure>
-                        <div id="avatar"></div>
+                        <div id="avatar" href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'"></div>
                         <figcaption>User Name</figcaption>
                     </figure>
                     <nav>
@@ -128,15 +141,52 @@
                         <button v-on:click="logout()">logout</button>
                     </div>
                     <!---result--->
-                    <div v-show="main_idx === 'RESULT'">
-                        Result page
+                    <div v-show="main_idx === 'RESULT'" class="result">
+                        <div class="w3-banner-grids">
+                            <div class="col-md-6 w3-banner-grid-left">
+                                <div class="w3-banner-img">
+                                    <h3 class="test">Chris Adam</h3>
+                                </div>
+                                <div class=" w3-right-addres-1">
+                                    <ul class="address">
+                                        <li>
+                                            <ul class="agileits-address-text ">
+                                                <li class="agile-it-adress-left"><b>Gender</b></li>
+                                                <li><span>:</span>Male</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li class="agile-it-adress-left"><b>School</b></li>
+                                                <li><span>     :</span>UCSC</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li class="agile-it-adress-left"><b>Major</b></li>
+                                                <li><span>:</span>Computer Science</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li class="agile-it-adress-left"><b>Courses and Grades</b></li>
+                                                <li><span>:</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 w3-banner-grid-right">
+                                <div class="w3-banner-text">
+                                    <h3>Personal Statement</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim velit sed nibh placerat, non aliquam purus pretium. Donec at justo dignissim, maximus elit et, vestibulum mi.</p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+            <!--------------------------------------------------------------------------->
 
-                </main>
-            </div>
-            <!------------------------------------------------------------------------------->
-
-        </div>
 
     </body>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>

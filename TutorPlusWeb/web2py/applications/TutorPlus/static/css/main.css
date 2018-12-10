@@ -1,7 +1,5 @@
 
 
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -43,6 +41,7 @@
 /*}*/
 
 /*---------------------------------------------*/
+
 .login-more p-t-190 a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
@@ -340,11 +339,11 @@ iframe {
   background-color: #005DC3;
   border-radius: 25px;
 
-  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(0, 93, 195, 0.5);
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -460,3 +459,48 @@ iframe {
   transform: translateY(-50%);
   left: 0;
 }
+/*Result/////////////////////////////////////
+ */
+.w3-banner-grids {
+    padding: 9em 0 0 0;
+}
+.col-md-6.w3-banner-grid-left {
+    width: 70%;
+    float: left;
+}
+.col-md-6.w3-banner-grid-right{
+    width: 70%;
+    float: left;
+}
+.w3-banner-text p {
+    width: 80%;
+}
+ul.address li ul.agileits-address-text li {
+    display: inline-block;
+    font-size: 1em;
+    color:rgba(255, 255, 255, 0.76);
+    margin-top: 1em;
+    font-weight: 600;
+    font-family: 'Text Me One', sans-serif;
+}
+ul.address li ul.agileits-address-text li:nth-child(1) {
+    width: 20%;
+}
+ul.address {
+    margin-top: 0.5em;
+      border-top: 2px dotted #00bcd4;
+    padding-top: 0.5em;
+}
+li.agile-it-adress-left b {
+    color: #fff;
+}
+h3{
+  color: white;
+}
+.w3-banner-text p{
+  color: white;
+}
+.w3-right-addres-1{
+  margin-left: auto;
+}
+

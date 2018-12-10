@@ -1,5 +1,6 @@
 /* import font */
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Play');
 
 
 
@@ -11,11 +12,12 @@
 
 #main_part, #vue-index,body{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0039b3+0,34cfbe+100 */
-    background: #0039b3; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #0039b3 0%, #34cfbe 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #0039b3 0%,#34cfbe 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #0039b3 0%,#34cfbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0039b3', endColorstr='#34cfbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-image: url("../images/big_image_3.jpg");
+    /*background: #0039b3; /* Old browsers */
+    /*background: -moz-linear-gradient(-45deg, #0039b3 0%, #34cfbe 100%); /* FF3.6-15 */
+    /*background: -webkit-linear-gradient(-45deg, #0039b3 0%,#34cfbe 100%); /* Chrome10-25,Safari5.1-6 */
+    /*background: linear-gradient(135deg, #0039b3 0%,#34cfbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0039b3', endColorstr='#34cfbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     /* make the background color not repeat */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,6 +29,7 @@
     grid-template-columns: 20% auto;
     padding: 3em;
 }
+
 aside{
     background: #DCE1F6;
     color: #fff;
@@ -45,8 +48,9 @@ figure{
 }
 
 figcaption{
+    font-family: Arial;
     font-size: 1.3em;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 nav{
@@ -74,7 +78,8 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8em;
+    font-family: 'Play', sans-serif;
+    font-size: 1em;
     display: block;
     padding: 1.5em 3em;
     background-color: rgba(255,255,255,.35);
@@ -86,7 +91,7 @@ nav ul li a:hover{
 }
 
 main{
-    background: white url('../images/main-component.jpg') no-repeat;
+    background: white url('../images/big_image_1.jpg') no-repeat;
     background-size: cover;
     padding: 2em;
 }
@@ -103,9 +108,10 @@ figcaption{
 }
 
 h1{
-
+    font-family: 'Play', sans-serif;
     font-size: 3em;
     margin-top: 2em;
+    color: white;
 }
 
 p{
