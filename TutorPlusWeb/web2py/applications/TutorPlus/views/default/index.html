@@ -36,6 +36,7 @@
 
                                     <v-text-field
                                         id="username_field"
+                                        :rules="[rules.required]"
                                         label="Username"
                                         box
                                         color="blue"
@@ -45,6 +46,7 @@
                                         id="password_field"
                                         :append-icon="show_password ? 'visibility_off' : 'visibility'"
                                         :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required]"
                                         name="input-10-1"
                                         label="Password"
                                         @click:append="show_password = !show_password"
@@ -52,9 +54,6 @@
                                         box
                                         dark
                                       ></v-text-field>
-
-
-
 
                                     <div class="container-login100-form-btn">
                                         <button v-on:click="login()" class="login100-form-btn">Login</button>
@@ -82,6 +81,7 @@
 
                                     <v-text-field
                                         id="username_signup_field"
+                                        :rules="[rules.required]"
                                         label="Username"
                                         box
                                         color="blue"
@@ -91,7 +91,9 @@
                                         id="password_signup_field"
                                         :append-icon="show_password ? 'visibility_off' : 'visibility'"
                                         :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required, rules.min]"
                                         name="input-10-1"
+                                        counter
                                         label="Password"
                                         @click:append="show_password = !show_password"
                                         color="blue"
@@ -101,7 +103,9 @@
                                     <v-text-field
                                         id="re-password_signup_field"
                                         :type="show_password ? 'text' : 'password'"
+                                        :rules="[rules.required, rules.min]"
                                         name="input-10-1"
+                                        counter
                                         label="Re-Password"
                                         color="blue"
                                         box

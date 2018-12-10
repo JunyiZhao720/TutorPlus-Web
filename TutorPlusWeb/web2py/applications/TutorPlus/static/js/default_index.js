@@ -245,7 +245,11 @@ var app = function() {
             show_password: false,
             alert: true,
             alert_message: "default alert message",
-            rating: 1
+            rating: 1,
+            rules: {
+              required: value => !!value || 'Required',
+              min: v => !!v && v.length >= 6 || 'Min 6 characters',
+            }
         },
         methods: {
             // login-part
