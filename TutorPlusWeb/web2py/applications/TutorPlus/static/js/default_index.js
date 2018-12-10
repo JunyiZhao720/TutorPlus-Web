@@ -159,10 +159,12 @@ var app = function() {
             self.vue.alert_message = message;
             self.vue.alert_type = "error";
             self.vue.alert = true;
+            self.vue.alert_color = "red";
         }else{
             self.vue.alert_message = message;
             self.vue.alert_type = "success";
             self.vue.alert = true;
+            self.vue.alert_color = "green";
         }
     };
     /*********************************************************************************************************/
@@ -171,6 +173,12 @@ var app = function() {
         console.log("User listener is online!");
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
+                if(!user.emailVerified){
+                    console.log("Email is not permitted");
+                    self.invokeMessage("You need to verify your email first before login", true);
+                    self.logout()
+                    return;
+                }
                 console.log("User listener: login!");
             // firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
             //
@@ -313,6 +321,7 @@ var app = function() {
             alert: false,
             alert_message: "default alert message",
             alert_type: "error",
+            alert_color: "red",
             rating: 1,
             rules: {
               required: value => !!value || 'Required',
