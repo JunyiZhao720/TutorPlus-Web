@@ -466,6 +466,7 @@ def download_tutor_profile_list_by_name():
         debug("download_tutor_profile_list", str(e))
         raise HTTP(400, "Internal error")
 
+
 def download_tutor_replies():
     # check if packet valid
     data = __parsePacket(request.vars.packet)
@@ -541,9 +542,52 @@ def upload_user_rating():
         __createDoc(collections_tutor, uid, new_reply)
         tutor_profile[RATING_COUNT_FIELD] = tutor_count
         tutor_profile[RATING_SUM_FIELD] = tutor_sum
-        print(tutor_count)
-        print()
         __createDoc([USER_COLLECTION], tutor_id, tutor_profile)
     except ValueError, e:
         debug("upload_user_rating", str(e))
+        raise HTTP(400, uid + ': Internal error')
+
+
+def delete_user_rating():
+    # check if packet valid
+    data = __parsePacket(request.vars.packet)
+    if data is None:
+        debug("delete_user_rating", "Packet errors")
+        raise HTTP(400, "Packet errors")
+    # main fields
+    if ID_FIELD not in data or TUTOR_ID_TRANS not in data:
+        debug("delete_user_rating", "Empty id or tutor_id")
+        raise HTTP(400, "Empty id or tutor_id")
+    uid = data[ID_FIELD]
+    uid = str(uid)
+    tutor_id = data[TUTOR_ID_TRANS]
+    tutor_id = str(tutor_id)
+
+    # if exist
+    collections_tutor = [USER_COLLECTION, tutor_id, RATING_COLLECTION]
+    exist_state = __ifDocExist(collections_tutor, uid)
+
+    # db storage
+    try:
+        tutor_profile = __downloadDoc([USER_COLLECTION], tutor_id)
+        # got previous tutor profile
+        if RATING_COUNT_FIELD in tutor_profile and RATING_SUM_FIELD in tutor_profile:
+            tutor_sum = tutor_profile[RATING_SUM_FIELD]
+            tutor_count = tutor_profile[RATING_COUNT_FIELD]
+        else:
+            raise HTTP(400, 'Tutor error, rating related fields not exist')
+        # check if the reply already exists
+        if exist_state:
+            old_reply = __downloadDoc(collections_tutor, uid)
+            old_rating = int(old_reply[RATING_FIELD])
+
+            tutor_sum -= old_rating
+            tutor_count -= 1
+
+        __deleteDoc(collections_tutor, uid)
+        tutor_profile[RATING_COUNT_FIELD] = tutor_count
+        tutor_profile[RATING_SUM_FIELD] = tutor_sum
+        __createDoc([USER_COLLECTION], tutor_id, tutor_profile)
+    except ValueError, e:
+        debug("delete_user_rating", str(e))
         raise HTTP(400, uid + ': Internal error')
