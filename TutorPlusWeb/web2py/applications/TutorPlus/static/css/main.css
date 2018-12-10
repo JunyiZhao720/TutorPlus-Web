@@ -155,6 +155,10 @@ iframe {
 .limiter {
   width: 100%;
   margin: 0 auto;
+  background-image: url("../images/star.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-login100 {
@@ -169,12 +173,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #fff;  
+  /*background: #fff;  */
 }
 
 .wrap-login100 {
   width: 390px;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 
@@ -503,4 +507,6 @@ h3{
 .w3-right-addres-1{
   margin-left: auto;
 }
-
+.replies{
+  border-radius: 10px;
+}
