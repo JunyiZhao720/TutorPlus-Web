@@ -399,7 +399,7 @@ var app = function() {
       // login-part
       logged_in: false,
       login_idx: "LOGIN",
-
+      rating: 0,
       // login-part message box
       is_login_messagebox_show: false,
       login_message: "",

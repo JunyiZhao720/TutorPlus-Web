@@ -189,6 +189,7 @@ p{
   transform: scale(1.1);
 }
 
-.search-div{
-    background:white;
+.reply-div{
+    /*background: rgba(255,255,255,.5);*/
+    background: #0F192A;
 }

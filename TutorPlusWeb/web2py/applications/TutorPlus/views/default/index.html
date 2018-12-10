@@ -260,6 +260,43 @@
       <div v-show="main_idx === 'RESULT'">
         <h1>Tutor Name</h1>
         <h2>Tutor description</h2>
+          <template>
+
+                <div class="reply-div">
+                    <v-container fluid grid-list-md>
+                        <v-layout align-space-between column>
+                            <v-layout row>
+                                <v-flex xs8>
+                                    <v-rating v-model="rating" hover="true"></v-rating>
+                                </v-flex>
+
+                                <v-flex xs2>
+                                    <v-btn flat color="primary">Edit</v-btn>
+                                </v-flex>
+                                <v-flex xs2>
+                                    <v-btn flat color="primary">Submit</v-btn>
+                                </v-flex>
+
+                            </v-layout>
+                            <v-textarea
+                              name="input-7-1"
+                              box
+                              label="Label"
+                              auto-grow
+                              value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+                              readonly = 1
+                              background-color = "black"
+                              dark
+
+                            ></v-textarea>
+
+                        </v-layout>
+                    </v-container>
+                </div>
+
+
+
+        </template>
       </div>
     </main>
   </div>

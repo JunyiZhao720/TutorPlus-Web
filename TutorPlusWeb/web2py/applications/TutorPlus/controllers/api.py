@@ -514,7 +514,8 @@ def upload_user_rating():
         new_reply = {
             ID_FIELD: str(uid).decode('unicode-escape'),
             REPLY_FIELD: str(data[REPLY_FIELD]).decode('unicode-escape'),
-            RATING_FIELD: str(data[RATING_FIELD]).decode('unicode-escape')
+            RATING_FIELD: str(data[RATING_FIELD]).decode('unicode-escape'),
+            NAME_FIELD: str(data[NAME_FIELD]).decode('unicode-escape')
         }
         tutor_profile = __downloadDoc([USER_COLLECTION], tutor_id)
 
