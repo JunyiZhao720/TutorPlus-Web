@@ -158,7 +158,7 @@
               </v-flex>
 
               <v-flex  xs2>
-                <v-btn color="info">Search by name</v-btn>
+                <v-btn color="info" v-on:click="searchTutorByName()">Search by name</v-btn>
               </v-flex>
             </v-layout>
 
@@ -166,8 +166,6 @@
             </br>
 
             <v-layout row wrap>
-
-
               <search-result-card
                 v-for= "eachTutor in search_result"
                 v-bind:show_grade="search_show_grade"
@@ -176,10 +174,10 @@
                 v-bind:major="eachTutor.major"
                 v-bind:name="eachTutor.name"
                 v-bind:rating="eachTutor.rating"
+                v-bind:imageurl="eachTutor.imageURL"
                 v-bind:university="school_full_name_dict[eachTutor.university]"
-                v-bind:school_dict="school_full_name_dict"
+                v-on:show-detail="showTutorDetail($event)"
               ></search-result-card>
-
 
             </v-layout>
 
@@ -305,7 +303,7 @@
       <div v-show="main_idx === 'RESULT'">
         Result page
         <button class="btn btn--radius btn--green" v-on:click="queryTest()">Query Test</button>
-
+        ${detailPage}
       </div>
 
     </main>
