@@ -48,10 +48,14 @@ img{
     cursor: pointer;
 }
 figure{
-    background-image: url("../images/bbc.jpeg");
+    background-image: url("../images/images.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius: 10px;
+
 }
 
 figcaption{
