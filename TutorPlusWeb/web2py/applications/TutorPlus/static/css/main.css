@@ -1,5 +1,11 @@
 
+#vue-index{
+  background-image: url("../images/star.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -41,6 +47,7 @@
 /*}*/
 
 /*---------------------------------------------*/
+
 
 .login-more p-t-190 a {
 	font-family: Poppins-Regular;
@@ -155,10 +162,6 @@ iframe {
 .limiter {
   width: 100%;
   margin: 0 auto;
-  background-image: url("../images/star.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .container-login100 {

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdfe6aae-9d1e-47c6-8dfa-f90b7c573abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/admin/sessions/029/1b2/127.0.0.1-58a7071f-31f5-4e6d-b41b-83009198801e" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin/sessions/029/1b2/127.0.0.1-58a7071f-31f5-4e6d-b41b-83009198801e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters_8000.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1544433720128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/web2py$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1544438098565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="888496440">
@@ -70,8 +74,8 @@
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -93,15 +97,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="811" />
-          <entry key="html" value="789" />
+          <entry key="css" value="935" />
+          <entry key="html" value="821" />
           <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="811" />
-          <entry key="HTML" value="789" />
+          <entry key="CSS" value="935" />
+          <entry key="HTML" value="821" />
           <entry key="Python" value="4" />
         </counts>
       </usages-collector>
@@ -112,17 +116,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
+            <state relative-caret-position="165">
+              <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -130,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="345">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
@@ -144,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="375">
               <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
             </state>
           </provider>
@@ -153,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+            <state relative-caret-position="422">
+              <caret line="209" column="23" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -171,7 +166,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
+            <state relative-caret-position="690">
               <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
             </state>
           </provider>
@@ -180,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="231" column="21" selection-start-line="231" selection-start-column="21" selection-end-line="231" selection-end-column="21" />
+            <state relative-caret-position="78">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -219,6 +214,8 @@
       <find>RESULT</find>
       <find>unpkg</find>
       <find>Username</find>
+      <find>limi</find>
+      <find>login-p</find>
     </findStrings>
     <replaceStrings>
       <replace>#005dc3</replace>
@@ -241,10 +238,10 @@
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/login.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/style.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/models/db.py" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" />
-        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/import.html" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/main.css" />
+        <option value="$PROJECT_DIR$/applications/TutorPlus/static/css/index.css" />
         <option value="$PROJECT_DIR$/applications/TutorPlus/views/default/index.html" />
       </list>
     </option>
@@ -429,15 +426,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.326972" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,29 +451,6 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26967096" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32866243" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32866243" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -570,27 +544,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/controllers/appadmin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/models/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="375">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
+        <state relative-caret-position="690">
           <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -601,31 +575,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/import.html">
+    <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="78">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+        <state relative-caret-position="422">
+          <caret line="209" column="23" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/static/js/default_index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="1601">
           <caret line="253" column="20" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/TutorPlus/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
+        <state relative-caret-position="165">
+          <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
         </state>
       </provider>
     </entry>

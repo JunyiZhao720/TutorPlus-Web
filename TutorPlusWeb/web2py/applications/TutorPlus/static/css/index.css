@@ -12,8 +12,6 @@
 
 #main_part, #vue-index,body{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0039b3+0,34cfbe+100 */
-    background-image: url("../images/star.gif");
-    background-position: center;
     /*background: #0039b3; /* Old browsers */
     /*background: -moz-linear-gradient(-45deg, #0039b3 0%, #34cfbe 100%); /* FF3.6-15 */
     /*background: -webkit-linear-gradient(-45deg, #0039b3 0%,#34cfbe 100%); /* Chrome10-25,Safari5.1-6 */
@@ -207,4 +205,7 @@ a{
     background: rgba(191, 191, 191, .5);
     /*background: #0F192;*/
     border-radius: 10px;
+}
+.v-text-field{
+    font-family: Arial;
 }
