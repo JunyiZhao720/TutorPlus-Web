@@ -15,7 +15,7 @@ def __verify_idToken(id_token):
         return None
 
 
-def __parsePacket(packet, check_data=True):
+def __parsePacket(packet, check_data=True, return_uid=False):
     if packet is None:
         debug("__parsePacket", "Packet is empty")
         return None
@@ -35,6 +35,7 @@ def __parsePacket(packet, check_data=True):
                     return None
                 else:
                     data = packet[DATA_TRANS]
+                    if return_uid: data[TOKEN_TRANS] = cred
                     return data
             else:
                 return dict()
@@ -154,23 +155,45 @@ from gluon.contrib import simplejson
 
 def get_profile():
     # check if packet valid
-    data = __parsePacket(request.vars.packet)
-    if data is None:
-        debug("get_profile", "Packet errors")
-        raise HTTP(400, "Packet errors")
-    # main fields
-    if ID_FIELD not in data:
-        debug("get_profile", "Empty id")
-        raise HTTP(400, "Empty id")
-    uid = data[ID_FIELD]
-    uid = str(uid)
-    collections = [USER_COLLECTION]
-    try:
-        profile = __downloadDoc(collections, uid)
-        return response.json(dict(profile=profile))
-    except ValueError, e:
-        debug("get_profile", str(e))
-        raise HTTP(400, uid + ": Document doesn't exist")
+    data = __parsePacket(request.vars.packet, True, True)
+    # if data is None:
+    #     debug("get_profile", "Packet errors")
+    #     raise HTTP(400, "Packet errors")
+    # # main fields
+    # if ID_FIELD not in data:
+    #     debug("get_profile", "Empty id")
+    #     raise HTTP(400, "Empty id")
+    # uid = data[ID_FIELD]
+    # uid = str(uid)
+    # cred = data[TOKEN_TRANS]
+    # cred = str(cred[u"uid"])
+    # if cred != uid:
+    #     debug("get_profile", cred + " " + uid + " doesn't match")
+    #     raise HTTP(400, "Id doesn't match!")
+
+    # # get data
+    # collections = [USER_COLLECTION]
+    # try:
+    #     if __ifDocExist(collections, uid):
+    #         profile = __downloadDoc(collections, uid)
+    #     else:
+    #         profile = {
+    #             COUNT_FIELD: 0,
+    #             GENDER_FIELD: "",
+    #             ID_FIELD: uid,
+    #             IMAGE_URL_FIELD: "",
+    #             MAJOR_FIELD: "",
+    #             NAME_FIELD: "",
+    #             PS_FIELD: "",
+    #             SCHEDULE_FIELD: "",
+    #             TAG_FIELD: [],
+    #             UNIVERSITY_FIELD: ""
+    #         }
+    #         # __createDoc(collections, uid, profile)
+    #     return response.json(dict(profile=profile))
+    # except ValueError, e:
+    #     debug("get_profile", str(e))
+    #     raise HTTP(400, uid + ": Document doesn't exist")
 
 
 def update_profile():
@@ -195,30 +218,6 @@ def update_profile():
     except ValueError, e:
         debug(update_profile, str(e))
         raise HTTP(400, uid + ': Updating info encounters an error')
-
-
-def create_profile():
-    # check if packet valid
-    data = __parsePacket(request.vars.packet)
-    if data is None:
-        debug("create_profile", "Packet errors")
-        raise HTTP(400, "Packet errors")
-    # main fields
-    if ID_FIELD not in data:
-        debug("create_profile", "Empty id")
-        raise HTTP(400, "Empty id")
-    uid = data[ID_FIELD]
-    uid = str(uid)
-    for field_name in data:
-        if field_name not in USER_PROFILE_FIELDS:
-            debug("create_profile", uid + ": <" + field_name + "> is not a user field")
-            raise HTTP(400, uid + ": " + field_name + " is not a user field")
-    collections = [USER_COLLECTION]
-    try:
-        __createDoc(collections, uid, data)
-    except ValueError, e:
-        debug("create_profile", str(e))
-        raise HTTP(400, uid + ': Creating info encounters an error')
 
 
 def download_course_list_for_the_user():
@@ -369,7 +368,24 @@ def download_tutor_profile_list():
         # download tutor profiles
         collections = [USER_COLLECTION]
         for tutor in tutor_list:
-            profile_list.append(__downloadDoc(collections, tutor))
+            profile = __downloadDoc(collections, tutor)
+            courseName = school + "-" + course
+            courseInfo = __downloadDoc([USER_COLLECTION, tutor, COURSE_COLLECTION], courseName)
+
+            name = profile[NAME_FIELD] if NAME_FIELD in profile else ""
+            university = profile[UNIVERSITY_FIELD] if UNIVERSITY_FIELD in profile else ""
+            rating = float(profile[RATING_SUM_FIELD]) / float(
+                profile[RATING_COUNT_FIELD]) if RATING_SUM_FIELD in profile and RATING_COUNT_FIELD in profile else 0
+            major = profile[MAJOR_FIELD] if MAJOR_FIELD in profile else ""
+            grade = courseInfo[GRADE_TUTOR] if courseInfo is not None and GRADE_TUTOR in courseInfo else "Null"
+            profile_list.append({
+                "id": tutor,
+                "name": name,
+                "university": university,
+                "major": major,
+                "rating": rating,
+                "grade": grade
+            })
         return response.json(dict(profile_list=profile_list))
     except ValueError, e:
         debug("download_tutor_profile_list", str(e))

@@ -35,13 +35,11 @@ RATING_COUNT_FIELD = u'rating_count'
 RATING_FIELD = u"rating"
 REPLY_FIELD = u"reply"
 
-
 USER_PROFILE_FIELDS = (ID_FIELD, COUNT_FIELD, GENDER_FIELD, IMAGE_URL_FIELD, MAJOR_FIELD, NAME_FIELD, PS_FIELD,
                        SCHEDULE_FIELD, TAG_FIELD, UNIVERSITY_FIELD)
 
 # School fields
 SCHOOL_MAJOR_LIST_FIELD = "major_list"
-
 
 # Transmission fields
 TOKEN_TRANS = "idToken"
@@ -51,6 +49,11 @@ COURSE_TRANS = "course_id"
 SCHOOL_TRANS = "school_id"
 ACTIVE_TRANS = "is_active"
 TUTOR_ID_TRANS = "tutor_id"
+
+# Search tutors fields
+GRADE_TUTOR = "grade"
+RATING_TUTOR = "rating"
+
 
 # -------------------------------------------------------------------------
 # Helper Functions
