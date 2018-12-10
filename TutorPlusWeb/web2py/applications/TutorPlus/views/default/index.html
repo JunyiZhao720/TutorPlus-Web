@@ -130,7 +130,6 @@
             <div id="main_part" v-show="logged_in">
                 <aside>
                     <figure>
-                        <div id="avatar" href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'"></div>
                         <figcaption>User Name</figcaption>
                     </figure>
                     <nav>
@@ -217,12 +216,15 @@
                                     <v-container fluid grid-list-md>
                                         <v-layout align-space-between column>
                                     <v-layout row>
-                                        <v-flex xs8>
+                                        <v-flex xs6>
                                             <v-rating v-model="rating" hover readonly></v-rating>
                                         </v-flex>
 
                                         <v-flex xs2>
                                             <v-btn flat color="primary" v-show="false">Edit</v-btn>
+                                        </v-flex>
+                                        <v-flex xs2>
+                                            <v-btn flat color="primary" v-show="false">Delete</v-btn>
                                         </v-flex>
                                         <v-flex xs2>
                                             <v-btn flat color="primary" v-show="false">Submit</v-btn>
