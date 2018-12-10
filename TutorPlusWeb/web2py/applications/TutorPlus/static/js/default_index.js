@@ -154,6 +154,17 @@ var app = function() {
     //     });
     // };
 
+    self.invokeMessage = function(message, isError){
+        if (isError){
+            self.vue.alert_message = message;
+            self.vue.alert_type = "error";
+            self.vue.alert = true;
+        }else{
+            self.vue.alert_message = message;
+            self.vue.alert_type = "success";
+            self.vue.alert = true;
+        }
+    };
     /*********************************************************************************************************/
     /*Login functions*/
     self.is_logged_in_listener = function(){
@@ -183,67 +194,63 @@ var app = function() {
         });
     };
 
-  //   self.signup = function() {
-  //   var userEmail = document.getElementById("username_signup_field").value;
-  //   var userPwd1 = document.getElementById("password_signup_field").value;
-  //   var userPwd2 = document.getElementById("re-password_signup_field").value;
-  //
-  //   if (!(userEmail && userPwd1 && userPwd2)) {
-  //     self.vue.login_message = "The Email and Password must be filled";
-  //     self.vue.is_login_messagebox_show = true;
-  //     return;
-  //   }
-  //   if (userPwd1 != userPwd2) {
-  //     self.vue.login_message = "The passwords you entered are not the same";
-  //     self.vue.is_login_messagebox_show = true;
-  //     return;
-  //   }
-  //
-  //   firebase.auth().createUserWithEmailAndPassword(userEmail, userPwd1).catch(function(error) {
-  //     // Handle Errors here.
-  //     var errorCode = error.code;
-  //     var errorMessage = error.message;
-  //     console.log("An error happened when handling signup");
-  //     console.log("errorCode = ", errorCode, " errorMessage = ", errorMessage);
-  //     self.vue.login_message = errorMessage;
-  //     self.vue.is_login_messagebox_show = true;
-  //
-  //     // ...
-  //
-  //   }).then(function() {
-  //     var user = firebase.auth().currentUser;
-  //     if (user) {
-  //       console.log("In signup: detected a user");
-  //       //var db = firebase.firestore();
-  //       var user_uid = user.uid;
-  //       /*
-  //       db.collection("users").doc(user_uid).set({
-  //         email: user.email,
-  //         gender: '',
-  //         major: '',
-  //         name: '',
-  //         university: '',
-  //         ps: ''
-  //       });*/
-  //       user.sendEmailVerification().then(function() {
-  //         // Email sent.
-  //         console.log("A email is sent to the user");
-  //         self.vue.login_message = "A email is sent to the addres you registed, please verify.";
-  //         self.vue.is_login_messagebox_show = true;
-  //       }).catch(function(error) {
-  //         // An error happened.
-  //         var errorCode = error.code;
-  //         var errorMessage = error.message;
-  //         console.log("An error happened when handling signup");
-  //         console.log("errorCode = ", errorCode, " errorMessage = ", errorMessage);
-  //         self.vue.login_message = errorMessage;
-  //         self.vue.is_login_messagebox_show = true;
-  //       });
-  //     } else {
-  //       console.log("In signup: cannot detect a user");
-  //     }
-  //   });
-  // }
+    self.signup = function() {
+    var userEmail = document.getElementById("username_signup_field").value;
+    var userPwd1 = document.getElementById("password_signup_field").value;
+    var userPwd2 = document.getElementById("re-password_signup_field").value;
+
+    if (!(userEmail && userPwd1 && userPwd2)) {
+        self.invokeMessage("The Email and Password must be filled", true);
+      return;
+    }
+    if (userPwd1 != userPwd2) {
+        self.invokeMessage("The passwords you entered are not the same", true);
+      return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPwd1).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log("An error happened when handling signup");
+      console.log("errorCode = ", errorCode, " errorMessage = ", errorMessage);
+      self.invokeMessage(errorMessage, true);
+
+      // ...
+
+    }).then(function() {
+      var user = firebase.auth().currentUser;
+      if (user) {
+        console.log("In signup: detected a user");
+        //var db = firebase.firestore();
+        var user_uid = user.uid;
+        /*
+        db.collection("users").doc(user_uid).set({
+          email: user.email,
+          gender: '',
+          major: '',
+          name: '',
+          university: '',
+          ps: ''
+        });*/
+        user.sendEmailVerification().then(function() {
+          // Email sent.
+          console.log("A email is sent to the user");
+          self.invokeMessage("A email is sent to the addres you registed, please verify.", false);
+
+        }).catch(function(error) {
+          // An error happened.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log("An error happened when handling signup");
+          console.log("errorCode = ", errorCode, " errorMessage = ", errorMessage);
+          self.invokeMessage(errorMessage, true);
+        });
+      } else {
+        console.log("In signup: cannot detect a user");
+      }
+    });
+  }
 
     self.is_logged_in = function(){
         let user = firebase.auth().currentUser;
@@ -263,8 +270,7 @@ var app = function() {
             let errorCode = error.code;
             let errorMessage = error.message;
             console.log("Error : " + errorCode + "-" + errorMessage);
-            self.vue.message = errorCode + "-" + errorMessage;
-            self.vue.is_messagebox_show = true;
+            self.invokeMessage(errorCode + "-" + errorMessage, true);
         });
     };
 
@@ -278,8 +284,7 @@ var app = function() {
             let errorCode = error.code;
             let errorMessage = error.message;
             console.log("Error : " + errorCode + "-" + errorMessage);
-            self.vue.alert_message = "Error : " + errorCode + "-" + errorMessage;
-            self.vue.alert = true;
+            self.invokeMessage("Error : " + errorCode + "-" + errorMessage, true);
         })
     };
 
@@ -318,7 +323,8 @@ var app = function() {
             // login-part
             is_logged_in: self.is_logged_in,
             login: self.login,
-            logout: self.logout
+            logout: self.logout,
+            signup:  self.signup
             // add_post: self.add_post,
             // // Likers.
             // like_mouseover: self.like_mouseover,
