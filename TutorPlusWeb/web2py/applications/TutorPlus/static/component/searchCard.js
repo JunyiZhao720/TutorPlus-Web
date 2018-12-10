@@ -15,7 +15,7 @@ var Template = `
         </v-flex>
         <v-flex xs5 style="margin-top:auto; margin-bottom:auto">
           <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+            v-bind:src="imageurl"
             height="125px"
             contain
           ></v-img>
@@ -24,7 +24,7 @@ var Template = `
 
     <v-divider light></v-divider>
     <v-card-actions>
-      <v-btn flat dark>Details</v-btn>
+      <v-btn flat dark v-on:click="showDetail()">Details</v-btn>
     </v-card-actions>
   </v-card>
 </v-flex>
@@ -37,6 +37,7 @@ Vue.component('search-result-card', {
     'major',
     'name',
     'rating',
+    'imageurl',
     'university',
   ],
   data: function() {
@@ -45,10 +46,10 @@ Vue.component('search-result-card', {
     }
   },
   methods: {
-    deleteThis: function() {
-      this.card.is_active = false;
+    showDetail: function() {
+      //this.card.is_active = false;
       //this.tutor_card.is_active = false;
-      //this.$emit(this.tutor_card.index);
+      this.$emit('show-detail', this.uid);
     }
   },
   created(){

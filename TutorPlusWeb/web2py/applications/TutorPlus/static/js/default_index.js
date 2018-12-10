@@ -232,7 +232,7 @@ var app = function() {
   }
 
   self.searchTutorByCourse = function() {
-    console.log("hello")
+    //console.log("hello")
     if (self.vue.search_course && self.vue.search_university) {
       var packet = {
         idToken: self.vue.idToken,
@@ -244,12 +244,34 @@ var app = function() {
       };
       $.get("https://tutorplus-93a0f.appspot.com/download-tutor-profile-list", packet,
       function(data, status){
-        console.log("hello wolrd in GUHU")
-        console.log(data.profile_list);
+        //console.log("hello wolrd in GUHU")
+        //console.log(data.profile_list);
         self.vue.search_result = data.profile_list;
+        self.vue.search_show_grade = true;
       });
     }
   }
+
+  self.searchTutorByName = function() {
+    //console.log("hello in search by name");
+    if (self.vue.search_name) {
+      var packet = {
+        idToken: self.vue.idToken,
+        data: {
+          name: self.vue.search_name,
+        }
+      };
+      $.get("https://tutorplus-93a0f.appspot.com/download-tutor-profile-list-by-name", packet,
+      function(data, status){
+        //console.log("hello wolrd in GUHU");
+        //console.log(data.profile_list);
+        self.vue.search_result = data.profile_list;
+        self.vue.search_show_grade = false;
+      });
+    }
+  }
+
+
 
   /*********************************************************************************************************/
   /*Signup functions*/
@@ -334,7 +356,9 @@ var app = function() {
         'University of California, Davis (UCD)',
       ],
 
-      school_data: {}
+      school_data: {},
+
+      detailPage: "BalaBla"
       //signup part
       // form_title: "",
       // form_content: "",
@@ -368,8 +392,14 @@ var app = function() {
       },
       updateTutorProfile: self.updateTutorProfile,
       searchTutorByCourse: self.searchTutorByCourse,
-
+      searchTutorByName: self.searchTutorByName,
       queryTest: self.searchTutorByCourse,
+
+      showTutorDetail: function(uid){
+        this.detailPage= uid;
+        this.main_idx = 'RESULT';
+
+      }
       /*function() {
         this.$http.get("https://tutorplus-93a0f.appspot.com/echo",
         {
