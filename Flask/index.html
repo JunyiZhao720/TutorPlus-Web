@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TutorPlus</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--========================================Login-CSS==================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/TutorPlus/static/images/icons/favicon.ico">
+	<!-- <link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/bootstrap/css/bootstrap.min.css">-->
+
+	<!--
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/css/util.css">
+  -->
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Ffont-awesome.min.css?alt=media&token=9e627b85-7c8b-452a-98b4-4167c314634f">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fmaterial-design-iconic-font.min.css?alt=media&token=c705c3fb-f03d-4b4b-b0a8-b8728c8d64b5">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fanimate.css?alt=media&token=8f56b32a-5d06-4f45-8b24-575b44f0285b">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fhamburgers.min.css?alt=media&token=44cdbba6-e6fa-4ae7-8f1a-071f7a9ab3ad">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fanimsition.min.css?alt=media&token=86b0aa83-7cd5-404b-87bf-cbecd0dd3175">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fselect2.min.css?alt=media&token=3928343a-bd54-43d4-9091-61c05f29e2c8">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fdaterangepicker.css?alt=media&token=e4d4d25b-849b-41c1-8b47-2e502702d052">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Futil.css?alt=media&token=158fbe46-d2f9-4b6e-a15b-53d7ddcaa9cc">
+
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+	<!--===============================================================================================-->
+
+
+	<!--========================================Login-CSS-JS==================================================-->
+	<!--===============================================================================================-->
+	<!--
+	<script src="/TutorPlus/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/TutorPlus/static/vendor/animsition/js/animsition.min.js"></script>
+	<script src="/TutorPlus/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/TutorPlus/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+		<script src="/TutorPlus/static/vendor/select2/select2.min.js"></script>
+    <script src="/TutorPlus/static/vendor/daterangepicker/moment.min.js"></script>
+    <script src="/TutorPlus/static/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="/TutorPlus/static/vendor/countdowntime/countdowntime.js"></script>
+-->
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fjquery-3.2.1.min.js?alt=media&token=9025de31-9923-46b0-b8d9-3793fc8133bb"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fanimsition.min.js?alt=media&token=6ac85505-2307-439b-8486-ef9f559c7bd1"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fpopper.js?alt=media&token=2464add3-d016-4ebf-9c1e-8c276172c1f3"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fbootstrap.min.js?alt=media&token=38140b7e-10fd-459a-9a00-16bdb6402846"></script>
+  <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fselect2.min.js?alt=media&token=985e12d3-a118-4d61-ac2e-766ea8ff2c73"></script>
+  <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fmoment.min.js?alt=media&token=7dde9652-7801-44ec-9df3-f26d8f79213f"></script>
+  <script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fdaterangepicker.js?alt=media&token=71454977-a755-4370-acaa-55e7cfbd1bc0"></script>
+	<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fcountdowntime.js?alt=media&token=ccaa43c7-e499-4ac3-ac2c-d7227ffe4fb1"></script>
+	<!--===============================================================================================-->
+
+
+	<!--========================================Profile-Page-CSS-JS==================================================-->
+	<!--===============================================================================================-->
+	<!-- Font special for pages-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+
+	<!-- Main CSS-->
+
+	<!--<link rel="stylesheet" href="/TutorPlus/static/css/userProfile.css">-->
+	<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2FuserProfile.css?alt=media&token=0ed021b5-fdd9-4760-8260-95bf1f5a6cc7">
+	<!--===============================================================================================-->
+
+
+	<!--========================================Main-CSS==================================================-->
+	<!--===============================================================================================-->
+	<!--
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/TutorPlus/static/css/main.css">-->
+
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Findex.css?alt=media&token=a0061a17-d23e-41e9-9992-7a25db381b08">
+	<link rel="stylesheet" type="text/css" href="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fmain.css?alt=media&token=12defdc2-3eb3-4205-b4e0-38270367d43c">
+	<!--===============================================================================================-->
+
+
+	<!--==========================================JS=============================================-->
+	<!--===============================================================================================-->
+	<!--<script src="/TutorPlus/static/js/main.js"></script>-->
+	<!--<script src="/TutorPlus/static/js/vue.js"></script>-->
+	<script src="https://unpkg.com/vue@latest"></script>
+	<!--<script src="https://unpkg.com/vue-select@latest"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+	<!--<script src="/TutorPlus/static/js/vue-resource.js"></script>-->
+	<!--===============================================================================================-->
+
+	<!--==========================================Other=============================================-->
+	<!--===============================================================================================-->
+	<script type="text/javascript"><!--
+    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+    var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+var w2p_ajax_date_format = "%Y-%m-%d";
+var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+var ajax_error_500 = "An error occured, please <a href=\"/TutorPlus/default/index\">reload</a> the page";
+var w2p_ajax_disable_with_message = "Working...";
+
+    //--></script>
+
+<meta name="keywords" content="[&#x27;web2py&#x27;, &#x27;python&#x27;, &#x27;framework&#x27;]" />
+<meta name="description" content="a cool new app" />
+<meta name="generator" content="Web2py Web Framework" />
+<meta name="author" content="Your Name &lt;you@example.com&gt;" />
+<script src="/TutorPlus/static/js/jquery.js" type="text/javascript"></script><link href="/TutorPlus/static/css/calendar.css" rel="stylesheet" type="text/css" /><script src="/TutorPlus/static/js/calendar.js" type="text/javascript"></script><script src="/TutorPlus/static/js/web2py.js" type="text/javascript"></script>
+
+	<!--===============================================================================================-->
+
+	<!--==========================================MessageBox-Modal======================================-->
+	<!--===============================================================================================-->
+
+	<!--===============================================================================================-->
+
+
+	<!--==========================================Firebase=============================================-->
+	<!--===============================================================================================-->
+	<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDWW9aZzAPulRzPU6i_23OdAx0jXPwJRVk",
+			authDomain: "tutorplus-93a0f.firebaseapp.com",
+			databaseURL: "https://tutorplus-93a0f.firebaseio.com",
+			projectId: "tutorplus-93a0f",
+			storageBucket: "tutorplus-93a0f.appspot.com",
+			messagingSenderId: "690236283457"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<!--===============================================================================================-->
+</head>
+
+<!--============================================Main==============================================-->
+<!--===============================================================================================-->
+
+<body>
+	
+
+
+<!--
+<html>
+    <body>-->
+
+<div id="vue-index">
+  <v-app id="myBackground">
+    <!----------------------------------- login part -------------------------------->
+    <!--login_idx is used to control display: LOGIN, SIGNUP-->
+
+	<template>
+        <v-alert
+          v-model="alert"
+          v-bind:type="alert_type"
+          v-bind:color="alert_color"
+          transition="scale-transition"
+          dismissible
+          >${alert_message}
+        </v-alert>
+      </template>
+	
+    <div id="login_part" v-show="!logged_in">
+    
+      
+      
+
+      <!---login--->
+      <!--
+    <span v-show="login_idx === 'LOGIN'">
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
+
+            <div class="login100-form validate-form" id="login_div">
+
+              <img src="/TutorPlus/static/images/Logo.png" align="middle">
+
+              <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                <input class="input100" type="text" name="username" id="username_field">
+                <span class="focus-input100" data-placeholder="Email"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <input class="input100" type="password" name="password" id="password_field">
+                <span class="focus-input100" data-placeholder="Password"></span>
+              </div>
+
+              <div class="container-login100-form-btn">
+                <button v-on:click="login()" class="login100-form-btn">Login</button>
+              </div>
+
+              <ul class="login-more p-t-190">
+                <li>
+                  <span class="txt1">
+                    Don’t have an account?
+                  </span>
+
+                  <a href="javascript:void(0)" v-on:click="login_idx = 'SIGNUP'" class="txt2">
+                    Sign up
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+    -->
+
+      <span v-show="login_idx === 'LOGIN'">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
+
+
+            <div class="login100-form validate-form" id="login_div">
+
+              <img src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fojbk1.png?alt=media&token=e6c18d2f-f7a5-4e32-b9e7-c99d5a59bdd6" align="middle">
+
+              <v-text-field id="username_field" :rules="[rules.required]" label="Username" box color="blue" dark></v-text-field>
+              <v-text-field id="password_field" :append-icon="show_password ? 'visibility_off' : 'visibility'" :type="show_password ? 'text' : 'password'" :rules="[rules.required]" name="input-10-1" label="Password" @click:append="show_password = !show_password"
+                color="blue" box dark></v-text-field>
+
+              <div class="container-login100-form-btn">
+                <button v-on:click="login()" class="login100-form-btn">Login</button>
+              </div>
+              <br>
+
+              <div class="container-login100-form-btn">
+                <button v-on:click="login_idx = 'SIGNUP'" class="login100-form-btn">Sign Up</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </span>
+
+
+      <!---signup--->
+      <!--
+      <span v-show="login_idx === 'SIGNUP'">
+        <div class="limiter">
+          <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+
+              <div class="login100-form validate-form" id="login_div">
+
+                <img src="/TutorPlus/static/images/Logo.png" align="middle">
+
+                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                  <input class="input100" type="text" name="username-signup" id="username_signup_field">
+                  <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                  <input class="input100" type="password" name="password-signup" id="password_signup_field">
+                  <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                  <input class="input100" type="password" name="re-password" id="re-password_signup_field">
+                  <span class="focus-input100" data-placeholder="Re-Password"></span>
+                </div>
+
+                <div class="container-login50-form-btn">
+                  <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                  <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+      -->
+
+      <span v-show="login_idx === 'SIGNUP'">
+        <div class="container-login100">
+          <div class="wrap-login100 p-t-85 p-b-20">
+
+            <div class="login100-form validate-form" id="login_div">
+
+              <img src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fojbk1.png?alt=media&token=e6c18d2f-f7a5-4e32-b9e7-c99d5a59bdd6" align="middle">
+
+              <v-text-field id="username_signup_field" :rules="[rules.required]" label="Username" box color="blue" dark></v-text-field>
+              <v-text-field id="password_signup_field" :append-icon="show_password ? 'visibility_off' : 'visibility'" :type="show_password ? 'text' : 'password'" :rules="[rules.required, rules.min]" name="input-10-1" counter label="Password"
+                @click:append="show_password = !show_password" color="blue" box dark></v-text-field>
+              <v-text-field id="re-password_signup_field" :type="show_password ? 'text' : 'password'" :rules="[rules.required, rules.min]" name="input-10-1" counter label="Re-Password" color="blue" box dark></v-text-field>
+
+              <div class="container-login50-form-btn">
+                <button v-on:click="signup()" class="login50-form-btn">Signup</button>
+                <button v-on:click="login_idx = 'LOGIN'" class="login50-form-btn">Return</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+
+      <!---messageBox--->
+    </div>
+    <!------------------------------------------------------------------------------->
+
+
+    <!------------------------------------ main part -------------------------------->
+    <div id="main_part" v-show="logged_in">
+    <!--
+      <template>
+        <v-alert
+          v-model="alert"
+          v-bind:type="alert_type"
+          v-bind:color="alert_color"
+          transition="scale-transition"
+          dismissible
+          >${alert_message}
+        </v-alert>
+      </template>
+      -->
+
+      <aside>
+        <figure>
+          <div id="avatar">
+            <img v-bind:src="profile_img_url" />
+          </div>
+          <figcaption>${profile_name}</figcaption>
+        </figure>
+        <nav>
+          <ul>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'HOME'">Home</a></li>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'">Search</a></li>
+            <li><a href="javascript:void(0)" v-on:click="main_idx = 'PROFILE'">Profile</a></li>
+            <!--<li><a href="javascript:void(0)" v-on:click="main_idx = 'RESULT'">Result</a></li>-->
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <!---home--->
+        <div v-show="main_idx === 'HOME'">
+          <h1>Welcome to Tutor+</h1>
+          <p>Tutor+ is a right place to find your ideal tutor!</p>
+          <a href="javascript:void(0)" v-on:click="main_idx = 'SEARCH'" class="cta">Do Search Now</a>
+          <button v-on:click="logout()">logout</button>
+        </div>
+        <!---search--->
+        <div v-show="main_idx === 'SEARCH'">
+
+          <div class="card card-1" style="min-height:825px">
+            <div class="card-heading"></div>
+            <div class="card-body">
+
+              <h3 style="color:#000">To find a tutor, you can</h3>
+
+              <v-layout row>
+                <v-flex xs5>
+                  <v-autocomplete v-model="search_university" :items="school_list" :label="`University`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </v-flex>
+
+                <v-flex xs4>
+                  <v-autocomplete v-model="search_course" :items="search_course_list" :label="`Course`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                  <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
+                </v-flex>
+                <v-flex xs2>
+                  <v-btn color="info" v-on:click="searchTutorByCourse()">Search by course</v-btn>
+                </v-flex>
+              </v-layout>
+
+              <h3 style="color:#000">or</h3>
+
+              <v-layout row>
+                <v-flex xs5 sm5 md3>
+                  <v-text-field v-model="search_name" label="Tutor Name" clearable></v-text-field>
+                </v-flex>
+
+                <v-flex xs2>
+                  <v-btn color="info" v-on:click="searchTutorByName()">Search by name</v-btn>
+                </v-flex>
+              </v-layout>
+
+              <v-divider></v-divider>
+              </br>
+
+              <v-layout row wrap>
+                <search-result-card v-for="eachTutor in search_result" v-bind:show_grade="search_show_grade" v-bind:grade="eachTutor.grade" v-bind:uid="eachTutor.id" v-bind:major="eachTutor.major" v-bind:name="eachTutor.name" v-bind:rating="eachTutor.rating"
+                  v-bind:imageurl="eachTutor.imageURL" v-bind:university="school_full_name_dict[eachTutor.university]" v-on:show-detail="showTutorDetail($event)"></search-result-card>
+
+              </v-layout>
+
+            </div>
+            <!--Card body-->
+          </div>
+          <!--Card-->
+        </div>
+
+
+        <!---profile--->
+        <div v-show="main_idx === 'PROFILE'">
+
+          <!--<div class="wrapper wrapper--w680">-->
+          <div class="card card-1" style="min-height:825px">
+
+            <!--<div class="card-heading"></div>-->
+            <div class="card-body">
+
+              <div v-if="!become_a_TA">
+                <h2 class="title">Update your Profile</h2>
+
+                <div>
+                  <v-flex xs12 sm6>
+                    <v-text-field v-bind:value="profile_email" label="Email" disabled></v-text-field>
+                  </v-flex>
+                </div>
+
+                <div>
+                  <v-layout row>
+                    <v-flex xs12 sm6>
+                      <v-text-field v-model="profile_name" label="Name"></v-text-field>
+                    </v-flex>
+
+
+                  </v-layout>
+                </div>
+
+                <div>
+                  <v-autocomplete v-model="profile_university" :items="school_list" :label="`University`" clearable>
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </div>
+
+                <div>
+                  <v-flex xs12>
+                    <v-autocomplete v-model="profile_major" :items="profile_major_list" :label="`Major`" clearable>
+                      <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                      </v-slide-x-reverse-transition>
+                    </v-autocomplete>
+                    <!--<v-text-field v-model="profile_major" label="Major"></v-text-field>-->
+                  </v-flex>
+                </div>
+
+                <v-flex xs12 sm6 md3>
+                  <v-autocomplete v-model="profile_gender" :items="['Male','Female']" :label="`Gender`">
+                    <v-slide-x-reverse-transition slot="append-outer" mode="out-in">
+                    </v-slide-x-reverse-transition>
+                  </v-autocomplete>
+                </v-flex>
+
+                <v-textarea v-model="profile_personal_statement" color="teal" placeholder="Talk about yourself..." style="margin-top:45px; margin-bottom:25px">
+                  <div slot="label">
+                    Personal Statement <small></small>
+                  </div>
+                </v-textarea>
+
+
+                <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateProfile()">Update</button>
+                  </div>
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=true">Become a Tutor!</button>
+                  </div>
+                </v-layout>
+
+              </div>
+
+              <div v-show="become_a_TA">
+                <h2 class="title">Update your Profile</h2>
+
+                <v-layout row>
+                  <ta-course-card v-for="TutorCard in tutor_card_list" v-if="TutorCard.is_active" v-bind:card="TutorCard" v-bind:school_list="school_list" v-bind:school_name_dict="school_name_dict" v-bind:school_data="school_data">
+                  </ta-course-card>
+                </v-layout>
+
+                <!--
+                <i class="fa fa-plus-circle" style="font-size:30px" v-on:click="newTutorCard()"></i>
+                -->
+
+                <v-btn fab dark small color="blue" v-on:click="newTutorCard()">
+                    <v-icon dark>add</v-icon>
+                </v-btn>
+
+                <v-layout row wrap>
+                  <div class="p-t-20" style="margin-right:15px">
+                    <button class="btn btn--radius btn--green" v-on:click="updateTutorProfile()">Update</button>
+                  </div>
+
+
+                  <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" v-on:click="become_a_TA=false">Back To You Personal Profile</button>
+                  </div>
+                </v-layout>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--</div>-->
+
+
+
+
+        </div>
+
+
+        <!---result--->
+        <div v-if="main_idx === 'RESULT'" class="result">
+
+          <!--reply-->
+
+          <template>
+            <v-layout column>
+
+              <div class="w3-banner-grids">
+                <v-layout row>
+                  <v-flex xs6>
+                    <div class="col-md-6 w3-banner-grid-left">
+                      <div class="w3-banner-img">
+                        <h3 class="test">${result_name}<b>&nbsp &#9733</b><b>${reault_rating}</b></h3>
+                      </div>
+                      <div class=" w3-right-addres-1">
+                        <ul class="address">
+                          <li>
+                            <ul class="agileits-address-text ">
+                              <li class="agile-it-adress-left"><b>Gender</b></li>
+                              <li>${result_gender}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>School</b></li>
+                              <li>${result_university}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>Major</b></li>
+                              <li>${result_major}</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <ul class="agileits-address-text">
+                              <li class="agile-it-adress-left"><b>Email</b></li>
+                              <li>${result_email}</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </v-flex>
+                  <v-flex xs5>
+                    <div class="col-md-6 w3-banner-grid-right">
+                      <div class="w3-banner-text">
+                        <h3>Personal Statement</h3>
+                        <p>${result_personal_statement}</p>
+                      </div>
+
+                    </div>
+                  </v-flex>
+                </v-layout>
+              </div>
+              <br>
+
+              <reply-card
+                v-bind:reply_list="result_reply_list"
+                v-bind:user_uid="user_uid"
+                v-bind:tutor_uid="detailPage"
+                v-bind:user_name="profile_name"
+                v-bind:id_token="idToken"
+              ></reply-card>
+
+              <!--
+              <div class="reply-div" style="margin-top:100px">
+                <v-container fluid grid-list-md>
+                  <v-layout align-space-between column>
+                    <v-layout row>
+                      <v-flex xs4>
+                        <v-rating v-model="rating" hover readonly></v-rating>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Edit</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Delete</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-btn flat color="primary" v-show="false">Submit</v-btn>
+                      </v-flex>
+
+                      <v-flex xs2>
+                        <v-layout row>
+
+                          <v-flex xs3>
+                            <v-btn fab dark small color="primary">
+                              <v-icon dark>chevron_left</v-icon>
+                            </v-btn>
+                          </v-flex>
+
+                          <v-flex xs3>
+                            <v-btn fab dark small color="primary">
+                              <v-icon dark>chevron_right</v-icon>
+                            </v-btn>
+                          </v-flex>
+
+                          <v-flex xs2>
+                            <div>[1/20]</div>
+                          </v-flex>
+
+                        </v-layout>
+                      </v-flex>
+
+                    </v-layout>
+                    <v-textarea class="replies" name="input-7-1" box label="Label" auto-grow value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through." readonly background-color="white"></v-textarea>
+                  </v-layout>
+                </v-container>
+              </div>
+              -->
+
+
+            </v-layout>
+          </template>
+        </div>
+
+
+      </main>
+    </div>
+  </v-app>
+</div>
+
+<!------------------------------------------------------------------------------->
+
+
+
+
+
+<!-- Main JS-->
+
+<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2FreplyCard.js?alt=media&token=ef65b40f-5316-429a-9356-24d65eea7bed"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2FsearchCard.js?alt=media&token=c6883304-03d5-4b45-bdba-e39caa368f39"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2FtutorCard.js?alt=media&token=2f078403-25a2-46f5-bd95-42b9c5893b43"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/tutorplus-93a0f.appspot.com/o/TutorPlusWeb%2Fdefault_index.js?alt=media&token=da63a1c8-a057-4718-ad8c-346800c239bf"></script>
+
+<!--
+<script src="/TutorPlus/static/component/replyCard.js"></script>
+<script src="/TutorPlus/static/component/searchCard.js"></script>
+<script src="/TutorPlus/static/component/tutorCard.js"></script>
+<script src="/TutorPlus/static/js/default_index.js"></script>
+-->
+<!--
+</body>
+</html>-->
+
+</body>
+
+</html>
+
+<!--===============================================================================================-->
